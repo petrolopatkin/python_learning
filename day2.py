@@ -1,0 +1,8 @@
+name=input('What is your name? ')
+age=input('What is your age? ')
+country=input('What country are you from? ')
+siblings=input('How many siblings do you have? ')
+university=input('At what university do you study? ')
+country_for_a_living=input('What country would you like to live in? ')
+language=input('What language do you speak? ')
+print('My name is ' + name + ', I am ' + age + ' years old, I am from ' + country + ', I have ' + siblings + ', and I study at ' + university + '. I would like to live in ' + country_for_a_living + '. and I speak ' + language)
