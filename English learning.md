@@ -40,7 +40,15 @@ granted - позволено, разрешено
 
 denied - отказ, отказано
 
+while - пока
 
+counter - счетчик
+
+interation - интерация
+
+condition - условие
+
+break - прерывать, ломать
 
 # General vocabulary
 
