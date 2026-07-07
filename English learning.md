@@ -130,7 +130,26 @@ aver - утверждать, заявлять
 
 peculiar - своеобразный, особый, специфический
 
+metastasize - распространяться
 
+tissue - ткань, салфетка
 
+interim - временный, промежуточный
+
+unbeknownst - неизвестный
+
+array - массив, множество, ряд
+
+babbling - лепет, болтовня
 # Useful phrases
+Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
+The human body is made up of different types of tissues - человесеское тело создано из разных видов ткани
+
+I am looking for an interim solution while I work on a better long-term plan - я ищу временное решение, пока работаю над долгосрочным планом
+
+Unbeknowst to me, my friends were planning a surprise birthday party - я не знал, что мои друзья планировали сюрприз
+
+The website offers a wide array of tools for developers - сайт предлагает большой набор инструментов для разработчиков
+
+I as so nervous during my first presentation that I started babbling - я так нервничал во время своей первой презентации, что начал говорить бессвязно
