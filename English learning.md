@@ -82,6 +82,13 @@ instance variable - переменна экземпляра
 
 override - переопределять
 
+inherit - наследовать
+
+derived class - производный класс
+
+extend - расширять
+
+feature - возможность
 # General vocabulary
 
 embark - начать, отправиться
@@ -182,6 +189,42 @@ coherent - согласованный, последовательный
 
 seamless - плавный, беспрепятственный
 
+vain - пустой, бесполезный, напрасный
+
+coffin - гроб
+
+heap - куча, груда
+
+apothecary - аптека, фармацепция
+
+agile - гибкий, ловкий
+
+slim down - похудеть, сократить
+
+impose - ввести, навязать, наложить
+
+compel - заставлять, вынуждать, принуждать
+
+revelation - открытие
+
+enrich - обогатить, пополнить
+
+upend - перевернуть, разрушить, изменить
+
+stash away - спрятать, запрятать
+
+screw - винт, шуруп
+
+hoarding - накопление
+
+declutter - разобрать, навести порядок
+
+riddle - загадка, головоломка
+
+slither - скользить, ползти
+
+wriggle - извиваться
+
 
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
@@ -207,5 +250,21 @@ Many young professionals choose remote jobs because they want to have a better w
 People should not rely on ai too much beacuse they still need to develop their own skills - люди не должны слишкмо полагаться а ии потому что им нужно развивать свои собственные навыки
 
 I want to specialize in software development because I think this field has a great future - я хочу специализироваться на разработке программного обеспечения потому что считаю, что у этой сферы хорошее будущее
+
+I know I still make mistakes, but I want to keep improving my English every day - я знаю что все еще совершаю ошибки, но хочу продолжать улучшать свой английский каждый день
+
+One of the things I enjoy in programming is solving problems and finding better solutions - одна из вещей которые мне нравяться в программировании это решать проблемы и находить лучшие решения
+
+Sometimes you have to take risks if you want to achieve something great in life - иногда нужно рисковать чтобы достичь чего-то хорошего в жизни
+
+I can see that I am making progress in English - я вижу что добиваюсь прогресса в изучении английского
+
+Instead of being afraid of mistakes, I try to learn from them and become a better programmer - вместо того чтобы бояться ошибок я старюсь учиться на них и становиться лучше
+
+Travelling can enrich your understanding of different cultures - путешествия могут обогатить твое понимание разных культур
+
+His passion to for technologies compelled him to start learning programming - его увлечение технологиями вынудило его начать учить программирование
+
+The IT industry changes quickly, so programmers need to stay agile and keep learning new technologies - айти индустрия быстро меняеться поэтому программисты должны оставаться гибкими и продолжать учить новые технологии
 
 
