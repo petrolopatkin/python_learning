@@ -89,6 +89,10 @@ derived class - производный класс
 extend - расширять
 
 feature - возможность
+
+execute - выполнять
+
+
 # General vocabulary
 
 embark - начать, отправиться
@@ -224,6 +228,24 @@ riddle - загадка, головоломка
 slither - скользить, ползти
 
 wriggle - извиваться
+
+upheld - подержанный, сохраненный
+
+conviction - убеждение, осуждение
+
+embezzle - присваивать, похищать, растрачивать
+
+hindrance - препятствие, помеха
+
+lenient - мягкий, снисходительный
+
+blaze - пожар, пламя
+
+cumulative - совокупный, накопленный
+
+amplify - усиливать
+
+abstain - воздерживаться, отказываться 
 
 
 # Useful phrases
