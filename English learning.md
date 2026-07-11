@@ -247,6 +247,30 @@ amplify - усиливать
 
 abstain - воздерживаться, отказываться 
 
+scalability - маштабность, расширяемость
+
+outback - глубина, малонаселенная местность
+
+ablaze - восторженный, пылкий
+
+solstice - солнцестояние
+
+bustle - суета, суматоха
+
+emerge - появиться, возникнуть
+
+unveil - открыть, раскрыть, обнародовать
+
+scaffold - каркас
+
+clamber - карабкаться, взбираться
+
+fluctuate - колебаться, меняться, варьироваться
+
+scavenger - стервятник
+
+gauge - оценить, измерить
+
 
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
@@ -288,5 +312,19 @@ Travelling can enrich your understanding of different cultures - путешес�
 His passion to for technologies compelled him to start learning programming - его увлечение технологиями вынудило его начать учить программирование
 
 The IT industry changes quickly, so programmers need to stay agile and keep learning new technologies - айти индустрия быстро меняеться поэтому программисты должны оставаться гибкими и продолжать учить новые технологии
+
+Scalability is one of the most important factors when developing modern software - маштабираемость одна из самых важных факторов при разработке современного ПО
+
+New technologies continues to emerge every year - новые технологии продолжают возникать каждый год
+
+It is difficult to gauge someone's English level without having a real conversation - очень тяжело оценить чей-то уровень английского без реального разговора
+
+Universities provide students with valuable knowledge - университеты обеспечивают студентов важными знаниями
+
+Theoretical knowledge gives students a strong fundation for their future careers - теоретичиские знания дают сильную базу для их будущих карьер
+
+Moving to Slovakia helped me step out of my comfort zone and become more independent - переезд в словакию помог мне выйти из зоны комфорта и стать более самостоятельным
+
+The IT industry provides a wide range of opportunities for young professionals - айти индустрия обеспечивает широкий спектр возможностей для молодых профессионалов
 
 
