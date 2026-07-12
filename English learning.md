@@ -92,7 +92,9 @@ feature - возможность
 
 execute - выполнять
 
+randint(random integer) - случайное целое число
 
+shuffle - перемешать
 # General vocabulary
 
 embark - начать, отправиться
@@ -271,6 +273,26 @@ scavenger - стервятник
 
 gauge - оценить, измерить
 
+amenities - удобства, услуги
+
+quilt - одеяло
+
+riot - бунт, беспорядки
+
+arson - поджог
+
+profound - глубокий, значительный
+
+hush - тишина, молчание
+
+condemn - осуждать, приговорить, обвинять
+
+disperse  - разгонять
+
+roundabout - круговое движение, кольцо
+
+hostility - враждебность, неприязнь
+
 
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
@@ -327,4 +349,13 @@ Moving to Slovakia helped me step out of my comfort zone and become more indepen
 
 The IT industry provides a wide range of opportunities for young professionals - айти индустрия обеспечивает широкий спектр возможностей для молодых профессионалов
 
+Technology has a profound impact on the way people communicate - технологии имеет значительное влияние на то как люди общаються
+
+A good city should provide residents with modern amenities such as parks, hospitals and public transport - хороший город должен предоставлять обитателям хорошие удобства как парки, госпитали, общественный транспорт
+
+Learning another language can help reduce hostility between different cultures - изучение другого языка может помочь уменьшить враждебность между разными культурами
+
+After concert ended, people slowly dispersed and went home - после того как концерт закончился люди понемного рассеились и пошли домой
+
+Many countries condemned the use of violence during the conflict - многие страны осудили использование насилия во время конфликта
 
