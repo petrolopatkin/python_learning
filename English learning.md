@@ -95,6 +95,8 @@ execute - выполнять
 randint(random integer) - случайное целое число
 
 shuffle - перемешать
+
+dependency - зависимость
 # General vocabulary
 
 embark - начать, отправиться
@@ -293,6 +295,50 @@ roundabout - круговое движение, кольцо
 
 hostility - враждебность, неприязнь
 
+eventually achieve your goals - в итоге добиться своих целей
+
+make steady progress - делать стабильный прогресс
+
+substantial - значительный, огромный
+
+robust - надежный, прочный, устойчивый
+
+breach - нарушение, утечка
+
+interference - вмешательство, помеха
+
+confine - ограничивать, держать в рамках
+
+merely - всего лишь, просто
+
+stem - происходить из, быть вызванным
+
+premise - предположение, основная идея
+
+allegedly - предположительно, якобы
+
+glean - извлекать, получать информацию
+
+prescribe - прописывать(лекарство), предписывать
+
+intrusion - вторжение, вмешательство
+
+vindication - оправдание
+
+plaintiff - истец
+
+settle out of court - урегулировать дело без суда
+
+lose your rag - потерять самообладание
+
+groan - стон, стонать
+
+lace - шнурок
+
+pellet - гранула
+
+paperclip - скрепка
+
 
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
@@ -358,4 +404,30 @@ Learning another language can help reduce hostility between different cultures -
 After concert ended, people slowly dispersed and went home - после того как концерт закончился люди понемного рассеились и пошли домой
 
 Many countries condemned the use of violence during the conflict - многие страны осудили использование насилия во время конфликта
+
+If you keep improving your skills, you will eventually achieve your goals - если ты продолжишь развивать свои навыки ты в конце концов/итоге добьешься своих целей
+
+I try to make steady progress in English and programming every day - я стараюсь делать стабильный прогресс в английском и программировании каждый день
+
+Learning English requires a substantial amount of time and effort - изучение английского требует значительного количества времени и усилий
+
+Developers need to create robust systems that can handle many users - разработчикам нужно создавать надежные системы которые могут обслуживать множество пользователей
+
+The company suffered a data breach and lost important information - компания столкнулась с утечкой данных и потеряла важную информацию
+
+Too much interference from technology can reduce people's ability to think independently - слишком большое вмешательство технологий может уменьшить способность людей думать самостоятельно
+
+You should not confine youself to one area of knowledge - ты не должен ограничивать себя одной областью знаний
+
+Success is not merely about money, it is also about personal growth - успех это не просто деньги, это также и личный рост
+
+Many problems in society stem from a lack of education - много проблем в обществе происходят из-за недостатка образования
+
+The main premise of this article is that technology can improve our lives - главная идея этой статьи в том что технологии могут улучшить нашу жизнь
+
+The company allegedly broke the law - компания предположительно нарушила закон
+
+I was able to glean useful information from this book - мне удалось получить полезную информацию из этой книги
+
+Doctors usually prescribe medicine after cheking patient's condition - доктора обычно выписывают лекарства после проверки состояния пациента
 
