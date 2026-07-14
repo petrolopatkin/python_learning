@@ -339,6 +339,36 @@ pellet - гранула
 
 paperclip - скрепка
 
+beneficial - полезный, благоприятный
+
+retention - сохранение, удержание
+
+measure - мера, измерять, оценивать
+
+caution - осторожность, предупреждение
+
+perceptual - связанный с восприятием 
+
+legible - разборчивый, легко читаемый
+
+dispute - спор, конфликт
+
+shed light on - проливать свет на что-то
+
+brace - фиксатор
+
+engulf - поглощать, полностью охватывать
+
+flock - стая птиц, толпа людей
+
+stow - убрать, сложить, разместить
+
+outing - прогулка, вылазка, поездка
+
+deaf - глухой
+
+sewer - канализация 
+
 
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
@@ -430,4 +460,16 @@ The company allegedly broke the law - компания предположите�
 I was able to glean useful information from this book - мне удалось получить полезную информацию из этой книги
 
 Doctors usually prescribe medicine after cheking patient's condition - доктора обычно выписывают лекарства после проверки состояния пациента
+
+You shouldn't try to learn everything you come across - ты не должен учить все с чем сталкиваешься
+
+Nobody knows what the future will bring but we can prepare ourselves - никто не знает что произойдет в будущем но мы можем подготовиться
+
+Modern companies need workers with a wide range of skills - современные компании нуждаються в работниках с широким спектром навыков
+
+I often come across useful information while reading articles - я часто сталкиваюсь с полезной информацией во время чтения статей
+
+Learning English can open up many opportunities in the future - изучение английского может открыть много возможностей в будущем
+
+My experience abroad helped me become more mature and confident - мой опыт за границей помог мне стать более зрелым и уверенным
 
