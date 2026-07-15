@@ -97,6 +97,8 @@ randint(random integer) - случайное целое число
 shuffle - перемешать
 
 dependency - зависимость
+
+malware - вредоносное програмное обеспечение(по)
 # General vocabulary
 
 embark - начать, отправиться
@@ -369,6 +371,28 @@ deaf - глухой
 
 sewer - канализация 
 
+defraud - обмануть, мошенничать
+
+accordingly - соответственно, согласно этому, ссылаясь
+
+endorsment - поддержка, одобрение, рекомендация
+
+ingenuity - изобретательность, находчивость
+
+atrocity - зверство, ужасное преступление
+
+reconciliation - примирение, восстановление отношений
+
+buckwheat - гречка
+
+stew - тушить(еду)
+
+restriction - ограничение
+
+poke - тыкать, тыкать пальцем
+
+trespass - незаконно проникать, вмешиваться
+
 
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
@@ -472,4 +496,20 @@ I often come across useful information while reading articles - я часто с
 Learning English can open up many opportunities in the future - изучение английского может открыть много возможностей в будущем
 
 My experience abroad helped me become more mature and confident - мой опыт за границей помог мне стать более зрелым и уверенным
+
+Trvelling alone gave me a sence of freedom - птушествия в одиночку дают мне ощещение свободы
+
+People should exercise reguralry and maintain balanced lifestyle - люди должны регулярно заниматься спортом и поддерживать сбалансированный образ жизни
+
+Governments should raise awareness about healthy eating - государство должно повысить осведомленность об здоровой еде
+
+Education can be more effective in the long term - образование может быть более эффективным в длительном сроке времени
+
+Developers need to protect their application from malware attacks - разработчики должны защищать  свои приложения от вредоносных атак
+
+Human ingenuity has helped solve many difficult problems throughout history - человеческая изобретательность помогла решить много сложных проблем на протяжении истории
+
+The situation has changed, so we need to adjust our plans accordingly - ситуация изменилась поэтому нам нужно соответственно изменить планы
+
+Some people believe that governments should introduce restrictions on unhealthy products - некоторые люди считают что государство должно ввести ограничения на нездоровую пищу
 

@@ -2,6 +2,32 @@ contacts = {
     "Peter": "123456789",
     "Kate": "987654321"
 }
+def add_contact():
+     name = input("Name: ")
+     phone = input("Phone: ")
+     item = name
+     contacts[item] = phone
+
+
+def find_contact():
+     find_name = input("Name: ")
+     if find_name in contacts:
+      print(find_name , contacts[find_name])
+     else:
+      print("Contact not found")
+
+
+def show_contacts():
+  for item in contacts:
+   print(item, contacts[item])
+
+
+def delete_contact():
+ delete_name = input("Name: ")
+ if delete_name in contacts:
+  contacts.pop(delete_name)
+
+
 command = ""
 while True:
   print("""
@@ -11,29 +37,22 @@ while True:
  4. Delete contact
  5. Exit
  """)
-  command = int(input("> "))
+  try:
+   command = int(input("> "))
+  except ValueError:
+     print("Invalid value, try again")
+     continue
   if command == 1 :
-        name = input("Name: ")
-        phone = input("Phone: ")
-        item = name
-        contacts[item] = phone
+        add_contact()
+        print("Contact successfuly added!")
   elif command == 2 :
-       find_name = input("Name: ")
-       if find_name in contacts:
-            print(contacts[find_name])
-       else:
-            print("Contact not found")
+       find_contact()
   elif command == 3 :
-       for item in contacts:
-            print(item, contacts[item])
+       show_contacts()
   elif command == 4 :
-       delete_name = input("Name: ")
-       if delete_name in contacts:
-            contacts.pop(delete_name)
-       else:
-            print("Contact not found")
+       delete_contact()
+       print("Contact was succssesfuly deleted")
   elif command == 5 :
        break
   else:
-       print("You've entered wrong command, try again")
-    
+     print("You've entered wrong command, try again!")
