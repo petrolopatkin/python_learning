@@ -393,6 +393,50 @@ poke - тыкать, тыкать пальцем
 
 trespass - незаконно проникать, вмешиваться
 
+conservation - сохранение
+
+subtle - тонкий, изысканный, едва уловимый
+
+fumes - пары, испарения, дым
+
+be on the brink of death - быть на грани смерти
+
+consumption - потребление
+
+comb - расческа, гребень
+
+floss - зубная нить
+
+chow - пища, еда
+
+gutter - водосток
+
+balletic - балетный, грациозный
+
+tether - предел, предел возможностей
+
+unhinged - безумный, смушедший, неуравновешенный
+
+startling - поразительный, ошеломляющий, шокирующий
+
+inhibit - сдерживать, подавлять
+
+dwelling - жилье
+
+forage - собирательство
+
+digestion - пищеварение, переваривание
+
+
+# Common collocations
+energy consumption - потребление энергии
+
+wilflife conservation - сохранение/охрана природы
+
+subtle difference - тонкая разница
+
+inhibit growth - сдерживать рост
+
 
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
@@ -512,4 +556,20 @@ Human ingenuity has helped solve many difficult problems throughout history - ч
 The situation has changed, so we need to adjust our plans accordingly - ситуация изменилась поэтому нам нужно соответственно изменить планы
 
 Some people believe that governments should introduce restrictions on unhealthy products - некоторые люди считают что государство должно ввести ограничения на нездоровую пищу
+
+People have become more aware of protecting nature - люди осознали важность защиты природы
+
+The breathtaking scenery made trip unforgettable - захватывающий вид сделал поездку незабываемой
+
+Christopher eventually figuered out what had really happended - Кристофер в итоге узнал что произошло на самом деле
+
+The truth turned out be very different from what I expected - правда оказалась совсем другой в сравнении с тем что я ожидал
+
+Wildlife conservation is essential for future generations - охрана природы крайне важна для будущих поколений
+
+There is a subtle difference between confidence and arrogance - существует тонкая разница между уверенностью и высокомерием
+
+Fear can inhibit people from achieving their goals - страх может сдерживать людей от достижения своих целей
+
+Many countries are trying to reduce energy consumption - многие страны стараються снизить потребление энергии
 
