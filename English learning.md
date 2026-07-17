@@ -427,6 +427,18 @@ forage - собирательство
 
 digestion - пищеварение, переваривание
 
+deviate - отклоняться, отходить от нормы
+
+acumen - проницатльность, деловая хватка
+
+blunt - прямолинейный
+
+tedious - скучный, утомительный
+
+covet - сильно желать
+
+sincerity - искренность
+
 
 # Common collocations
 energy consumption - потребление энергии
@@ -436,6 +448,12 @@ wilflife conservation - сохранение/охрана природы
 subtle difference - тонкая разница
 
 inhibit growth - сдерживать рост
+
+deviate from the plan - отклониться о  плана
+
+business acumen - деловая хватка
+
+show sincerity - проявлять искренность
 
 
 # Useful phrases
@@ -572,4 +590,16 @@ There is a subtle difference between confidence and arrogance - существу
 Fear can inhibit people from achieving their goals - страх может сдерживать людей от достижения своих целей
 
 Many countries are trying to reduce energy consumption - многие страны стараються снизить потребление энергии
+
+Online sources allow students to study at their own pace - онлайн ресурсы помогают студентам обучаться в своем темпе
+
+Face-to-face interaction helps students develop communication skills - взаимодействие лицом к лицу помогает студентам развивать свои навыки коммуникации
+
+Students can recieve immediate feedback from their teachers - студенты могут получить мгновенную обратную свзь с учителями
+
+Many people deviate from their original plans when unexpected problems appear - многие люди отклоняються от своих реальных планов когда появляються неожиданные проблемы
+
+Successful entrepreneurs need strong business acumen to make good decisions - успешные предпрениматели должны иметь сильную деловую хватку чтобы принимать хорошие решения
+
+I appreciate people's sincerity because honesty is important in relationship - я ценю искренность людей потому что честность очень важна в отношениях
 
