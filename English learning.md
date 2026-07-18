@@ -439,6 +439,42 @@ covet - сильно желать
 
 sincerity - искренность
 
+amusing - забавный, смешной
+
+fond of - увлекающийся
+
+candor - искренность, прямота
+
+feasible - осуществимый, возможный
+
+cutback - сокращение(расходов, бюджета)
+
+confluence - слияние(рек, идей)
+
+nourishment - питание
+
+belabor - перегружать, слишком долго обсуждать
+
+unequivocally - однозначно, без сомнений
+
+colussion - сговор
+
+hibernation - спячка
+
+saline - соленый
+
+drip - капать, капля
+
+ridge - хребет, гребень
+
+tentatively - предварительно
+
+condense - сокращать, сгущать, конденсировать
+
+prevalent - распространенный, преобладающий
+
+fluid - жидкость, плавный, жидкий
+
 
 # Common collocations
 energy consumption - потребление энергии
@@ -455,7 +491,11 @@ business acumen - деловая хватка
 
 show sincerity - проявлять искренность
 
+find a feasible solution - найти осуществимое решение
 
+become increasingly prevalent - становиться все более распространенным
+
+be fond of something - любить что-то/кого-то
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -602,4 +642,12 @@ Many people deviate from their original plans when unexpected problems appear - 
 Successful entrepreneurs need strong business acumen to make good decisions - успешные предпрениматели должны иметь сильную деловую хватку чтобы принимать хорошие решения
 
 I appreciate people's sincerity because honesty is important in relationship - я ценю искренность людей потому что честность очень важна в отношениях
+
+Successful people learn how to face obstacles and continue moving forward - успешные люди учаться сталкиваться с препятствиями и продолжать двигаться дальше
+
+Personal development is continious process - персональное развитие это потоянный процесс
+
+Living abroad has taught me how to solve problems on my own - жизнь за границей научила меня самому решать свои проблемы
+
+The main character was absent from several chapters - главный герой отсутствовал несколько глав
 
