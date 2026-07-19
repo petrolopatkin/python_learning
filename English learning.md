@@ -475,6 +475,18 @@ prevalent - распространенный, преобладающий
 
 fluid - жидкость, плавный, жидкий
 
+abuzz - оживленный, шумный, активный
+
+commute - ездить на работу/учебу
+
+altogether - полностью, в целом, вообще
+
+sodding - чертов, проклятый
+
+pond - пруд
+
+invigilate - контролировать экзамен
+
 
 # Common collocations
 energy consumption - потребление энергии
@@ -496,6 +508,12 @@ find a feasible solution - найти осуществимое решение
 become increasingly prevalent - становиться все более распространенным
 
 be fond of something - любить что-то/кого-то
+
+daily commute - ежедневная дорога на работу/учебу
+
+be abuzz with activity - быть наполненным активностью
+
+
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -650,4 +668,12 @@ Personal development is continious process - персональное разви
 Living abroad has taught me how to solve problems on my own - жизнь за границей научила меня самому решать свои проблемы
 
 The main character was absent from several chapters - главный герой отсутствовал несколько глав
+
+I have made significant progress since I started practising every day - я сделал огромный прогресс с того момента как начал практиковаться каждый день
+
+Many people spend hours commuting to work every day - многие люди тратят часы на то чтобы добраться на работу каждый день
+
+Altogether, I believe that technology improved people's lives - в целом я считаю что технологии улучшили жизнь людей
+
+The city centre was abuzz with tourists during the summer season - центр города был наполнен туристами во время летнего сезона
 

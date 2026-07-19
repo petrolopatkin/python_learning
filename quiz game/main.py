@@ -53,23 +53,37 @@ Correct answer was: {questions[question]} """)
 
 
 def add_question():
+   category = choose_category()
+   questions = quiz[category]
    question = input("Question: ")
    answer = input("Answer: ")
-   item = question
-   quiz[item] = answer
+   questions[question] = answer
 
 
 def show_questions():
-   for question in quiz:
-    print(f"""{question}
-- {quiz[question]}""")
-    
+   selected_category = choose_category()
+   if selected_category == "All":
+     for category in quiz:
+      print(category)
+      questions = quiz[category]
+      for question in questions:
+       print(f"""==================================================
+{question}
+==================================================""")
+       print(f"- {questions[question]}")
+   else:
+     questions = quiz[selected_category]
+     for question in questions:
+      print(f"""{question}
+- {questions[question]}""")
+   
 
 def choose_category():
   print("""Choose category:
 1. Geography
 2. General knowledge
-3. Math""")
+3. Math
+4. All categories""")
   choice =  int(input("> "))
   if choice == 1:
     return "Geography"
@@ -77,6 +91,8 @@ def choose_category():
     return "General knowledge"
   elif choice == 3:
     return "Math"
+  elif choice == 4:
+    return "All"
 
 
 while True:
