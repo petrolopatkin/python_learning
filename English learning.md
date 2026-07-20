@@ -99,6 +99,8 @@ shuffle - перемешать
 dependency - зависимость
 
 malware - вредоносное програмное обеспечение(по)
+
+patch - исправление
 # General vocabulary
 
 embark - начать, отправиться
@@ -487,6 +489,26 @@ pond - пруд
 
 invigilate - контролировать экзамен
 
+boastful - хвастливый
+
+pine - сосна
+
+shrug - пожать плечами
+
+rash - необдуманный, поспешный
+
+stubborn - упрямый
+
+lap - круг(в соревновании), колени(сидящего человека)
+
+patch - участок
+
+seek out - искать(активно)
+
+ailment - недуг, заболевание
+
+buoyant - плавучий, жизнерадостный
+
 
 # Common collocations
 energy consumption - потребление энергии
@@ -676,4 +698,20 @@ Many people spend hours commuting to work every day - многие люди тр
 Altogether, I believe that technology improved people's lives - в целом я считаю что технологии улучшили жизнь людей
 
 The city centre was abuzz with tourists during the summer season - центр города был наполнен туристами во время летнего сезона
+
+I am becoming more familiar with Slovak culture after living there for a year - я становлюсь более знакомым со словацкой культрой прожив здесь год
+
+Many people are passionate about sports and outdoor activities - многие люди увлекаються спортом и активным отдыхом
+
+My past decisions brought me where I am today - мои прошлые решения привели меня туда где я сейчас
+
+Success requires dedication to your goals - успех требует преданности своим целям
+
+Many youngsters seek out new opportunities to improve their careers - многие молодые люди ищут новые возможности для улучшения их карьеры
+
+I can be stubborn, but I always work hard to achieve my goals - я могу быть упертым, но я всегда тяжело работаю для достижения своих целей
+
+The company released a security patch to fix the problem - компания выпустила обновление безопасности чтобы исправить проблему
+
+Despite many difficulties in life, Christopher remains buoyant - несмотря на трудности в жизни, Кристофер остается жизнерадостным
 

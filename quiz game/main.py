@@ -20,8 +20,14 @@ quiz = {
     "What is 68 - 1?": "67"}
 }
 def start_quiz():
-   category = choose_category()
-   questions = quiz[category]
+   selected_category = choose_category()
+   questions = {}
+   if selected_category == "All":
+     for category in quiz:
+       for question in quiz[category]:
+         questions[question] = quiz[category][question]
+   else:
+     questions = quiz[selected_category]
    questions_list = list(questions)
    random.shuffle(questions_list)
    score = 0
@@ -41,8 +47,8 @@ def start_quiz():
 Correct answer was: {questions[question]} """)
    print(f"{score}/{len(questions_list)}")
    percent = (score / len(questions_list)) * 100
-   print(percent)
-   if percent == 100:
+   print(f"{percent: .1f}%")
+   if percent >= 100:
     print("Outstanding! You have reached a perfect score, congrats!")
    elif percent >= 80:
     print("Excellent! You are almost there!")
@@ -58,6 +64,7 @@ def add_question():
    question = input("Question: ")
    answer = input("Answer: ")
    questions[question] = answer
+   print("Question successfuly added")
 
 
 def show_questions():
@@ -95,12 +102,31 @@ def choose_category():
     return "All"
 
 
+def delete_question():
+  number = 1
+  category = choose_category()
+  questions = quiz[category]
+  questions_list = list(questions)
+  for question in questions:
+     print(f"{number}. {question}")
+     number += 1
+  del_question = int(input("Select a question to delete: "))
+  if del_question < 1 or del_question > len(questions_list):
+    print("Invalid number, try again")
+    return
+  selected_question = questions_list[del_question - 1]
+  if selected_question in questions_list:
+   questions.pop(selected_question)
+   print("Question successfuly deleted") 
+      
+
 while True:
     print("""
 1. Start quiz
 2. Add question
 3. Show all questions
-4. Exit
+4. Delete question
+5. Exit
 """)
     try:
      command = int(input("> "))
@@ -114,6 +140,8 @@ while True:
     elif command == 3:
        show_questions()
     elif command == 4:
-        break
+        delete_question()
+    elif command == 5:
+      break
     else:
         print("Wrong command, try again")
