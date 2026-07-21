@@ -104,8 +104,13 @@ def choose_category():
 
 def delete_question():
   number = 1
-  category = choose_category()
-  questions = quiz[category]
+  selected_category = choose_category()
+  if selected_category == "All":
+    for category in quiz:
+       for question in quiz[category]:
+        print("Delete question is available only inside one category!")
+        return
+  questions = quiz[selected_category]
   questions_list = list(questions)
   for question in questions:
      print(f"{number}. {question}")
@@ -119,14 +124,44 @@ def delete_question():
    questions.pop(selected_question)
    print("Question successfuly deleted") 
       
+def edit_question_or_answer():
+  number = 1
+  category = choose_category()
+  questions = quiz[category]
+  questions_list = list(questions)
+  for question in questions:
+    answer = questions[question]
+    print(f"{number}. {question}")
+    print(f"- {answer}")
+    number += 1
+  select_q = int(input("Select: question: "))
+  if select_q < 1 or select_q > len(questions_list):
+    print("Invalid number, try again")
+    return
+  selected_question = questions_list[select_q - 1]
+  edit_q_or_a = int(input("""What do you want to edit?: 
+  1. Question
+  2. Answer """))
+  if edit_q_or_a < 1 or edit_q_or_a > 2:
+    print("Invalid number, try again")
+  if edit_q_or_a == 1:
+    new_q = (input("New question: "))
+    questions[new_q] = questions[selected_question]
+    if selected_question in questions_list:
+     questions.pop(selected_question)
+  if edit_q_or_a == 2:
+    new_a = (input("New answer: "))
+    questions[selected_question] = new_a
+  print("Question successfuly changed")
 
 while True:
     print("""
 1. Start quiz
 2. Add question
-3. Show all questions
-4. Delete question
-5. Exit
+3. Edit question or answer
+4. Show all questions
+5. Delete question
+6. Exit
 """)
     try:
      command = int(input("> "))
@@ -138,10 +173,12 @@ while True:
     elif command == 2:
         add_question()
     elif command == 3:
-       show_questions()
+       edit_question_or_answer()
     elif command == 4:
-        delete_question()
+        show_questions()
     elif command == 5:
+        delete_question()
+    elif command == 6:
       break
     else:
         print("Wrong command, try again")

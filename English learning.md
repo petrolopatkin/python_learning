@@ -101,6 +101,10 @@ dependency - зависимость
 malware - вредоносное програмное обеспечение(по)
 
 patch - исправление
+
+scaling - масштабирование, увеличение
+
+
 # General vocabulary
 
 embark - начать, отправиться
@@ -509,6 +513,20 @@ ailment - недуг, заболевание
 
 buoyant - плавучий, жизнерадостный
 
+moreover - более того, кроме того
+
+coax - уговаривать
+
+picker - сборщик
+
+pupils - ученики(школьники)/зрачки
+
+complement - дополнять
+
+devise - разработать, придумать
+
+quotation - цитата
+
 
 # Common collocations
 energy consumption - потребление энергии
@@ -534,6 +552,8 @@ be fond of something - любить что-то/кого-то
 daily commute - ежедневная дорога на работу/учебу
 
 be abuzz with activity - быть наполненным активностью
+
+broaden horizons - расширять кругозор
 
 
 # Useful phrases
@@ -715,3 +735,10 @@ The company released a security patch to fix the problem - компания вы
 
 Despite many difficulties in life, Christopher remains buoyant - несмотря на трудности в жизни, Кристофер остается жизнерадостным
 
+Travelling helps me take my mind off daily stress - путешествия помогают мне отвлечься от ежедневного стресса
+
+Meeting people from different cultures can broaden your horizons - знакомство с людьми разных культур может расширить твой кругозор
+
+Travelling helps people understand different cultures. Moreover, it allows them to develop important social skills - Путешествия помогают людям понимать разные культуры. Более того, они позволяют людям развивать важные социальные навыки
+
+This book complements my English studies because it improves my vocabulary and reading skills - эта книга дополняет мое изучение английского потому что это развивает мой словарный запас и навыки чтения
