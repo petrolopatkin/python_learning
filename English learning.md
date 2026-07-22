@@ -527,6 +527,44 @@ devise - разработать, придумать
 
 quotation - цитата
 
+crib - детская кровать
+
+akin - похожий
+
+drowsy - сонный, вялый
+
+frenzy - безумие
+
+jot down - быстро записать
+
+gruesome - ужасный, жуткий
+
+persuade - убедить
+
+vanity - тщеславие, самолюбие
+
+disfiguered - обезображенный
+
+oodles - куча
+
+dullard - глупый
+
+sloppy - небрежный
+
+pity - жалость, сожаление
+
+cougar - пума
+
+leery - подозриительный
+
+ensconce - удобно устроиться, расположиться
+
+benevolent - доброжелательный, благожелательный
+
+contentedly - удовлетворенно
+
+prosperity - благополучие, процветание
+
 
 # Common collocations
 energy consumption - потребление энергии
@@ -742,3 +780,13 @@ Meeting people from different cultures can broaden your horizons - знаком�
 Travelling helps people understand different cultures. Moreover, it allows them to develop important social skills - Путешествия помогают людям понимать разные культуры. Более того, они позволяют людям развивать важные социальные навыки
 
 This book complements my English studies because it improves my vocabulary and reading skills - эта книга дополняет мое изучение английского потому что это развивает мой словарный запас и навыки чтения
+
+My parents persuaded me to study abroad - мои родители убедили меня учиться за границей
+
+I ususally jot down new vocabulary words while watching English videos - я обычно быстро записываю новые слова для словаря пока смотрю видео на английском
+
+Economic prosperity depends on many factors such as education and technology - экономическое благополучие зависит от многих факторов таких как образование и технологии
+
+The organisation provides help to poor families because it has a benevolent purpose - организация помогает бедным семьям потому что у нее благотворительная цель
+
+I feel pity for homeless person - я почувствовал жалость к бездомному человеку 

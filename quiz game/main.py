@@ -144,6 +144,7 @@ def edit_question_or_answer():
   2. Answer """))
   if edit_q_or_a < 1 or edit_q_or_a > 2:
     print("Invalid number, try again")
+    return
   if edit_q_or_a == 1:
     new_q = (input("New question: "))
     questions[new_q] = questions[selected_question]
