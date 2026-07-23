@@ -565,7 +565,29 @@ contentedly - удовлетворенно
 
 prosperity - благополучие, процветание
 
+lodge - домик
 
+ease - облегчить
+
+neglect - пренебрегать
+
+lenient - мягкий, снисходительный
+
+excessive - чрезмерный
+
+unify - обьединять
+
+vivacious - жизнерадостный, энергичный
+
+nimble - ловкий, быстрый
+
+shrill - резкий
+
+underfed - недоедающий,  голодающий
+
+gambol - резвиться, прыгать
+
+unalterable - неизменный, непоправимый
 # Common collocations
 energy consumption - потребление энергии
 
@@ -790,3 +812,12 @@ Economic prosperity depends on many factors such as education and technology - �
 The organisation provides help to poor families because it has a benevolent purpose - организация помогает бедным семьям потому что у нее благотворительная цель
 
 I feel pity for homeless person - я почувствовал жалость к бездомному человеку 
+
+Students should learn how to apply knowledge in real situations - студенты должны уметь применять знания в реальных ситуациях
+
+Economic growth should not happen at the expence of the environment - экономический рост не должен быть в цену разрушения окруающей среды
+
+Many young people want to pusrue a career in technology - многие молодые люди хотят развивать свою карьеру в технологиях
+
+Parents play an important role in shaping their children's behviour - родители играют важную роль в формировании поведения их ребенка
+
