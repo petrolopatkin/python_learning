@@ -588,6 +588,28 @@ underfed - недоедающий,  голодающий
 gambol - резвиться, прыгать
 
 unalterable - неизменный, непоправимый
+
+demise - упадок, гибель, смерть
+
+grunt -хрюкать, ворчать
+
+slik - шелк, шелковый
+
+steadily - постепенно, стабильно
+
+indefatigable - неутомимый
+
+neatly - аккуратно
+
+twig - ветка
+
+sturdy - крепкий, прочный
+
+pleadingly - умоляюще
+
+mingle - общаться
+
+irrepressible - неудержимый, неукротимый
 # Common collocations
 energy consumption - потребление энергии
 
@@ -615,7 +637,17 @@ be abuzz with activity - быть наполненным активностью
 
 broaden horizons - расширять кругозор
 
+increase steadily - стабильно увеличиваться
 
+mingle with people - общаться с людьми
+
+sturdy material - прочный материал
+
+the demise of something - конец чего-то
+
+indefatigable worker - неутомимый работник
+
+irrepressible enegry - неиссякаемая энергия
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -821,3 +853,6 @@ Many young people want to pusrue a career in technology - многие моло�
 
 Parents play an important role in shaping their children's behviour - родители играют важную роль в формировании поведения их ребенка
 
+The Internet helps me to stay in touch with my family - интернет помогает мне оставаться на связи со своей семьей
+
+English had become an essential part of my daily life - английский стал неотьемлимой частью моей жизни

@@ -53,6 +53,62 @@ def first_scene():
       break
 
 
+
+def second_scene():
+    while True:
+        msg = """===========================================
+Ты поставил коробку на место.
+Осмотрев ее перед тобой появились 3 возможности.
+1. Приоткрыть коробку
+2. Попробовать заглянуть в щель
+3. Продолжить представление
+===========================================
+"""
+
+        for sdsc in msg:
+            print(sdsc, end="")
+            time.sleep(0.05)
+
+        print()
+
+        try:
+            choice = int(input("> "))
+        except ValueError:
+            print("Invalid value, try again")
+            continue
+
+        if choice == 1:
+            open_box = "Все еще слишком рано! Попробуй выбрать другой вариант."
+
+            for message in open_box:
+                print(message, end="")
+                time.sleep(0.05)
+
+            print()
+
+        elif choice == 2:
+            try_to_look_into = "Внутри коробки слишком темно, ничего не видно."
+
+            for message in try_to_look_into:
+                print(message, end="")
+                time.sleep(0.05)
+
+            print()
+
+        elif choice == 3:
+            continue_show = "Отлично, правильный выбор. Продолжаем представление."
+
+            for message in continue_show:
+                print(message, end="")
+                time.sleep(0.05)
+
+            print()
+            break
+
+        else:
+            print("Wrong choice, try again.")
+
+
 def last_scene():
     print("Last")
 
@@ -69,6 +125,7 @@ while True:
     if command == 1:
         intro()
         first_scene()
+        second_scene()
         last_scene()
     elif command == 2:
         break
