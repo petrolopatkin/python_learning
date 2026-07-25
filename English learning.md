@@ -610,6 +610,28 @@ pleadingly - умоляюще
 mingle - общаться
 
 irrepressible - неудержимый, неукротимый
+
+blithely - беспечно, беззаботно
+
+canvass - обсуждать, собирать мнения
+
+liable - подверженный, ответственный
+
+hold aloof - держаться в стороне
+
+oppresion - угнетение
+
+contemplate - обдумывать, рассматривать
+
+eloquence - красноречие
+
+sordid - грязный, низкий(поступок), неприятный
+
+spurt - всплеск, резкий рывок
+
+vaguely - смутно, неясно
+
+
 # Common collocations
 energy consumption - потребление энергии
 
@@ -648,6 +670,20 @@ the demise of something - конец чего-то
 indefatigable worker - неутомимый работник
 
 irrepressible enegry - неиссякаемая энергия
+
+biding one's time - выжидать подходящий момент
+
+political oppression - политическое угнетение
+
+be liable to do something - быть подверженным к тому чтобы сделать что-то
+
+contemplate doing something - обдумывать какое-то действие
+
+eloquent speech - красноречивое выступление
+
+remeber vaguely - смутно помнить
+
+a sordid past - неприятное прошлое
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -856,3 +892,11 @@ Parents play an important role in shaping their children's behviour - родит
 The Internet helps me to stay in touch with my family - интернет помогает мне оставаться на связи со своей семьей
 
 English had become an essential part of my daily life - английский стал неотьемлимой частью моей жизни
+
+It isn't convenient to cook in a small kitchen - это не очень удобно готовить в маленькой кухне
+
+Many students look for food at an affordable price - многие студенты ищут еду по доступной цене
+
+Leaders should not abuse their power - лидеры не должны злоупотреблять властью
+
+I am contemplating moving to another country - я раздумываю над переездом в другую страну
