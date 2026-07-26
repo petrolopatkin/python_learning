@@ -631,6 +631,30 @@ spurt - всплеск, резкий рывок
 
 vaguely - смутно, неясно
 
+enchanting - очаровательный, волшебный
+
+vibrant - яркий, живой, энергичный
+
+lush - густой, пышный, зеленый
+
+ferocity - свирепость, жестокость
+
+depletion - истощение
+
+plug - подключать; рекламировать/продвигать
+
+muffle - приглушить, заглушить
+
+topple - свергнуть, опрокинуть
+
+unforeseen - непредвиденный
+
+undesirable - нежелательный
+
+shrewdly - хитро, проницательно
+
+malignity - злоба
+
 
 # Common collocations
 energy consumption - потребление энергии
@@ -684,6 +708,18 @@ eloquent speech - красноречивое выступление
 remeber vaguely - смутно помнить
 
 a sordid past - неприятное прошлое
+
+a vibrant culture - яркая культура
+
+resource depletion - истощение ресурса
+
+topple a leader - свергнуть лидера
+
+unforeseen consequences - непредвидинные последствия
+
+shrewd decision - хитрое решение
+
+
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -900,3 +936,12 @@ Many students look for food at an affordable price - многие студент
 Leaders should not abuse their power - лидеры не должны злоупотреблять властью
 
 I am contemplating moving to another country - я раздумываю над переездом в другую страну
+
+I find it difficult to choose clothes - я нахожу сожным выбирать вещи
+
+Students don't always have much choice when they live in dormitory - у студентов не так много выбора когда они живут в общежитии
+
+I eat at restaurants from time to time - я ем в ресторанах время от времени
+
+When it comes to clothes, I usually shop online - когда речь заходит о одежде, я обычно покупаю ее онлайн
+
