@@ -655,7 +655,27 @@ shrewdly - хитро, проницательно
 
 malignity - злоба
 
+flanked - окруженный
 
+explicit - ясный, конкретный; откровенный
+
+flaw - недостаток, дефект
+
+off the table - исключено, больше не рассматриваеться
+
+thwart - помешать, сорвать планы
+
+stupefy - ошеломить, шокировать
+
+frisk - обыскивать; резвиться, прыгать
+
+sternly - строго, сурово
+
+tumult - шум, беспорядок, хаос
+
+bonfire - костер
+
+stiffly - неподвижно, напряженно, неестественно
 # Common collocations
 energy consumption - потребление энергии
 
@@ -719,7 +739,13 @@ unforeseen consequences - непредвидинные последствия
 
 shrewd decision - хитрое решение
 
+a major flaw in something - большой недостаток в чем-то
 
+put something off the table - исключить что-то
+
+thwart someone's plans - сорвать чьи-то планы
+
+be flanked by - быть окруженным
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -945,3 +971,10 @@ I eat at restaurants from time to time - я ем в ресторанах вре�
 
 When it comes to clothes, I usually shop online - когда речь заходит о одежде, я обычно покупаю ее онлайн
 
+Music can have a profound impact on people's lives - музыка может иметь большое влияние на жизнь людей
+
+For many musicians, music is their main income - для большинства музыкантов музыка основной источник дохода
+
+Sporting events can bring people together - спортивные меропрятия могут обьединить людей
+
+Nature place a crucial role in our survival - природа играет важную роль в нашем выживании
