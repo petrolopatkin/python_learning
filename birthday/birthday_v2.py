@@ -14,9 +14,10 @@ def intro():
 Нажми на ENTER, чтобы продолжить.
 ========================================================================================"""
     image1 = Image.open('birthday/test.jpg')
-    image1.show()
     slow_print(intro_message)
-    input()
+    time.sleep(1)
+    image1.show()
+    input("Нажми ENTER чтобы продолжить ")
     time.sleep(2)
 
 def first_scene():
@@ -27,7 +28,10 @@ def first_scene():
 1. Открыть сразу
 2. Потрясти коробку
 ============================================="""
+     box_image = Image.open("birthday/birthday_box.jpg")
      slow_print(first_scene_message)
+     time.sleep(1)
+     box_image.show()
      try:
       choice = int(input("> "))
      except ValueError:
@@ -107,7 +111,10 @@ def third_scene():
 Вместе с подарком..
 Попробуй выбрать другой вариант
 """
+         crushed_box1 = Image.open("birthday/crushed_box1.jpg")
          slow_print(choice1)
+         time.sleep(1)
+         crushed_box1.show()
       elif choice == 2:
          choice2 = """Ты выбрал дрель
 Ты попробовать просверлить дырку в коробке..
@@ -115,14 +122,20 @@ def third_scene():
 Вместе с подарком и столом..
 Я думаю стоит попробовать другой вариант
 """
+         crushed_box2 = Image.open("birthday/crushed_box2.jpg")
          slow_print(choice2)
+         time.sleep(1)
+         crushed_box2.show()
       elif choice == 3:
          choice3 = """Ты выбрал универсальную открывашку.
 После пары неудачных попыток у тебя получилось открыть коробку.
 И внутри..
 Еще одна коробка;)
 """
+         box_in_box = Image.open("birthday/box_in_box.jpg")
          slow_print(choice3)
+         time.sleep(1)
+         box_in_box.show()
          time.sleep(2)
          break
       else:
@@ -140,7 +153,10 @@ def fourth_scene():
 3. Открыть руками
 =======================================================
 """
+    small_box = Image.open("birthday/small_box.jpg")
     slow_print(fourth_scene_message)
+    time.sleep(1)
+    small_box.show()
     try:
        choice = int(input("> "))
     except ValueError:

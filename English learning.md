@@ -676,6 +676,26 @@ tumult - шум, беспорядок, хаос
 bonfire - костер
 
 stiffly - неподвижно, напряженно, неестественно
+
+chops - талант, умение
+
+intricate - сложный, детально разработанный
+
+rugged - суровый, неровный(местность);прочный, устойчивый; мужественный
+
+lest - чтобы не, иначе
+
+clamour - требовать
+
+scoundrel - негодяй
+
+flimsy - слабый, ненадежный, хрупкий
+
+vile - мерзкий, отвратительный, подлый
+
+contemptible - презренный
+
+lamentation - жалоба, скорбь, печаль
 # Common collocations
 energy consumption - потребление энергии
 
@@ -746,6 +766,16 @@ put something off the table - исключить что-то
 thwart someone's plans - сорвать чьи-то планы
 
 be flanked by - быть окруженным
+
+intricate details - сложные детали
+
+rugged landscape - неровная местность
+
+flimsy argument - ненадежный аргумент
+
+a clamour for change - требование изменений
+
+vile behaviour - мерзкое поведение
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -978,3 +1008,9 @@ For many musicians, music is their main income - для большинства �
 Sporting events can bring people together - спортивные меропрятия могут обьединить людей
 
 Nature place a crucial role in our survival - природа играет важную роль в нашем выживании
+
+I feel comfortable around my close friends - я чувствую себя комфортно в окружении близких друзей
+
+Technology cannot replace meaningful fiendship - технологии не могут заменить ценную дружбу
+
+A sense of doubt started to grow among the animals - чувство сомнения начало расти среди животных
