@@ -104,7 +104,9 @@ patch - исправление
 
 scaling - масштабирование, увеличение
 
+mesh - сетка
 
+solidify - сделать обьект более твердым
 # General vocabulary
 
 embark - начать, отправиться
@@ -696,6 +698,30 @@ vile - мерзкий, отвратительный, подлый
 contemptible - презренный
 
 lamentation - жалоба, скорбь, печаль
+
+hasty - поспешный
+
+mesh - сетка
+
+solidify - затвердеть, укрепить
+
+outrage - возмущение
+
+incite - подстрекать, провоцировать
+
+soothing - успокаивающий
+
+superannuated - устаревший(из-за возраста)
+
+falter - колебатьс, сбиваться
+
+satisfactorily - удовлетворительно, достаточно хорошо
+
+rheumy - слезящийся, воспаленный
+
+frugally - экономно, бережливо
+
+insoluble - нерешаемый
 # Common collocations
 energy consumption - потребление энергии
 
@@ -776,6 +802,18 @@ flimsy argument - ненадежный аргумент
 a clamour for change - требование изменений
 
 vile behaviour - мерзкое поведение
+
+a hasty decision - поспешное решение
+
+public outrage - публичное недовольство
+
+soothing music - успокаювающая музыка
+
+falter under pressure - колебаться под давлением
+
+live frugally - экономно жить
+
+an insoluble problem - нерешаемая проблема
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1014,3 +1052,11 @@ I feel comfortable around my close friends - я чувствую себя ком
 Technology cannot replace meaningful fiendship - технологии не могут заменить ценную дружбу
 
 A sense of doubt started to grow among the animals - чувство сомнения начало расти среди животных
+
+I really enjoy mild weather - я действительно наслаждаюсь прохладной погодой
+
+Castles are important part of historical heritage - замки это важная часть исторического наследия
+
+It was impossible to tell two charachters apart - невозможно было разлечить двух персонажей
+
+The novel was a reflection of society - роман был отражением общества

@@ -1,6 +1,7 @@
 import time
 from PIL import Image
 import pygame
+import os
 pygame.mixer.init()
 magic_appearance = pygame.mixer.Sound("birthday/sounds/magic_appearance.wav")
 magic_appearance2 = pygame.mixer.Sound("birthday/sounds/magic_appearance2.wav")
@@ -17,18 +18,20 @@ def slow_print(message):
    print()
 
 
+def clear():
+   os.system("cls")
+
+
 def intro():
     intro_message = """========================================================================================
       🎉С Днем рождения!!🎉
 Привет, Пап. Сегодня я подготовил для тебя небольшое представление в честь дня рождения 
-Нажми на ENTER, чтобы продолжить.
 ========================================================================================"""
     image1 = Image.open('birthday/pictures/test.jpg')
     slow_print(intro_message)
     time.sleep(1)
     magic_appearance.play()
     image1.show()
-    input("Нажми ENTER чтобы продолжить ")
     time.sleep(2)
 
 def first_scene():
@@ -130,6 +133,7 @@ def third_scene():
 """
          crushed_box1 = Image.open("birthday/pictures/crushed_box1.jpg")
          slow_print(choice1)
+         wrong_answer.play()
          time.sleep(1)
          hammer.play()
          crushed_box1.show()
@@ -142,6 +146,7 @@ def third_scene():
 """
          crushed_box2 = Image.open("birthday/pictures/crushed_box2.jpg")
          slow_print(choice2)
+         wrong_answer.play()
          time.sleep(1)
          drill.play()
          crushed_box2.show()
@@ -153,6 +158,7 @@ def third_scene():
 """
          box_in_box = Image.open("birthday/pictures/box_in_box.jpg")
          slow_print(choice3)
+         correct_answer.play()
          time.sleep(1)
          magic_appearance.play()
          box_in_box.show()
@@ -245,11 +251,22 @@ while True:
         continue
     if command == 1:
         intro()
+        input("Нажми на ENTER, чтобы продолжить ")
+        clear()
         first_scene()
+        input("Нажми на ENTER, чтобы продолжить ")
+        clear()
         second_scene()
+        input("Нажми на ENTER, чтобы продолжить ")
+        clear()
         third_scene()
+        input("Нажми на ENTER, чтобы продолжить ")
+        clear()
         fourth_scene()
+        input("Нажми на ENTER, чтобы продолжить ")
+        clear()
         last_scene()
+        clear()
     elif command == 2:
         break
     else:
