@@ -722,6 +722,20 @@ rheumy - слезящийся, воспаленный
 frugally - экономно, бережливо
 
 insoluble - нерешаемый
+
+testament - доказательство, свидетельство
+
+cave in - обрущиться, сдаться под давлением
+
+sob - рыдать
+
+dwell - долго думать о чем-то
+
+guffaw - громко смеяться
+
+awning - навес(над окном, дверью, домом)
+
+
 # Common collocations
 energy consumption - потребление энергии
 
@@ -814,6 +828,12 @@ falter under pressure - колебаться под давлением
 live frugally - экономно жить
 
 an insoluble problem - нерешаемая проблема
+
+a thought-provoking book - книга заставляющая задуматься
+
+dwell on the past - долго думать о прошлом
+
+a testament to something - свидетельство чего-то  
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
