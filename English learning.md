@@ -735,6 +735,18 @@ guffaw - громко смеяться
 
 awning - навес(над окном, дверью, домом)
 
+deviously - хитро, коварно
+
+wince - вздрогнуть
+
+a tad - немного, чуть-чуть
+
+stain - пятно; испачкать
+
+beam - луч (света); широко улыбаться; балка(строительство)
+
+proximity - близость, нахождение рядом
+
 
 # Common collocations
 energy consumption - потребление энергии
@@ -834,6 +846,16 @@ a thought-provoking book - книга заставляющая задумать�
 dwell on the past - долго думать о прошлом
 
 a testament to something - свидетельство чего-то  
+
+close proximity to - близость к чему-то
+
+a beam of light - луч света
+
+coffie stain - кофейное пятно
+
+a tad difficult - немного сложно
+
+
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1080,3 +1102,7 @@ Castles are important part of historical heritage - замки это важна
 It was impossible to tell two charachters apart - невозможно было разлечить двух персонажей
 
 The novel was a reflection of society - роман был отражением общества
+
+The book was a tad difficult at first - книга была немного сложной в начале
+
+The hotel is in close proximity to the airport - отель находиться в близости аэропорта
