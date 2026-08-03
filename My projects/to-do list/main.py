@@ -23,8 +23,8 @@ def delete_task():
     with open("to-do list/tasks.txt") as file:
      tasks = file.readlines()
      if not tasks == 0:
-        print("There are no tasks yet")
-        return
+         print("There are no tasks yet")
+         return
      for task in tasks:
         print(f"{number}. {task}", end="\n")
         number += 1
