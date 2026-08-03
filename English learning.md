@@ -747,7 +747,31 @@ beam - луч (света); широко улыбаться; балка(стро
 
 proximity - близость, нахождение рядом
 
+commitment - преданность, обязательство
 
+envy - зависть, завидовать
+
+impeccable - безупречный
+
+cognizant(of) - осознающий, хорошо понимающий
+
+tangible - осязаемый, ощутимый, реальный
+
+ingrained - глубоко укренившийся
+
+distraught - убитый горем, крайне расстроенный
+
+sulk - дуться, обтжаться
+
+hue - оттенок, цвет
+
+feverish - лихорадочный
+
+afield - далеко; в стороне
+
+prohibitively - непомерно, чрезмерно
+
+elicitation - получение информации
 # Common collocations
 energy consumption - потребление энергии
 
@@ -855,7 +879,17 @@ coffie stain - кофейное пятно
 
 a tad difficult - немного сложно
 
+feel the pinch - испытывать трудности(финансовые)
 
+make a commitment - взять на себя обязательство
+
+fully cognizant of - полностью осознвать
+
+tangivle progress - ощутимый прогресс
+
+impeccable maners - безупречные манеры
+
+ingrained habit - глубоко укоренившаяся привычка
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1106,3 +1140,7 @@ The novel was a reflection of society - роман был отражением �
 The book was a tad difficult at first - книга была немного сложной в начале
 
 The hotel is in close proximity to the airport - отель находиться в близости аэропорта
+
+Parents are a role model for their children - родители это идеал для своих детей
+
+Digital books have already replaced phusical books to some extent - электронные книги заменили изические в какой-то степени
