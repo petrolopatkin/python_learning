@@ -772,6 +772,16 @@ afield - далеко; в стороне
 prohibitively - непомерно, чрезмерно
 
 elicitation - получение информации
+
+remorse - раскаяние
+
+latter - второй; последний из упомянутых
+
+gross - отвратительный, мерзкий, грубый
+
+gaudy - безвкусно яркий
+
+shrugging - пожимать плечами
 # Common collocations
 energy consumption - потребление энергии
 
@@ -890,6 +900,10 @@ tangivle progress - ощутимый прогресс
 impeccable maners - безупречные манеры
 
 ingrained habit - глубоко укоренившаяся привычка
+
+feel remorse - испытывать раскаяние
+
+the former and the latter - первый и второй
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1144,3 +1158,7 @@ The hotel is in close proximity to the airport - отель находиться
 Parents are a role model for their children - родители это идеал для своих детей
 
 Digital books have already replaced phusical books to some extent - электронные книги заменили изические в какой-то степени
+
+Big cities have advantages when it comes to education and employment - большие города имеют преимущество когда речь идет о обучение и возможностях работы
+
+He made his decision based on his past experience - он принял решение основываясь на прошлом опыте
