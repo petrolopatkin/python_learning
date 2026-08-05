@@ -782,6 +782,20 @@ gross - отвратительный, мерзкий, грубый
 gaudy - безвкусно яркий
 
 shrugging - пожимать плечами
+
+immerse - погружаться, полностью вовлекаться
+
+depict - изображать, показывать, описывать
+
+mundane - обычный, повседневный, скучный
+
+subdue - подавять, усмирять, сдерживать
+
+grin - ухмыляться, ухмылка
+
+brutish - жестокий, грубый
+
+
 # Common collocations
 energy consumption - потребление энергии
 
@@ -904,6 +918,14 @@ ingrained habit - глубоко укоренившаяся привычка
 feel remorse - испытывать раскаяние
 
 the former and the latter - первый и второй
+
+fully immerse yourself - полностью погрузиться
+
+mundane tasks - повседневные задачи
+
+subdue emotions - подавлять эмоции
+
+
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1162,3 +1184,7 @@ Digital books have already replaced phusical books to some extent - электр
 Big cities have advantages when it comes to education and employment - большие города имеют преимущество когда речь идет о обучение и возможностях работы
 
 He made his decision based on his past experience - он принял решение основываясь на прошлом опыте
+
+When I read a good book, I become completely immersed in the story - когда я читаю хорошую книгу я полностью погружаюсь в историю
+
+This moment was a turning point for the main charchter because he started to understand people better - это был переломный момент для главного героя потому что он начал понимать людей лучше
