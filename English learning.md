@@ -795,7 +795,17 @@ grin - ухмыляться, ухмылка
 
 brutish - жестокий, грубый
 
+irreversible - необратимый
 
+dabble - заниматься чем-то поверхностно;пробовать
+
+inconspicuously - незаметно
+
+flamboyant - яркий, экстравагантный
+
+ajar - приоткрытый
+
+pesky - надоедливый, раздражающий
 # Common collocations
 energy consumption - потребление энергии
 
@@ -925,7 +935,13 @@ mundane tasks - повседневные задачи
 
 subdue emotions - подавлять эмоции
 
+irreversible damage - необратимый ущерб
 
+dabble in something - немного заниматься чем-то
+
+move inconspicuously - двигаться незаметно
+
+leave the door ajar - оставить дверь приоткрытой
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1188,3 +1204,7 @@ He made his decision based on his past experience - он принял решен
 When I read a good book, I become completely immersed in the story - когда я читаю хорошую книгу я полностью погружаюсь в историю
 
 This moment was a turning point for the main charchter because he started to understand people better - это был переломный момент для главного героя потому что он начал понимать людей лучше
+
+Climate change can lead to irreversible damage to the environment - изменения климата могут привести к необратимому урону по окружающей среде
+
+I used to dabble in graphic design before focusing on programming - я пробовал немного заниматься графическим дизайном перед тем как сфокусироваться на программировании
