@@ -806,6 +806,14 @@ flamboyant - яркий, экстравагантный
 ajar - приоткрытый
 
 pesky - надоедливый, раздражающий
+
+composition - состав, структура
+
+steep - крутой, резкий
+
+sparked by - вызванный чем-то
+
+overlook - упускать из виду, не замечать
 # Common collocations
 energy consumption - потребление энергии
 
@@ -942,6 +950,12 @@ dabble in something - немного заниматься чем-то
 move inconspicuously - двигаться незаметно
 
 leave the door ajar - оставить дверь приоткрытой
+
+spark a debate - вызвать дискуссию
+
+a steep increase of a product - резкий рост продукта
+
+often overlooked - частно упускаемый из виду/игнорируемый
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
