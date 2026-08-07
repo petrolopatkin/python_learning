@@ -1,0 +1,3 @@
+07-08-2026|Entertaiment|Coffee|2.5
+07-08-2026|Products|Vegetables|5
+07-08-2026|Sport|Sneakers|50
