@@ -1,6 +1,3 @@
-import os
-print(os.getcwd())
-input()
 import pygame
 from PIL import Image
 import time
@@ -11,24 +8,24 @@ import sys
 def resource_path(relative_path):
     try:
         base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
+    except AttributeError:
+        base_path = os.path.dirname(os.path.abspath(__file__))
 
     return os.path.join(base_path, relative_path)
 
 
 pygame.mixer.init()
-magic_appearance = pygame.mixer.Sound("sounds/magic_appearance.wav")
-magic_appearance2 = pygame.mixer.Sound("sounds/magic_appearance2.wav")
-hammer = pygame.mixer.Sound("sounds/hammer_hit.wav")
-drill =  pygame.mixer.Sound("sounds/drill_sound_new.wav")
-second_box = pygame.mixer.Sound("sounds/appearance_for_second_box.wav")
-wrong_answer = pygame.mixer.Sound("sounds/wrong_answer.wav")
-correct_answer =  pygame.mixer.Sound("sounds/correct_answer.wav")
-song = pygame.mixer.Sound("sounds/background_song.mp3")
+magic_appearance = pygame.mixer.Sound(resource_path("sounds/magic_appearance.wav"))
+magic_appearance2 = pygame.mixer.Sound(resource_path("sounds/magic_appearance2.wav"))
+hammer = pygame.mixer.Sound(resource_path("sounds/hammer_hit.wav"))
+drill =  pygame.mixer.Sound(resource_path("sounds/drill_sound_new.wav"))
+second_box = pygame.mixer.Sound(resource_path("sounds/appearance_for_second_box.wav"))
+wrong_answer = pygame.mixer.Sound(resource_path("sounds/wrong_answer.wav"))
+correct_answer =  pygame.mixer.Sound(resource_path("sounds/correct_answer.wav"))
+song = pygame.mixer.Sound(resource_path("sounds/background_song.mp3"))
 def slow_print(message):
    for letter in message:
-      print(letter, end="")
+      print(letter, end="", flush= True)
       time.sleep(0.05)
    print()
 
@@ -42,7 +39,7 @@ def intro():
       🎉С Днем рождения!!🎉
 Привет, Пап. Сегодня я подготовил для тебя небольшое представление в честь дня рождения 
 ========================================================================================"""
-    image1 = Image.open('pictures/test.jpg')
+    image1 = Image.open(resource_path('pictures/test.jpg'))
     slow_print(intro_message)
     time.sleep(1)
     magic_appearance.play()
@@ -57,7 +54,7 @@ def first_scene():
 1. Открыть сразу
 2. Потрясти коробку
 ============================================="""
-     box_image = Image.open("pictures/birthday_box.jpg")
+     box_image = Image.open(resource_path("pictures/birthday_box.jpg"))
      slow_print(first_scene_message)
      time.sleep(1)
      magic_appearance2.play()
@@ -146,7 +143,7 @@ def third_scene():
 Вместе с подарком..
 Попробуй выбрать другой вариант
 """
-         crushed_box1 = Image.open("pictures/crushed_box1.jpg")
+         crushed_box1 = Image.open(resource_path("pictures/crushed_box1.jpg"))
          slow_print(choice1)
          wrong_answer.play()
          time.sleep(1)
@@ -159,7 +156,7 @@ def third_scene():
 Вместе с подарком и столом..
 Я думаю стоит попробовать другой вариант
 """
-         crushed_box2 = Image.open("pictures/crushed_box2.jpg")
+         crushed_box2 = Image.open(resource_path("pictures/crushed_box2.jpg"))
          slow_print(choice2)
          wrong_answer.play()
          time.sleep(1)
@@ -171,7 +168,7 @@ def third_scene():
 И внутри..
 Еще одна коробка;)
 """
-         box_in_box = Image.open("pictures/box_in_box.jpg")
+         box_in_box = Image.open(resource_path("pictures/box_in_box.jpg"))
          slow_print(choice3)
          correct_answer.play()
          time.sleep(1)
@@ -194,7 +191,7 @@ def fourth_scene():
 3. Открыть руками
 =======================================================
 """
-    small_box = Image.open("pictures/small_box.jpg")
+    small_box = Image.open(resource_path("pictures/small_box.jpg"))
     slow_print(fourth_scene_message)
     time.sleep(1)
     second_box.play()
