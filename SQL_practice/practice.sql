@@ -1,0 +1,67 @@
+CREATE TABLE expenses(
+    id INTEGER PRIMARY KEY,
+    date VARCHAR(50),
+    category VARCHAR(50),
+    item VARCHAR(50),
+    price DECIMAL
+);
+
+INSERT INTO expenses(
+    id,
+    date,
+    category,
+    item,
+    price
+)
+VALUES (1, '2026-08-08', 'Food', 'Carrot', 1.1),
+       (2, '2026-02-03', 'Transport', 'Bus ticket', 2.30),
+       (3, '2026-02-19', 'Entertainment', 'Cinema', 9.95),
+       (4, '2026-03-07', 'Shopping', 'T-shirt', 18.40),
+       (5, '2026-03-22', 'Food', 'Coffee', 3.65),
+       (6, '2026-04-11', 'Sport', 'Football', 14.90),
+       (7, '2026-05-02', 'Bills', 'Internet', 21.99),
+       (8, '2026-05-22', 'Entertainment', 'Football ticket', 10.52),
+       (9, '2026-06-26', 'Shopping', 'Backpack', 32.70),
+       (10, '2026-07-06', 'Shopping', 'Headphones', 51.89);
+
+
+-- Task 1
+SELECT *
+FROM expenses
+WHERE category = 'Food';
+-- Task 2
+SELECT * 
+FROM expenses
+ORDER BY price DESC;
+-- Task 3
+SELECT *
+FROM expenses 
+WHERE price < 10
+-- Task 4
+SELECT *
+FROM expenses
+WHERE price > 20
+-- Task 5
+SELECT *
+FROM expenses
+WHERE category = 'Food'
+ORDER BY price
+-- Task 6
+SELECT *
+FROM expenses
+WHERE category = 'Shopping'
+ORDER BY price DESC
+-- Task 7
+SELECT * 
+FROM expenses 
+WHERE price > 10
+ORDER BY price DESC
+-- Task 8
+SELECT * 
+FROM expenses 
+WHERE category = 'Food' or category = 'Sport'
+-- Task 9
+SELECT * 
+FROM expenses 
+WHERE category = 'Shopping' AND price > 20
+ORDER BY price DESC

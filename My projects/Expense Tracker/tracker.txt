@@ -1,3 +1,4 @@
-07-08-2026|Entertaiment|Coffee|2.5
-07-08-2026|Products|Vegetables|5
-07-08-2026|Sport|Sneakers|50
+08-08-2026|Entertainment|Coffee|3.5
+08-08-2026|Shopping|T-Shirt|10.0
+08-08-2026|Food|Products|25.0
+08-08-2026|Transport|Ticket|1.2

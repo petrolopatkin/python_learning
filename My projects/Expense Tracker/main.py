@@ -76,7 +76,64 @@ def delete_expense():
     show_expenses()
         
         
+def choose_category():
+    categories = {
+        1: "Food",
+        2: "Entertainment",
+        3: "Transport",
+        4: "Sport",
+        5: "Shopping",
+        6: "Bills",
+        7: "Other",
+        8: "All"
+    }
+    print("""
+1. Food
+2. Entertainment
+3. Transport
+4. Sport
+5. Shopping
+6. Bills
+7. Other
+8. All Categories""")
+    try:
+     choice = int(input("Choose a category: "))
+    except ValueError:
+        print("Please enter a number")
+        return None
+    if choice in categories:
+        return categories[choice]
+    else:
+        print("You have chosen wrong category, try again!")
+        return None
 
+
+def show_category():
+    selected_category = choose_category()
+    if selected_category is None:
+        return 
+    elif selected_category == "All":
+        show_expenses()
+        return
+    with open("My projects/Expense Tracker/tracker.txt", "r") as file:
+        cat = file.readlines()
+        if not cat:
+            print("There are no expenses yet")
+            return
+        found = False
+        for line in cat:
+         line = line.strip()
+         date, category, item, price = line.split("|")
+         if category == selected_category:
+             found = True
+             print(f"""================================
+Date: {date}
+Category: {category}
+Item: {item}
+Price: {price}""")
+        if not found:
+             print("There is no expense in this category yet")
+            
 
 while True:
     print("""
@@ -84,7 +141,8 @@ while True:
 2. Add expense
 3. Show total spent
 4. Delete expense
-5. Exit""")
+5. Show category
+6. Exit""")
     try:
         command = int(input("> "))
     except ValueError:
@@ -107,6 +165,10 @@ while True:
         input("Press ENTER to continue")
         clear()
     elif command == 5:
+        show_category()
+        input("Press ENTER to continue")
+        clear()
+    elif command == 6:
         break
     else:
         print("Wrong command, try again")
