@@ -814,6 +814,26 @@ steep - крутой, резкий
 sparked by - вызванный чем-то
 
 overlook - упускать из виду, не замечать
+
+compulsory - обязательный, принудительный
+
+condescending - снисходительный
+
+absentmindedly - рассеяно, задумавшись
+
+groggy - сонный, вялый
+
+saunter - неспешно идти, удаляться
+
+jaunty - бодрый, веселый
+
+stride - походка, шаг
+
+seesaw - качели
+
+inn - небольшая гостинница
+
+spur - стимул
 # Common collocations
 energy consumption - потребление энергии
 
@@ -956,6 +976,12 @@ spark a debate - вызвать дискуссию
 a steep increase of a product - резкий рост продукта
 
 often overlooked - частно упускаемый из виду/игнорируемый
+
+compulsory education - обязатеьное обучение
+
+a condescending attitude - снисходительное отношение
+
+look absentmindedly - рассеяно смотреть
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1222,3 +1248,7 @@ This moment was a turning point for the main charchter because he started to und
 Climate change can lead to irreversible damage to the environment - изменения климата могут привести к необратимому урону по окружающей среде
 
 I used to dabble in graphic design before focusing on programming - я пробовал немного заниматься графическим дизайном перед тем как сфокусироваться на программировании
+
+I have been working hard every day since I started programming - я сильно трудися каждый день с момента как начал программировать
+
+People are more likely to help others when they have a genuine motivation - люди более склонны помогать другим когда у них есть настоящая мотивация
