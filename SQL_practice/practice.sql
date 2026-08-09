@@ -65,3 +65,47 @@ SELECT *
 FROM expenses 
 WHERE category = 'Shopping' AND price > 20
 ORDER BY price DESC
+-- Agregate methods
+-- Task 1
+SELECT COUNT(*)
+FROM expenses
+-- Task 2
+SELECT SUM(price)
+FROM expenses
+-- Task 3
+SELECT MAX(price)
+FROM expenses
+-- Task 4
+SELECT MIN(price)
+FROM expenses
+-- Task 5
+SELECT AVG(price)
+FROM expenses
+-- Task 6
+SELECT SUM(price)
+FROM expenses
+WHERE category = 'Shopping'
+-- Task 7
+SELECT COUNT(*)
+FROM expenses
+WHERE category = 'Food'
+-- Task 8
+SELECT MAX(price)
+FROM expenses
+WHERE category = 'Food'
+-- Task 9
+SELECT SUM(price)
+FROM expenses
+WHERE category IN('Food', 'Shopping')
+-- Task 10
+SELECT AVG(price)
+FROM expenses 
+WHERE category = 'Entertainment' and price < 20
+-- Task 11
+SELECT SUM(price)
+FROM expenses
+WHERE price BETWEEN 5 AND 30
+-- Task 12
+SELECT AVG(price)
+FROM expenses
+WHERE category = 'Shopping' OR category ='Food'
