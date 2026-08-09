@@ -834,6 +834,26 @@ seesaw - качели
 inn - небольшая гостинница
 
 spur - стимул
+
+desperate - отчаянный
+
+foresee - предвидеть
+
+slumber - сон; дремать
+
+twitch - дергаться
+
+ooze - сочиться, просачиваться
+
+stiffen - напрячься, затвердеть
+
+dangle - висеть, свисать, болтаться
+
+combust - воспламеняться
+
+reluctant - неохотный
+
+
 # Common collocations
 energy consumption - потребление энергии
 
@@ -982,6 +1002,12 @@ compulsory education - обязатеьное обучение
 a condescending attitude - снисходительное отношение
 
 look absentmindedly - рассеяно смотреть
+
+be desperate for - отчаянно нуждаться в 
+
+foresee the future - предвидеть будущее
+
+reluctant decision - неохотное решение 
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1252,3 +1278,5 @@ I used to dabble in graphic design before focusing on programming - я проб�
 I have been working hard every day since I started programming - я сильно трудися каждый день с момента как начал программировать
 
 People are more likely to help others when they have a genuine motivation - люди более склонны помогать другим когда у них есть настоящая мотивация
+
+Some people work jobs they don't like just to have a roof over their heads - некоторые люди работают там где им не нравиться просто чтобы иметь крышу над головой
