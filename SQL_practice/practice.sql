@@ -109,3 +109,35 @@ WHERE price BETWEEN 5 AND 30
 SELECT AVG(price)
 FROM expenses
 WHERE category = 'Shopping' OR category ='Food'
+-- Advanced agregate methods GROUP BY, HAVING
+-- Task 1
+SELECT category, SUM(price)
+FROM expenses 
+GROUP BY category
+-- Task 2
+SELECT category, COUNT(*) AS count
+FROM expenses 
+GROUP BY category 
+-- Task 3
+SELECT category, AVG(price) AS average_price
+FROM expenses
+GROUP BY category
+-- Task 4
+SELECT category, SUM(price) AS sum
+FROM expenses
+GROUP BY category
+HAVING sum > 30
+-- Task 5
+SELECT category, COUNT(*) AS count
+FROM expenses
+GROUP BY category
+HAVING COUNT(*) > 1
+-- Task 6
+SELECT 
+category,
+COUNT(*) AS count,
+AVG(price) AS average_price,
+SUM(price) AS sum
+FROM expenses
+GROUP BY category
+HAVING count > 1 AND average_price > 10
