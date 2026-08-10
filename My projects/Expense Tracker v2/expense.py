@@ -24,13 +24,3 @@ Price: {self.price}""")
         self.price = new_price
 
 
-item1 = Expense("09-08-2026", "Food", "Orange", 1.35)
-item1.change_price(1.45)
-item1.show()
-print(item1.is_food())
-item2 = Expense("09-08-2026", "Entertainment", "Cinema ticket", 10.45)
-item2.show()
-item3 = Expense("08-08-2026", "Shopping", "T-Shirt", 15)
-item3.show()
-expense1 = Expense("08-08-2026", "Food", "Chicken", 3.25)
-print(expense1.is_food())
