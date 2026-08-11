@@ -141,3 +141,47 @@ SUM(price) AS sum
 FROM expenses
 GROUP BY category
 HAVING count > 1 AND average_price > 10
+-- new practice with advadnced aggregate methods
+-- task 1(easy)
+SELECT category, COUNT(*), SUM(price)
+FROM expenses
+GROUP BY category
+-- task 2(easy)
+SELECT category
+FROM expenses
+GROUP BY category
+HAVING SUM(price) > 30
+-- task 3(medium)
+SELECT category, 
+COUNT(*) as count,
+AVG(price) as average_price,
+SUM(price) as sum
+FROM expenses
+GROUP BY category
+HAVING COUNT(*) > 1
+-- task 4(medium)
+SELECT category
+FROM expenses
+GROUP BY category
+HAVING AVG(price) > 10
+-- task 5(hard)
+SELECT category,
+COUNT(*) as count,
+SUM(price) as sum,
+AVG(price) as average_price
+FROM expenses
+GROUP BY category
+HAVING COUNT(*) > 1 
+AND SUM(price) > 20
+AND AVG(price) > 5
+-- task 6(hard)
+SELECT category,
+COUNT(*) as count,
+MIN(price) as min_price,
+MAX(price) as max_price,
+AVG(price) as average_price,
+SUM(price) as sum
+FROM expenses
+GROUP BY category
+HAVING COUNT(*) > 1
+ORDER BY SUM(price) DESC
