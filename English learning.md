@@ -853,7 +853,27 @@ combust - воспламеняться
 
 reluctant - неохотный
 
+relish - получать удовольствие
 
+coax - уговаривать
+
+stake - ставка, риск, интерес в деле
+
+brooding - задумчивый
+
+fidget - ерзать, вертеться
+
+tuck in - заправить, заправлять
+
+concur - соглашаться
+
+boredom - скука, тоска
+
+minuscule - крошечный
+
+haughty - надменный
+
+squalor - нищета
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1280,3 +1300,9 @@ I have been working hard every day since I started programming - я сильно
 People are more likely to help others when they have a genuine motivation - люди более склонны помогать другим когда у них есть настоящая мотивация
 
 Some people work jobs they don't like just to have a roof over their heads - некоторые люди работают там где им не нравиться просто чтобы иметь крышу над головой
+
+We see advertisements every day whether we want or not - мы видим рекламу каждый день хотим мы этого или нет
+
+Consumers can be misled into buying unsiutable products - потребители могут быть введены в заблуждения покупая неподходящие продукты
+
+Most people pay little attention to advertisements - Большинство людей почти не придает значения рекламе
