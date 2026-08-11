@@ -1,0 +1,14 @@
+[
+  {
+    "Date": "09-08-2026",
+    "Category": "Food",
+    "Item": "Orange",
+    "Price": 1.45
+  },
+  {
+    "Date": "10-08-2026",
+    "Category": "Shopping",
+    "Item": "T-Shirt",
+    "Price": 18.5
+  }
+]

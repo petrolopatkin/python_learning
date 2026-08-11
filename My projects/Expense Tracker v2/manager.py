@@ -14,17 +14,17 @@ class ExpenseManager:
 
 
     def count_expenses(self):
-        number = 1
+        number = 0
         for expense in self.expenses:
             number += 1
-            return number
+        return number
 
 
     def total_price(self):
         total = 0
         for expense in self.expenses:
             total += expense.price
-            return total 
+        return total 
 
 
     
