@@ -874,6 +874,24 @@ minuscule - крошечный
 haughty - надменный
 
 squalor - нищета
+
+ponder - обдумывать, размышлять
+
+stilted - неестественный, скованный
+
+brusquely - резко, сухо, грубо
+
+sluggish - вялый, медлительный
+
+ought to - следовать
+
+resignedly - смирившись, покорно
+
+anguished - страдательный, мучительный
+
+rootless - безкоренной
+
+heron - цапля
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1028,6 +1046,14 @@ be desperate for - отчаянно нуждаться в
 foresee the future - предвидеть будущее
 
 reluctant decision - неохотное решение 
+
+ponder a question - обдумывать вопрос
+
+stilted conversation - скованный разговор
+
+answer brusquely - ответить сухо, резко
+
+sluggish response - медлительная реакция/ответ
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
