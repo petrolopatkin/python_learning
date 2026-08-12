@@ -13,12 +13,6 @@ Category: {self.category}
 Item: {self.item}
 Price: {self.price}""")
 
-    def is_food(self):
-        if self.category == "Food":
-            return True
-        else:
-            return False
-
 
     def change_price(self, new_price):
         self.price = new_price

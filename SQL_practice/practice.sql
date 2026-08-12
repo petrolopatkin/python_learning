@@ -24,7 +24,6 @@ VALUES (1, '2026-08-08', 'Food', 'Carrot', 1.1),
        (9, '2026-06-26', 'Shopping', 'Backpack', 32.70),
        (10, '2026-07-06', 'Shopping', 'Headphones', 51.89);
 
-
 -- Task 1
 SELECT *
 FROM expenses
@@ -185,3 +184,6 @@ FROM expenses
 GROUP BY category
 HAVING COUNT(*) > 1
 ORDER BY SUM(price) DESC
+--
+SELECT *
+FROM categories
