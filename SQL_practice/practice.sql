@@ -24,6 +24,23 @@ VALUES (1, '2026-08-08', 'Food', 'Carrot', 1.1),
        (9, '2026-06-26', 'Shopping', 'Backpack', 32.70),
        (10, '2026-07-06', 'Shopping', 'Headphones', 51.89);
 
+CREATE TABLE categories(
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(50),
+    description VARCHAR(100)
+);
+INSERT INTO categories(
+    id,
+    name,
+    description
+)
+VALUES (1, 'Food', 'Something to eat or to drink'),
+       (2, 'Shopping', 'Clothes or accessories'),
+       (3, 'Transport', 'Tickets for any kind of transport'),
+       (4, 'Entertainment', 'Any kind of recreation'),
+       (5, 'Sport', 'Sport objects and products'),
+       (6, 'Bills', 'Money for goods and services');
+
 -- Task 1
 SELECT *
 FROM expenses
@@ -187,3 +204,90 @@ ORDER BY SUM(price) DESC
 --
 SELECT *
 FROM categories
+-- join to of my tables
+SELECT 
+ex.date,
+c.id,
+c.name as category,
+ex.item,
+ex.price
+FROM expenses ex
+JOIN categories c
+    ON ex.category = c.name
+-- Task1
+SELECT 
+ex.item,
+ex.price,
+c.name as category
+FROM expenses ex
+JOIN categories c
+    ON ex.category = c.name
+-- Task 2
+SELECT *
+FROM expenses ex
+JOIN categories c
+    ON ex.category = c.name
+WHERE category == 'Food'
+-- Task 3
+SELECT 
+c.name as category,
+COUNT(*) as count,
+SUM(price) as sum
+FROM expenses ex
+JOIN categories c
+    ON ex.category = c.name
+GROUP BY category
+-- Task 4
+SELECT *
+FROM expenses ex
+JOIN categories c
+    ON ex.category = c.name
+GROUP BY category
+HAVING SUM(price) > 20
+-- Task 5
+SELECT 
+c.name as category,
+AVG(price) as average_price,
+MAX(price) as max_price,
+MIN(price) as min_price
+FROM expenses ex
+JOIN categories c
+    ON ex.category = c.name
+GROUP BY category
+ORDER BY price DESC
+-- Task 6
+SELECT 
+ex.date,
+c.id,
+c.name as category,
+ex.item,
+ex.price
+FROM expenses ex
+LEFT JOIN categories c
+    ON ex.category = c.name
+GROUP BY category
+HAVING 
+COUNT(*) > 1 
+AND SUM(price) > 30
+AND AVG(price) > 10
+-- Task 7
+SELECT 
+c.name as category,
+COUNT(*) as count,
+SUM(price) sum
+FROM expenses ex
+LEFT JOIN categories c
+    ON ex.category = c.name
+GROUP BY category
+-- Task 8
+SELECT 
+ex.date,
+c.id,
+c.name as category,
+ex.item,
+ex.price
+FROM expenses ex
+LEFT JOIN categories c
+    ON ex.category = c.name
+GROUP BY category
+ORDER BY price DESC
