@@ -892,6 +892,20 @@ anguished - страдательный, мучительный
 rootless - безкоренной
 
 heron - цапля
+
+craftily - хитро, ловко
+
+latch - защелка
+
+wristband - браслет
+
+scowl - хмуриться
+
+abrupty - резко, внезапно
+
+inflammation - воспаление
+
+nuisance - неприятность, досада 
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1054,6 +1068,12 @@ stilted conversation - скованный разговор
 answer brusquely - ответить сухо, резко
 
 sluggish response - медлительная реакция/ответ
+
+stop abruptly - резко остановиться
+
+cause inflammation - вызвать воспаление
+
+a major nuisance - большач неприятность
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
