@@ -5,8 +5,14 @@ class ExpenseManager:
        self.expenses = []
 
 
-    def add_expense(self, expense):
+    def add_expense(self):
+        date = input("Date: ")
+        category = input("Category: ")
+        item = input("Item: ")
+        price = float(input("Price: "))
+        expense = Expense(date, category, item, price)
         self.expenses.append(expense)
+        save_expenses(self.expenses)
 
 
     def show_expenses(self):
@@ -48,6 +54,7 @@ class ExpenseManager:
             warning_message = input("Are you sure you want to delete this expense? ").lower()
             if warning_message == "y":
              self.expenses.pop(del_message - 1)
+             print("Your deletion is successfull")
              save_expenses(self.expenses)
              break
             elif warning_message == "n":
