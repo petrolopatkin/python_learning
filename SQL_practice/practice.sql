@@ -291,3 +291,33 @@ LEFT JOIN categories c
     ON ex.category = c.name
 GROUP BY category
 ORDER BY price DESC
+-- subquaries
+-- Task 1
+SELECT *
+FROM expenses
+WHERE price > (SELECT AVG(price) FROM expenses) 
+-- Task 2
+SELECT *  
+FROM expenses
+WHERE price = 
+(SELECT MAX(price) AS max_price FROM expenses)
+-- Task 3
+SELECT *
+FROM expenses 
+GROUP BY category
+HAVING SUM(price) > (SELECT AVG(price) FROM expenses) 
+-- Task 4
+SELECT *
+FROM expenses
+WHERE category IN
+(SELECT name
+FROM categories
+WHERE name is 'Food')
+-- Task 5
+SELECT item,
+category,
+price
+FROM expenses 
+WHERE price > (SELECT AVG(price) as avg
+FROM expenses 
+WHERE category = expenses.category)
