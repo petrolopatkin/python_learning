@@ -906,6 +906,14 @@ abrupty - резко, внезапно
 inflammation - воспаление
 
 nuisance - неприятность, досада 
+
+morosely - угрюмо, мрачно, подавлено
+
+pugnacious - драчливый, агрессивный
+
+derogatory - пренебрежительный, оскробительный
+
+undermine - подрывать, ослаблять
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1074,6 +1082,14 @@ stop abruptly - резко остановиться
 cause inflammation - вызвать воспаление
 
 a major nuisance - большач неприятность
+
+look morosely - смотреть подавлено/мрачно
+
+a pugnacious attitude - агрессивное поведение
+
+derogatory comments - оскорбительные комментарии
+
+undermine confidence - ослаблять/подрывать уверенность
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1352,3 +1368,5 @@ We see advertisements every day whether we want or not - мы видим рек�
 Consumers can be misled into buying unsiutable products - потребители могут быть введены в заблуждения покупая неподходящие продукты
 
 Most people pay little attention to advertisements - Большинство людей почти не придает значения рекламе
+
+Other people's mistakes can help us avoid making the same mistakes ourselves - ошибки других людей могут помочь нам избежать повторения тех же ошибок нами
