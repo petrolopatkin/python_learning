@@ -321,3 +321,76 @@ FROM expenses
 WHERE price > (SELECT AVG(price) as avg
 FROM expenses 
 WHERE category = expenses.category)
+-- day 2 of practicing subqueries
+-- Task 1 
+SELECT *
+FROM expenses
+WHERE price < 
+(SELECT AVG(price)
+ FROM expenses) 
+ -- Task 2
+SELECT *
+FROM expenses
+WHERE price = (
+SELECT MAX(price) as max
+FROM expenses)
+-- Task 3
+SELECT *
+FROM expenses
+WHERE price = (
+SELECT MIN(price) as min
+FROM expenses)
+-- Task 4
+SELECT *
+FROM expenses
+WHERE price IS NOT (
+SELECT MAX(price) as max
+FROM expenses)
+-- Task 5
+SELECT *
+FROM expenses
+WHERE price > (
+SELECT MIN(price) as min
+FROM expenses)
+-- Task 6
+SELECT *
+FROM expenses
+WHERE price BETWEEN (
+SELECT AVG(price) as avg
+FROM expenses) 
+AND (
+SELECT MAX(price) as max
+FROM expenses) 
+-- correlated queries
+SELECT item,
+category,
+price
+FROM expenses as e
+WHERE price > (SELECT AVG(price)
+FROM expenses
+WHERE category = e.category)
+-- Task 1
+SELECT item,
+category,
+price
+FROM expenses as e
+WHERE price < (SELECT AVG(price)
+FROM expenses
+WHERE category = e.category)
+-- Task 2
+SELECT item,
+category,
+price
+FROM expenses as e
+WHERE price = (SELECT MAX(price)
+FROM expenses
+WHERE category = e.category)
+-- Task 3
+SELECT item,
+category, 
+price,
+(SELECT AVG(price)
+FROM expenses
+WHERE category = e.category) 
+as avg_price
+FROM expenses as e
