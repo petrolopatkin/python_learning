@@ -394,3 +394,106 @@ FROM expenses
 WHERE category = e.category) 
 as avg_price
 FROM expenses as e
+-- correlated subqueries day 2
+-- Task 1
+SELECT item,
+category, 
+price
+FROM expenses as e
+WHERE price > 
+(SELECT AVG(price)
+FROM expenses
+WHERE category = e.category)
+-- Task 2
+SELECT item,
+category, 
+price
+FROM expenses as e
+WHERE price <
+(SELECT AVG(price)
+FROM expenses
+WHERE category = e.category)
+-- Task 3
+SELECT item,
+category,
+price
+FROM expenses as e
+WHERE price = 
+(SELECT MIN(price)
+FROM expenses
+WHERE category = e.category)
+-- Task 4
+SELECT item,
+category,
+price
+FROM expenses as e
+WHERE price > 
+(SELECT AVG(price)
+FROM expenses)
+AND price < 
+(SELECT AVG(price)
+FROM expenses
+WHERE category = e.category)
+-- window functions 
+-- Task 1
+SELECT item, 
+category,
+price,
+AVG(price) OVER(
+PARTITION BY category) as category_avg
+FROM expenses
+-- Task 2
+SELECT item, 
+category,
+price,
+SUM(price) OVER(
+PARTITION BY category) as category_sum
+FROM expenses
+-- Task 3
+SELECT item,
+category,
+price,
+ROW_NUMBER() OVER(
+PARTITION BY category
+ORDER BY price ASC) as row_num
+FROM expenses
+-- Task 4
+SELECT item, 
+category,
+price,
+RANK() OVER(
+PARTITION BY category
+ORDER BY price DESC) as rank_num
+FROM expenses
+-- Task 5
+SELECT item, 
+category,
+price,
+DENSE_RANK() OVER(
+PARTITION BY category
+ORDER BY price DESC) as rank_num
+FROM expenses
+-- Task 6
+SELECT item,
+category,
+price,
+AVG(price) OVER(
+PARTITION BY category) as avg_category,
+SUM(price) OVER(
+PARTITION BY category) as sum_category,
+RANK() OVER(
+PARTITION BY category
+ORDER BY PRICE DESC) as rank_num
+FROM expenses
+-- window functions + subqueries
+-- Task
+SELECT *
+FROM
+(SELECT item,
+category,
+price,
+RANK() OVER(
+PARTITION BY category
+ORDER BY price DESC) as rank_num
+FROM expenses)
+WHERE rank_num == 1
