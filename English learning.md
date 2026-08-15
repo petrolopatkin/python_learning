@@ -914,6 +914,22 @@ pugnacious - драчливый, агрессивный
 derogatory - пренебрежительный, оскробительный
 
 undermine - подрывать, ослаблять
+
+derision - насмешка, презрение, издевательство
+
+thud - глухо удариться/упасть
+
+squawk - кричать(пронзительно)
+
+quiver - дрожать
+
+reversal - изменение, разворот ситуации, смена решения
+
+thong - ремешок; стринги
+
+klin - печь для обжига
+
+inoculate - прививать
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1090,6 +1106,12 @@ a pugnacious attitude - агрессивное поведение
 derogatory comments - оскорбительные комментарии
 
 undermine confidence - ослаблять/подрывать уверенность
+
+inoculate someone against - прививать кого-то против
+
+a sudden reversal - резкое изменение
+
+quiver with fear - дрожать от страха
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1370,3 +1392,9 @@ Consumers can be misled into buying unsiutable products - потребители
 Most people pay little attention to advertisements - Большинство людей почти не придает значения рекламе
 
 Other people's mistakes can help us avoid making the same mistakes ourselves - ошибки других людей могут помочь нам избежать повторения тех же ошибок нами
+
+Learning from mistakes is important. In other words, we can use our failures to become better - учиться на ошибах важно. другими словами, мы можем использовать наши неудачи чтобы стать лучше
+
+Some people change job to improve their careers. To puy it another way, they are looking for better opportunities - некоторые люди меняют работы чтобы улучшить свою карьеру. если выразиться иначе они ищут лучшие возможности
+
+It sounds as if you really enjoyed reading the book - звучит так будто тебе реально понравилость читать эту книгу
