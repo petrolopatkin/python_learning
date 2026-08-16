@@ -496,4 +496,87 @@ RANK() OVER(
 PARTITION BY category
 ORDER BY price DESC) as rank_num
 FROM expenses)
-WHERE rank_num == 1
+WHERE rank_num == 1 
+-- CTE practice
+-- Task 1
+WITH CTE1 AS
+(SELECT 
+item,
+category,
+price
+FROM expenses
+)
+SELECT *
+FROM CTE1
+-- Task 2
+WITH CTE1 AS
+(SELECT 
+item,
+category,
+price
+FROM expenses
+WHERE price > 10
+)
+SELECT *
+FROM CTE1
+-- Task 3 CTE + AVG
+WITH CTE1 AS
+(SELECT 
+category,
+AVG(price) avg_price
+FROM expenses e
+WHERE category = e.category
+GROUP BY category
+)
+SELECT *
+FROM CTE1
+-- Task  4 CTE + Window function
+WITH CTE1 AS
+(SELECT 
+item,
+category,
+price,
+RANK() OVER(
+PARTITION BY category
+ORDER BY price DESC) as rank_num
+FROM expenses
+)
+SELECT *
+FROM CTE1
+WHERE rank_num = 1
+-- Task 5 CTE + Window function + filtration
+WITH CTE1 AS
+(SELECT 
+item,
+category,
+price,
+RANK() OVER(
+PARTITION BY category
+ORDER BY price DESC) as rank_num
+FROM expenses
+)
+SELECT *
+FROM CTE1
+WHERE rank_num <= 2
+-- Task 6
+WITH CTE1 AS
+(SELECT category,
+AVG(price) AS avg_price
+FROM expenses
+GROUP BY category
+),
+CTE2 AS
+(SELECT item,
+category,
+price
+FROM expenses
+)
+SELECT 
+c2.item,
+c2.category,
+c2.price,
+c1.avg_price
+FROM CTE1 c1
+JOIN CTE2 c2
+    ON c1.category = c2.category
+WHERE c2.price > c1.avg_price
