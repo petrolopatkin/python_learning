@@ -930,6 +930,26 @@ thong - ремешок; стринги
 klin - печь для обжига
 
 inoculate - прививать
+
+cue - сигнал, подсказка
+
+ransack - обыскивать
+
+preponderance - перобладание, перевес, преимущество
+
+toiletries - средства личной гигиены
+
+fuss - суета, возня
+
+hoosegow - тюрьма
+
+nibble - грызть, откусывать
+
+raptly - завороженно
+
+reprehensible - предосудительный, заслуживающий осуждения
+
+wryly - ироничный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1112,6 +1132,16 @@ inoculate someone against - прививать кого-то против
 a sudden reversal - резкое изменение
 
 quiver with fear - дрожать от страха
+
+the more the merrier - чем больше тем веселее
+
+smile wryly - иронично улыбаться
+
+socially reprehensible - заслуживающий социального осуждения
+
+nibble a piece of bread - грызть кусок хлеба
+
+the preponderence of evidence - преимущество доказательств
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1398,3 +1428,7 @@ Learning from mistakes is important. In other words, we can use our failures to 
 Some people change job to improve their careers. To puy it another way, they are looking for better opportunities - некоторые люди меняют работы чтобы улучшить свою карьеру. если выразиться иначе они ищут лучшие возможности
 
 It sounds as if you really enjoyed reading the book - звучит так будто тебе реально понравилость читать эту книгу
+
+Curley picked a fight with Lennie - Курли завязал драку с Ленни
+
+Oh come to think of it, I completly forgot to serve dessert - если подумать, я забыл подать дессерт
