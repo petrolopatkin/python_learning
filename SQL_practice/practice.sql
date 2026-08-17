@@ -580,3 +580,48 @@ FROM CTE1 c1
 JOIN CTE2 c2
     ON c1.category = c2.category
 WHERE c2.price > c1.avg_price
+-- Lead and Lag window functions
+-- Task 1
+SELECT 
+id,
+item, 
+category,
+price,
+LAG(price, 1, 0) OVER(PARTITION BY category 
+ORDER BY id DESC) as previous_price
+FROM expenses
+-- Task 2
+SELECT 
+item, 
+category,
+price,
+LAG(price, 1, 0) OVER(PARTITION BY category 
+ORDER BY price DESC) as price_difference
+FROM expenses
+-- Task 3
+SELECT 
+id,
+item, 
+price,
+LEAD(price, 1, 0) OVER(PARTITION BY category
+ORDER BY id DESC) as next_price
+FROM expenses
+-- Task 4
+SELECT 
+item, 
+category,
+price,
+LEAD(price, 1, 0) OVER(PARTITION BY category 
+ORDER BY price DESC) as previous_price,
+LAG(price, 1, 0) OVER(PARTITION BY category 
+ORDER BY price) as more_expensive_than_previous
+FROM expenses
+-- Task 5
+SELECT 
+item, 
+category,
+price,
+LAG(price, 1, 0) OVER(PARTITION BY category 
+ORDER BY price DESC) as previous_price
+FROM expenses
+WHERE price > previous_price
