@@ -607,21 +607,37 @@ LEAD(price, 1, 0) OVER(PARTITION BY category
 ORDER BY id DESC) as next_price
 FROM expenses
 -- Task 4
-SELECT 
-item, 
-category,
-price,
-LEAD(price, 1, 0) OVER(PARTITION BY category 
-ORDER BY price DESC) as previous_price,
-LAG(price, 1, 0) OVER(PARTITION BY category 
-ORDER BY price) as more_expensive_than_previous
-FROM expenses
+WITH expenses_with_previous AS(
+SELECT
+    item,
+    category,
+    price,
+    LAG(price, 1, 0) OVER(
+    PARTITION BY category
+    ORDER BY id) AS previous_price
+FROM expenses)
+SELECT
+    item, 
+    category,
+    price,
+    previous_price,
+    price > previous_price AS more_expensive_than_previous
+FROM expenses_with_previous
 -- Task 5
-SELECT 
-item, 
-category,
-price,
-LAG(price, 1, 0) OVER(PARTITION BY category 
-ORDER BY price DESC) as previous_price
+WITH expenses_with_previous AS(
+SELECT
+    item,
+    category,
+    price,
+    LAG(price, 1, 0) OVER(
+    PARTITION BY category
+    ORDER BY id) AS previous_price
 FROM expenses
+)
+SELECT
+    item, 
+    category,
+    price,
+    previous_price
+FROM expenses_with_previous
 WHERE price > previous_price

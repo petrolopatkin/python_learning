@@ -950,6 +950,22 @@ raptly - завороженно
 reprehensible - предосудительный, заслуживающий осуждения
 
 wryly - ироничный
+
+fling - швырнуть, бросить
+
+aloof - отстраненный, холодный(черта)
+
+meager - скудный, недостаточный
+
+keg - бочонок, бочка
+
+scornful - презрительный
+
+sullenness - угрюмость, мрачность, недовольство
+
+baloney - чушь, ерунда
+
+avert - отвести, предотвратить; отвернуть взгляд
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1142,6 +1158,14 @@ socially reprehensible - заслуживающий социального ос�
 nibble a piece of bread - грызть кусок хлеба
 
 the preponderence of evidence - преимущество доказательств
+
+avert a crisis - предотвратить кризис
+
+scornful look - презрительный взгляд
+
+meager salary - скудная зарпалата
+
+keep/stay aloof - быть/оставаться отстраненным
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1432,3 +1456,5 @@ It sounds as if you really enjoyed reading the book - звучит так буд
 Curley picked a fight with Lennie - Курли завязал драку с Ленни
 
 Oh come to think of it, I completly forgot to serve dessert - если подумать, я забыл подать дессерт
+
+I wish there were more hours in a day - я бы хотел чтобы в дне было больше часов
