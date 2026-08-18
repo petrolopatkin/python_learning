@@ -966,6 +966,22 @@ sullenness - угрюмость, мрачность, недовольство
 baloney - чушь, ерунда
 
 avert - отвести, предотвратить; отвернуть взгляд
+
+jeering - насмешливый, издевательский
+
+humming - гудящий, жужжащий
+
+feather - перо
+
+woe - горе, беда, несчастье
+
+earnestly - серьезно, искренне
+
+coarse - грубы(поверхность;язык)
+
+complacently - самодовольно
+
+contort - искажать
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1166,6 +1182,14 @@ scornful look - презрительный взгляд
 meager salary - скудная зарпалата
 
 keep/stay aloof - быть/оставаться отстраненным
+
+contort your face - искажать лицо
+
+smile complacently - самодовольно улыбаться
+
+coarse hair - грубые волосы
+
+speak earnestly - говорить исркенне
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
