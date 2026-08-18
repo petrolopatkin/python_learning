@@ -641,3 +641,92 @@ SELECT
     previous_price
 FROM expenses_with_previous
 WHERE price > previous_price
+-- day 2 of practicing lead and lag functions
+-- Task 1
+SELECT 
+item,
+category,
+price,
+LAG(price, 1, 0) OVER (PARTITION BY category
+ORDER BY id) AS previous_price
+FROM expenses
+-- Task 2
+SELECT 
+item,
+category,
+price,
+LEAD(price, 1, 0) OVER (PARTITION BY category
+ORDER BY id) AS next_price
+FROM expenses
+-- Task 3
+SELECT 
+item,
+category,
+price,
+LAG(price, 1, 0) OVER(
+PARTITION BY category
+ORDER BY id) as previous_price
+FROM expenses
+-- Task 4
+WITH more_expensive AS(
+SELECT item, 
+category, 
+price,
+LAG(price, 1, 0) OVER(
+PARTITION BY category
+ORDER BY id DESC) as previous_price
+FROM expenses)
+SELECT 
+item, 
+category, 
+price,
+previous_price
+FROM more_expensive
+WHERE price > previous_price
+-- first_value and last_value practice
+-- Task 1
+SELECT 
+item,
+category,
+price,
+FIRST_VALUE(price) OVER(
+PARTITION BY category 
+ORDER BY price DESC) as highest_price
+FROM expenses
+-- Task 2
+SELECT 
+item,
+category,
+price,
+FIRST_VALUE(price) OVER(
+PARTITION BY category 
+ORDER BY price DESC) as highest_price,
+FIRST_VALUE(price) OVER(
+PARTITION BY category 
+ORDER BY price DESC) - price as price_difference
+FROM expenses
+-- Task 3
+SELECT 
+item,
+category,
+price,
+LAST_VALUE(price) OVER(
+PARTITION BY category 
+ORDER BY price DESC
+ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+) as lowest_price
+FROM expenses
+-- Task 4
+SELECT 
+item,
+category,
+price,
+FIRST_VALUE(price) OVER(
+PARTITION BY category 
+ORDER BY price DESC) as highest_price,
+LAST_VALUE(price) OVER(
+PARTITION BY category 
+ORDER BY price DESC
+ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+) as lowest_price
+FROM expenses
