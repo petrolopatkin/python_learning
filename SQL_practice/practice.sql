@@ -730,3 +730,52 @@ ORDER BY price DESC
 ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
 ) as lowest_price
 FROM expenses
+-- NTH_value practice
+-- Task 1
+SELECT 
+item, 
+category,
+price,
+NTH_VALUE(price, 2)  OVER(
+PARTITION BY category ORDER BY price 
+ROWS BETWEEN UNBOUNDED PRECEDING 
+AND UNBOUNDED FOLLOWING) AS second_highest_price
+FROM expenses
+-- Task 2
+SELECT 
+item, 
+category,
+price,
+NTH_VALUE(price, 3) OVER(
+PARTITION BY category ORDER BY price DESC
+ROWS BETWEEN UNBOUNDED PRECEDING 
+AND UNBOUNDED FOLLOWING) AS third_lowest_price
+FROM expenses
+-- Task 3
+SELECT 
+item, 
+category,
+price,
+NTH_VALUE(price, 1) OVER(
+PARTITION BY category ORDER BY price 
+ROWS BETWEEN UNBOUNDED PRECEDING 
+AND UNBOUNDED FOLLOWING) AS lowest_price,
+NTH_VALUE(price, 3) OVER(
+PARTITION BY category ORDER BY price DESC
+ROWS BETWEEN UNBOUNDED PRECEDING 
+AND UNBOUNDED FOLLOWING) AS third_lowest_price
+FROM expenses
+-- Task 4
+SELECT 
+item, 
+category,
+price,
+NTH_VALUE(price, 1)  OVER(
+PARTITION BY category ORDER BY price
+ROWS BETWEEN UNBOUNDED PRECEDING 
+AND UNBOUNDED FOLLOWING) AS cheapest_price,
+NTH_VALUE(price, 2)  OVER(
+PARTITION BY category ORDER BY price
+ROWS BETWEEN UNBOUNDED PRECEDING 
+AND UNBOUNDED FOLLOWING) AS second_cheapest_price
+FROM expenses
