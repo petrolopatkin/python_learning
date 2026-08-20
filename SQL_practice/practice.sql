@@ -779,3 +779,133 @@ PARTITION BY category ORDER BY price
 ROWS BETWEEN UNBOUNDED PRECEDING 
 AND UNBOUNDED FOLLOWING) AS second_cheapest_price
 FROM expenses
+-- practice
+-- Task 1
+SELECT 
+item, 
+category,
+price,
+NTH_VALUE(price, 2) OVER(
+PARTITION BY category
+ORDER BY price DESC
+ROWS BETWEEN UNBOUNDED PRECEDING 
+AND UNBOUNDED FOLLOWING) as second_cheapest_price
+FROM expenses
+-- Task 2
+SELECT
+item, 
+category,
+price,
+NTH_VALUE(price, 3) OVER(
+PARTITION BY category
+ORDER BY price DESC
+ROWS BETWEEN UNBOUNDED PRECEDING 
+AND UNBOUNDED FOLLOWING) as third_highest_price
+FROM expenses
+-- Task 3
+SELECT
+item, 
+category,
+price,
+LAST_VALUE(price) OVER(
+PARTITION BY category
+ORDER BY price DESC
+ROWS BETWEEN UNBOUNDED PRECEDING 
+AND UNBOUNDED FOLLOWING) as cheapest_price,
+FIRST_VALUE(price) OVER(
+PARTITION BY category
+ORDER BY price DESC) as most_expensive_price
+FROM expenses
+-- NTILE practice
+-- Task 1
+SELECT 
+id, 
+item,
+category,
+price,
+NTILE(4) OVER(ORDER BY price DESC)
+FROM expenses
+-- Task 2
+SELECT 
+id, 
+item,
+category,
+price,
+NTILE(3) OVER(
+PARTITION BY category
+ORDER BY price DESC)
+FROM expenses
+-- Task 3
+SELECT 
+id, 
+item,
+category,
+price,
+NTILE(3) OVER(
+PARTITION BY category
+ORDER BY price ASC)
+FROM expenses
+-- Task 4
+WITH quater_price AS(
+SELECT 
+id, 
+item,
+category,
+price,
+NTILE(4) OVER(
+PARTITION BY category
+ORDER BY price DESC) as price_groups
+FROM expenses
+)
+SELECT id, 
+item,
+category,
+price
+FROM quater_price
+WHERE price_groups = 1
+-- PERCENT_RANK practice
+-- Task 1
+SELECT 
+item,
+category,
+price,
+PERCENT_RANK() OVER(
+ORDER BY price ASC) as percent_rank
+FROM expenses
+-- Task 2
+SELECT 
+item,
+category,
+price,
+PERCENT_RANK() OVER(
+PARTITION BY category
+ORDER BY price ASC) as percent_rank
+FROM expenses
+-- Task 3
+SELECT 
+item,
+category,
+price,
+PERCENT_RANK() OVER(
+ORDER BY price DESC) as percent_rank
+FROM expenses
+-- Task 4
+WITH highest_category AS(
+SELECT 
+item, 
+category,
+price,
+NTILE(3) OVER(PARTITION BY category
+ORDER BY price DESC) as highest_percentage,
+PERCENT_RANK() OVER(
+PARTITION BY category
+ORDER BY price DESC) as percent_rank
+FROM expenses)
+SELECT 
+item,
+category,
+price,
+highest_percentage,
+percent_rank
+FROM highest_category
+WHERE percent_rank <= 0.20
