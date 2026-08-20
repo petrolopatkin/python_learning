@@ -1,4 +1,5 @@
 import requests
+import json
 def get_coordinates():
     city = input("Name a city: ")
     pr = {
@@ -36,10 +37,25 @@ def get_weather(city, latitude, longitude):
     apparent_temperature = weather_data["current"]["apparent_temperature"]
     relative_humididty = weather_data["current"]["relative_humidity_2m"]
     weather_code = weather_data["current"]["weather_code"]
-    print(f"Temperature: {temperature}°C")
-    print(f"Feels like: {apparent_temperature}°C")
-    print(f"Humidity: {relative_humididty}%")
-    print(f"Wind Speed: {wind_speed}km/h")
-    print(f"Wind Direction: {wind_direction}")
-    print(f"Wind Gusts: {wind_gusts}km/h")
-    print(f"Weather code: {weather_code}")
+    print(f"""---------{city}----------
+Temperature: {temperature}°C
+Feels like: {apparent_temperature}°C
+Humidity: {relative_humididty}%
+Wind Speed: {wind_speed}km/h
+Wind Direction: {wind_direction}
+Wind Gusts: {wind_gusts}km/h
+Weather code: {weather_code}
+-------------------------""")
+
+
+def save_city(city, latitude, longitude):
+    with open("My projects/api_project/cities.json", "r") as f:
+        cities = json.load(f)
+    saved_cities = {
+            "name": city,
+            "latitude": latitude,
+            "longitude": longitude
+        }
+    cities.append(saved_cities)
+    with open("My projects/api_project/cities.json", "w") as f:
+        json.dump(cities, f, indent=2)

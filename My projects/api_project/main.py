@@ -1,5 +1,7 @@
 from weather import get_coordinates
 from weather import get_weather
+from weather import save_city
+print(save_city("Prešov", 48.99923, 21.2355))
 result = None
 while True:
       print("""
