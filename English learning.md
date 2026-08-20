@@ -982,6 +982,18 @@ coarse - грубы(поверхность;язык)
 complacently - самодовольно
 
 contort - искажать
+
+belligerently - агрессивно
+
+shakily - дрожжа, неуверенно
+
+omission - пропуск, упущение
+
+inextricably - неразрывно, нераздельно
+
+blearily - сонно, мутно
+
+stoutness - крепкое/полное телосложение
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1190,6 +1202,12 @@ smile complacently - самодовольно улыбаться
 coarse hair - грубые волосы
 
 speak earnestly - говорить исркенне
+
+act belligerently - действовать агрессивно
+
+omission of information - пропуск информации
+
+intextricably linked - неразрывно связан
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1482,3 +1500,5 @@ Curley picked a fight with Lennie - Курли завязал драку с Ле
 Oh come to think of it, I completly forgot to serve dessert - если подумать, я забыл подать дессерт
 
 I wish there were more hours in a day - я бы хотел чтобы в дне было больше часов
+
+Technology and modern life are inextricably linked - технологии и продвинутая жизнь неразрывно связанны
