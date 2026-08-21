@@ -59,3 +59,21 @@ def save_city(city, latitude, longitude):
     cities.append(saved_cities)
     with open("My projects/api_project/cities.json", "w") as f:
         json.dump(cities, f, indent=2)
+
+
+def load_saved_cities():
+     with open("My projects/api_project/cities.json", "r") as f:
+         saved_cities = json.load(f)
+     for number, city in enumerate(saved_cities, start= 1):
+        print(f"{number}. {city['name']}")         
+
+
+def get_weather_for_saved_cities():
+        with open("My projects/api_project/cities.json", "r") as f:
+         saved_cities = json.load(f)
+        for number, city in enumerate(saved_cities, start= 1):
+         print(f"{number}. {city['name']}")
+        choice = int(input("Choose a city: ")) 
+        index = choice - 1
+        selected_city = saved_cities[index]
+        return selected_city["name"], selected_city["latitude"], selected_city["longitude"]
