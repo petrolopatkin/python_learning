@@ -994,6 +994,20 @@ inextricably - неразрывно, нераздельно
 blearily - сонно, мутно
 
 stoutness - крепкое/полное телосложение
+
+ceaseless - непрерывный, нескончаемый
+
+dank - сырой, влажный
+
+crevice - трещина, расщелина
+
+rigidity - жесткость, неподвижность
+
+spit - плевок; плевать
+
+strenuous - напряженный
+
+avarice - жадность, алчность
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1208,6 +1222,12 @@ act belligerently - действовать агрессивно
 omission of information - пропуск информации
 
 intextricably linked - неразрывно связан
+
+greed and avarice - жадность и алчность
+
+strenuous exercise - напряженное упражнение
+
+rigidity of the rules - жесткость правил
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1502,3 +1522,5 @@ Oh come to think of it, I completly forgot to serve dessert - если поду�
 I wish there were more hours in a day - я бы хотел чтобы в дне было больше часов
 
 Technology and modern life are inextricably linked - технологии и продвинутая жизнь неразрывно связанны
+
+I had a great teacher who explained things very clearly - у меня был учитель который обьснял вещи очень понятно
