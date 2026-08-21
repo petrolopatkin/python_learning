@@ -909,3 +909,115 @@ highest_percentage,
 percent_rank
 FROM highest_category
 WHERE percent_rank <= 0.20
+-- CUME_DIST practice
+-- Task 1
+SELECT 
+item, 
+category,
+price,
+CUME_DIST() OVER(ORDER BY price ASC)
+FROM expenses
+-- Task 2
+SELECT 
+item, 
+category,
+price,
+CUME_DIST() OVER(
+PARTITION BY category
+ORDER BY price ASC)
+FROM expenses
+-- Task 3
+SELECT 
+item, 
+category,
+price,
+CUME_DIST() OVER(
+PARTITION BY category
+ORDER BY price DESC)
+FROM expenses
+-- Task 4
+SELECT
+item, 
+category,
+price,
+NTILE(4) OVER(
+PARTITION BY category
+ORDER BY price) as quater_price,
+CUME_DIST() OVER(
+PARTITION BY category
+ORDER BY price) as cume_dist
+FROM expenses
+-- Task 5
+SELECT 
+item,
+category,
+price,
+PERCENT_RANK() OVER(
+PARTITION BY category
+ORDER BY price) as percent_rank,
+CUME_DIST() OVER(
+PARTITION BY category
+ORDER BY price) as cume_dist
+FROM expenses
+-- PERCENTILE_CONT and PERCENTILE_DISC pactice
+SELECT
+item,
+category,
+price,
+PERCENTILE_CONT(price, 0.5)OVER(ORDER BY price) as median
+FROM expenses
+-- Task 2
+SELECT
+item,
+category,
+price,
+PERCENTILE_CONT(price, 0.25)OVER(ORDER BY price),
+PERCENTILE_CONT(price, 0.5)OVER(ORDER BY price),
+PERCENTILE_CONT(price, 0.75)OVER(ORDER BY price)
+FROM expenses
+-- Task 3
+SELECT
+item,
+category,
+price,
+PERCENTILE_CONT(price, 0.5)OVER(ORDER BY price) as median,
+PERCENTILE_DISC(price, 0.5) OVER(ORDER BY price) as perc_disc
+FROM expenses
+-- Task 4
+SELECT
+item,
+category,
+price,
+PERCENTILE_CONT(price, 0.5)OVER(
+PARTITION BY category
+ORDER BY price) as median
+FROM expenses
+-- Task 5
+SELECT
+item,
+category,
+price,
+PERCENTILE_CONT(price, 0.9)OVER(
+PARTITION BY category
+ORDER BY price) as median
+FROM expenses
+-- Task 6
+SELECT
+item,
+category,
+price,
+PERCENTILE_CONT(price, 0.25)OVER(
+PARTITION BY category
+ORDER BY price) as median,
+PERCENTILE_CONT(price, 0.5)OVER(
+PARTITION BY category
+ORDER BY price),
+PERCENTILE_CONT(price, 0.75)OVER(
+PARTITION BY category
+ORDER BY price),
+PERCENTILE_CONT(price, 0.9)OVER(
+PARTITION BY category
+ORDER BY price)
+FROM expenses
+--
+SELECT sqlite_version();

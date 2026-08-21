@@ -8,5 +8,10 @@
     "name": "Kosice",
     "latitude": 48.71441,
     "longitude": 21.25802
+  },
+  {
+    "name": "Kiev",
+    "latitude": 59.5987,
+    "longitude": 55.2078
   }
 ]
