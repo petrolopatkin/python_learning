@@ -77,3 +77,50 @@ def get_weather_for_saved_cities():
         index = choice - 1
         selected_city = saved_cities[index]
         return selected_city["name"], selected_city["latitude"], selected_city["longitude"]
+
+
+def get_todays_forecast(city, latitude, longitude):
+    pr3 = {
+        "name": city,
+        "latitude": latitude,
+        "longitude": longitude,
+        "daily": "temperature_2m_max,temperature_2m_min,weather_code",
+        "forecast_days": 1,
+        "timezone": "auto"
+    }
+    r = requests.get('https://api.open-meteo.com/v1/forecast', params=pr3)
+    #print(r.status_code)
+    #print(r.json())
+    forecast_data = r.json()
+    max_temperature = forecast_data["daily"]["temperature_2m_max"][0]
+    min_temperature = forecast_data["daily"]["temperature_2m_min"][0]
+    weather_code = forecast_data["daily"]["weather_code"][0]
+    print(f"""---------{city}----------
+Max Temperature: {max_temperature}°C
+Min Temperature: {min_temperature}°C
+Weather Code: {weather_code}
+-------------------------""")
+
+
+def get_forecast_for_seven_days(city, latitude, longitude):
+    pr4 = {
+            "name": city,
+            "latitude": latitude,
+            "longitude": longitude,
+            "daily": "temperature_2m_max,temperature_2m_min,weather_code",
+            "forecast_days": 7,
+            "timezone": "auto"
+    }
+    r = requests.get('https://api.open-meteo.com/v1/forecast', params=pr4)
+    seven_forecast_data = r.json()
+    date = seven_forecast_data["daily"]["time"]
+    max_temperature = seven_forecast_data["daily"]["temperature_2m_max"]
+    min_temperature = seven_forecast_data["daily"]["temperature_2m_min"]
+    weather_code = seven_forecast_data["daily"]["weather_code"]
+    for i in range(len(date)):
+        print(f"""---------{city}----------
+    Date: {date[i]}
+    Max Temperature: {max_temperature[i]}
+    Min Temperature: {min_temperature[i]}
+    Weather Code: {weather_code[i]}
+-------------------------""")
