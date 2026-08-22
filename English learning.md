@@ -1008,6 +1008,18 @@ spit - плевок; плевать
 strenuous - напряженный
 
 avarice - жадность, алчность
+
+straggler - отставший
+
+rubble - обломки, руины
+
+sway - качаться; влияние, власть
+
+hiss - шипеть
+
+decency - порядочность, приличе, достойное поведение
+
+incandescence - свечение(от высокой температуры), накал
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1228,6 +1240,10 @@ greed and avarice - жадность и алчность
 strenuous exercise - напряженное упражнение
 
 rigidity of the rules - жесткость правил
+
+common decency - элементарная порядочность
+
+to hold sway over someone - иметь влияние/власть над кем-то
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1524,3 +1540,9 @@ I wish there were more hours in a day - я бы хотел чтобы в дне 
 Technology and modern life are inextricably linked - технологии и продвинутая жизнь неразрывно связанны
 
 I had a great teacher who explained things very clearly - у меня был учитель который обьснял вещи очень понятно
+
+The trees were swaying in the wind - деревья покачивались от ветра
+
+Everyone deserves to be treated with common decency - каждый заслуживает на то чтобы к нему относились с элементарной порядочностью
+
+I'm getting closer and closer to achieving my goals every day - я все ближе и ближе к достижению своих целей с каждым днем
