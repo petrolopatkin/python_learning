@@ -1021,3 +1021,91 @@ ORDER BY price)
 FROM expenses
 --
 SELECT sqlite_version();
+-- window fnctions practice
+-- Task 1
+SELECT
+item, 
+category,
+price,
+LAG(price, 1, 0) OVER(PARTITION BY category
+ORDER BY id) as previous_price
+FROM expenses
+-- Task 2
+WITH CTE1 AS(
+SELECT
+item, 
+category,
+price,
+LAG(price, 1, 0) OVER(PARTITION BY category
+ORDER BY id) as previous_price
+FROM expenses)
+SELECT 
+item,
+category,
+price,
+previous_price,
+price - previous_price as price_difference
+FROM CTE1
+-- Task 3
+SELECT
+item,
+category,
+price,
+FIRST_VALUE(price) OVER(PARTITION BY category
+ORDER BY price) as cheapest_price
+FROM expenses
+-- Task 4
+SELECT
+item,
+category,
+price,
+NTH_VALUE(price, 3) OVER(PARTITION BY category
+ORDER BY price ASC
+ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING)
+as third_price
+FROM expenses
+-- Task 5
+SELECT
+item,
+category,
+price,
+NTILE(4) OVER(PARTITION BY category
+ORDER BY price)
+FROM expenses
+-- Task 6
+SELECT
+item, 
+category,
+price,
+PERCENT_RANK() OVER( PARTITION BY category
+ORDER BY price ASC)
+FROM expenses
+-- Task 7
+WITH CTE AS(
+SELECT
+item,
+category,
+price,
+CUME_DIST() OVER(PARTITION BY category
+ORDER BY price ASC) as cume_dist
+FROM expenses)
+SELECT
+item, 
+category,
+price,
+cume_dist
+FROM CTE 
+WHERE cume_dist > 0.5
+-- Task 8
+SELECT 
+item,
+category,
+price,
+FIRST_VALUE(price) OVER(PARTITION BY category
+ORDER BY price) as cheapest_price,
+LAG(price, 1, 0) OVER (
+PARTITION BY category
+ORDER BY id) as previous_price,
+NTILE(3) OVER(ORDER BY price ASC) as price_group,
+PERCENT_RANK() OVER(ORDER BY price) as rank_pice
+FROM expenses
