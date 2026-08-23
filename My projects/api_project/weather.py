@@ -1,5 +1,26 @@
 import requests
 import json
+weather_codes = {
+    0: "Clear sky",
+    1: "Mainly clear",
+    2: "Partly cloudy",
+    3: "Overcast",
+    45: "Fog",
+    48: "Depositing rime fog",
+    51: "Light drizzle",
+    53: "Moderate drizzle",
+    55: "Dense drizzle",
+    61: "Slight rain",
+    63: "Moderate rain",
+    65: "Heavy rain",
+    71: "Slight snow",
+    73: "Moderate snow",
+    75: "Heavy snow",
+    80: "Slight rain showers",
+    81: "Moderate rain showers",
+    82: "Violent rain showers",
+    95: "Thunderstorm"
+}
 def get_coordinates():
     city = input("Name a city: ")
     pr = {
@@ -37,6 +58,7 @@ def get_weather(city, latitude, longitude):
     apparent_temperature = weather_data["current"]["apparent_temperature"]
     relative_humididty = weather_data["current"]["relative_humidity_2m"]
     weather_code = weather_data["current"]["weather_code"]
+    weather_description = weather_codes[weather_code]
     print(f"""---------{city}----------
 Temperature: {temperature}°C
 Feels like: {apparent_temperature}°C
@@ -44,7 +66,7 @@ Humidity: {relative_humididty}%
 Wind Speed: {wind_speed}km/h
 Wind Direction: {wind_direction}
 Wind Gusts: {wind_gusts}km/h
-Weather code: {weather_code}
+Weather code: {weather_code} - {weather_description}
 -------------------------""")
 
 
@@ -69,14 +91,22 @@ def load_saved_cities():
 
 
 def get_weather_for_saved_cities():
-        with open("My projects/api_project/cities.json", "r") as f:
-         saved_cities = json.load(f)
-        for number, city in enumerate(saved_cities, start= 1):
-         print(f"{number}. {city['name']}")
-        choice = int(input("Choose a city: ")) 
-        index = choice - 1
-        selected_city = saved_cities[index]
-        return selected_city["name"], selected_city["latitude"], selected_city["longitude"]
+        while True:
+         with open("My projects/api_project/cities.json", "r") as f:
+          saved_cities = json.load(f)
+         for number, city in enumerate(saved_cities, start= 1):
+          print(f"{number}. {city['name']}")
+         try:
+          choice = int(input("Choose a city: ")) 
+          index = choice - 1
+          selected_city = saved_cities[index]
+         except ValueError:
+            print("Invalid value, try again")
+            continue
+         except IndexError:
+            print("Incorrect index, try again")
+            continue
+         return selected_city["name"], selected_city["latitude"], selected_city["longitude"]
 
 
 def get_todays_forecast(city, latitude, longitude):
@@ -95,10 +125,11 @@ def get_todays_forecast(city, latitude, longitude):
     max_temperature = forecast_data["daily"]["temperature_2m_max"][0]
     min_temperature = forecast_data["daily"]["temperature_2m_min"][0]
     weather_code = forecast_data["daily"]["weather_code"][0]
+    weather_description = weather_codes[weather_code]
     print(f"""---------{city}----------
 Max Temperature: {max_temperature}°C
 Min Temperature: {min_temperature}°C
-Weather Code: {weather_code}
+Weather Code: {weather_code} - {weather_description}
 -------------------------""")
 
 
@@ -118,9 +149,10 @@ def get_forecast_for_seven_days(city, latitude, longitude):
     min_temperature = seven_forecast_data["daily"]["temperature_2m_min"]
     weather_code = seven_forecast_data["daily"]["weather_code"]
     for i in range(len(date)):
-        print(f"""---------{city}----------
+     weather_description = weather_codes[weather_code[i]]
+     print(f"""---------{city}----------
     Date: {date[i]}
     Max Temperature: {max_temperature[i]}
     Min Temperature: {min_temperature[i]}
-    Weather Code: {weather_code[i]}
+    Weather Code: {weather_code[i]} - {weather_description}
 -------------------------""")

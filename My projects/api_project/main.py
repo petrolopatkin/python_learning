@@ -42,7 +42,11 @@ while True:
 3. Get today's forecast
 4. Get forecast for 7 days
 """)
-            saved_command = int(input("> "))
+            try:
+             saved_command = int(input("> "))
+            except ValueError:
+                   print("Invalid value, try again")
+                   continue
             if saved_command == 1:
                   load_saved_cities()
             elif saved_command == 2:
