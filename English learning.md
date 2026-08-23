@@ -1020,6 +1020,24 @@ hiss - шипеть
 decency - порядочность, приличе, достойное поведение
 
 incandescence - свечение(от высокой температуры), накал
+
+stern - суровый, строгий
+
+judicious - благоразумный, рассудительный
+
+semblance - видимость, подобие
+
+residue - остаток, осадок
+
+precipitated - вызвал, спровоцировал
+
+disparagement - уничижение, принижение
+
+deftly - ловко, умело
+
+furtive - скрытный, украдкой
+
+inaudible - неразборчивый, неслышный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1244,6 +1262,12 @@ rigidity of the rules - жесткость правил
 common decency - элементарная порядочность
 
 to hold sway over someone - иметь влияние/власть над кем-то
+
+a judicious decision - благоразумне решение
+
+a furtive glance - украдкой брошенный взгляд
+
+a semblance of normality - видимость нормальности
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1546,3 +1570,7 @@ The trees were swaying in the wind - деревья покачивались о�
 Everyone deserves to be treated with common decency - каждый заслуживает на то чтобы к нему относились с элементарной порядочностью
 
 I'm getting closer and closer to achieving my goals every day - я все ближе и ближе к достижению своих целей с каждым днем
+
+He deftly caught the ball - он ловко словил мяч
+
+His response was almost inaudible - его ответ был почти неслышен
