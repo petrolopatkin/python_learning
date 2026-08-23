@@ -1109,3 +1109,105 @@ ORDER BY id) as previous_price,
 NTILE(3) OVER(ORDER BY price ASC) as price_group,
 PERCENT_RANK() OVER(ORDER BY price) as rank_pice
 FROM expenses
+-- analytical functions practice day 2
+-- Task 1
+SELECT
+item,
+category,
+price,
+LAG(price, 1, 0) OVER(PARTITION BY category
+ORDER BY price) as previous_price
+FROM expenses
+-- Task 2
+SELECT
+item,
+category,
+price,
+FIRST_VALUE(price) OVER(PARTITION BY category
+ORDER BY price ASC) as cheapest_price
+FROM expenses
+-- TAsk 3
+SELECT 
+item,
+category,
+price,
+NTILE(4) OVER(ORDER BY price) as price_groups
+FROM expenses
+-- Task 4
+WITH CTE AS(
+SELECT
+item,
+category,
+price,
+CUME_DIST() OVER(PARTITION BY category
+ORDER BY price ASC) as cume_dist
+FROM expenses)
+SELECT 
+item,
+category,
+price,
+cume_dist
+FROM CTE 
+WHERE cume_dist > 0.3
+-- LEAD practice
+SELECT 
+item,
+category,
+price,
+LEAD(price, 1, 0) OVER(PARTITION BY category
+ORDER BY id) as next_price
+FROM expenses
+-- Task 2
+WITH CTE AS(
+SELECT 
+item,
+category,
+price,
+LEAD(price, 1, 0) OVER(PARTITION BY category
+ORDER BY id) as next_price
+FROM expenses)
+SELECT
+item,
+category,
+price,
+next_price,
+price - next_price as price_difference
+FROM CTE 
+-- Task 3
+WITH CTE AS(
+SELECT 
+item,
+category,
+price,
+LEAD(price, 1, 0) OVER(PARTITION BY category
+ORDER BY price ASC) as next_price
+FROM expenses)
+SELECT
+item,
+category,
+price,
+next_price,
+price - next_price as price_difference
+FROM CTE 
+-- Task 4
+WITH CTE AS(
+SELECT
+item,
+category,
+price,
+LAG(price, 1, 0) OVER(
+PARTITION BY category
+ORDER BY id) as previous_price,
+LEAD(price, 1, 0) OVER(
+PARTITION BY category
+ORDER BY id) as next_price
+FROM expenses)
+SELECT
+item,
+category,
+price,
+previous_price,
+next_price,
+price - previous_price as price_difference_from_previous,
+price - next_price as price_difference_from_next
+FROM CTE 
