@@ -26,8 +26,7 @@ def get_coordinates():
     pr = {
         "name": city
     }
-    r = requests.get('https://geocoding-api.open-meteo.com/v1/search', params=pr)
-
+    r = make_api_request('https://geocoding-api.open-meteo.com/v1/search', params=pr)
     #print(r.status_code)
     #print(r.json())
     data = r.json()
@@ -47,7 +46,7 @@ def get_weather(city, latitude, longitude):
         "longitude": longitude,
         "current": "temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m,apparent_temperature,relative_humidity_2m,weather_code"
     }
-    r = requests.get('https://api.open-meteo.com/v1/forecast', params=pr2)
+    r = make_api_request('https://api.open-meteo.com/v1/forecast', params=pr2)
     #print(r.status_code)
     #print(r.json())
     weather_data = r.json()
@@ -118,7 +117,7 @@ def get_todays_forecast(city, latitude, longitude):
         "forecast_days": 1,
         "timezone": "auto"
     }
-    r = requests.get('https://api.open-meteo.com/v1/forecast', params=pr3)
+    r = make_api_request('https://api.open-meteo.com/v1/forecast', params=pr3)
     #print(r.status_code)
     #print(r.json())
     forecast_data = r.json()
@@ -142,7 +141,7 @@ def get_forecast_for_seven_days(city, latitude, longitude):
             "forecast_days": 7,
             "timezone": "auto"
     }
-    r = requests.get('https://api.open-meteo.com/v1/forecast', params=pr4)
+    r = make_api_request('https://api.open-meteo.com/v1/forecast', params=pr4)
     seven_forecast_data = r.json()
     date = seven_forecast_data["daily"]["time"]
     max_temperature = seven_forecast_data["daily"]["temperature_2m_max"]
@@ -156,3 +155,99 @@ def get_forecast_for_seven_days(city, latitude, longitude):
     Min Temperature: {min_temperature[i]}
     Weather Code: {weather_code[i]} - {weather_description}
 -------------------------""")
+
+
+def make_api_request(url, params):
+   try:
+      r = requests.get(url, params=params, timeout=5)
+      r.raise_for_status()
+      return r
+   except requests.ConnectionError:
+     print("You aren't connected now. Check your connection and try again")
+   except requests.Timeout:
+     print("Server is not responding now, try again later")
+   except requests.HTTPError:
+     print("Something went wrong, try again")
+
+
+def get_hourly_forecast(city, latitude, longitude):
+   pr5 = {
+      "name": city,
+      "latitude": latitude,
+      "longitude": longitude,
+      "hourly": "temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m,apparent_temperature,relative_humidity_2m,weather_code",
+      "forecast_hours": 24
+   }
+   r = make_api_request('https://api.open-meteo.com/v1/forecast', params=pr5)
+   hourly_data = r.json()
+   hour = hourly_data["hourly"]["time"]
+   temperature = hourly_data["hourly"]["temperature_2m"]
+   wind_speed = hourly_data["hourly"]["wind_speed_10m"]
+   wind_direction = hourly_data["hourly"]["wind_direction_10m"]
+   wind_gusts = hourly_data["hourly"]["wind_gusts_10m"]
+   apparent_temperature = hourly_data["hourly"]["apparent_temperature"]
+   relative_humidity = hourly_data["hourly"]["relative_humidity_2m"]
+   weather_code = hourly_data["hourly"]["weather_code"]
+
+   for i in range(len(hour)):
+       weather_description = weather_codes[weather_code[i]]
+       print(f"""---------{city}----------
+Time: {hour[i]}
+Temperature: {temperature[i]}°C
+Feels like: {apparent_temperature[i]}°C
+Humidity: {relative_humidity[i]}%
+Wind Speed: {wind_speed[i]}km/h
+Wind Direction: {wind_direction[i]}
+Wind Gusts: {wind_gusts[i]}km/h
+Weather code: {weather_code[i]} - {weather_description}
+-------------------------""")
+
+
+def get_weather_for_specific_hour(city, latitude, longitude):
+     pr5 = {
+          "name": city,
+          "latitude": latitude,
+          "longitude": longitude,
+          "hourly": "temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m,apparent_temperature,relative_humidity_2m,weather_code",
+          "forecast_hours": 24
+       }
+     r = make_api_request('https://api.open-meteo.com/v1/forecast', params=pr5)
+     hourly_data = r.json()
+     hour = hourly_data["hourly"]["time"]
+     temperature = hourly_data["hourly"]["temperature_2m"]
+     wind_speed = hourly_data["hourly"]["wind_speed_10m"]
+     wind_direction = hourly_data["hourly"]["wind_direction_10m"]
+     wind_gusts = hourly_data["hourly"]["wind_gusts_10m"]
+     apparent_temperature = hourly_data["hourly"]["apparent_temperature"]
+     relative_humididty = hourly_data["hourly"]["relative_humidity_2m"]
+     weather_code = hourly_data["hourly"]["weather_code"]
+     for number, hour in enumerate(hour, start=1):
+        print(f"{number}. {hour}")
+     while True:
+      try:
+        hour_choice = int(input("Choose an hour: "))
+        index2 = hour_choice - 1
+      except ValueError:
+         print("Invalid value, try again")
+         continue
+      break
+     selected_hour = hour[index2]
+     selected_temperature = temperature[index2]
+     selected_wind_speed =  wind_speed[index2]
+     selected_wind_direction =  wind_direction[index2]
+     selected_wind_gusts =  wind_gusts[index2]
+     selected_apparent_temperature =  apparent_temperature[index2]
+     selected_relative_humidity =  relative_humididty[index2]
+     selected_weather_code = weather_code[index2]
+     selected_weather_description = weather_codes[selected_weather_code]
+     print(f"""---------{city}----------
+Time: {selected_hour}
+Temperature: {selected_temperature}°C
+Feels like: {selected_apparent_temperature}°C
+Humidity: {selected_relative_humidity}%
+Wind Speed: {selected_wind_speed}km/h
+Wind Direction: {selected_wind_direction}
+Wind Gusts: {selected_wind_gusts}km/h
+Weather code: {selected_weather_code} - {selected_weather_description}
+-------------------------""")
+    

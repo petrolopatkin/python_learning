@@ -5,6 +5,8 @@ from weather import load_saved_cities
 from weather import get_weather_for_saved_cities
 from weather import get_todays_forecast
 from weather import get_forecast_for_seven_days
+from weather import get_hourly_forecast
+from weather import get_weather_for_specific_hour
 result = None
 while True:
       print("""
@@ -41,6 +43,8 @@ while True:
 2. Get weather for saved city
 3. Get today's forecast
 4. Get forecast for 7 days
+5. Get hourly forecast
+6. Get weather for selected hour
 """)
             try:
              saved_command = int(input("> "))
@@ -63,7 +67,17 @@ while True:
                    result = get_weather_for_saved_cities()
                    if result:
                           city, latitude, longitude = result
-                          get_forecast_for_seven_days(city, latitude, longitude)             
+                          get_forecast_for_seven_days(city, latitude, longitude)
+            elif saved_command == 5:
+                   result = get_weather_for_saved_cities()
+                   if result:
+                          city, latitude, longitude = result
+                          get_hourly_forecast(city, latitude, longitude) 
+            elif saved_command == 6:
+                   result = get_weather_for_saved_cities()
+                   if result:
+                          city, latitude, longitude = result
+                          get_weather_for_specific_hour(city, latitude, longitude)             
       elif command == 4:
             break
       else:
