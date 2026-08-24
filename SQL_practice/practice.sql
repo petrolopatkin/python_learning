@@ -1211,3 +1211,43 @@ next_price,
 price - previous_price as price_difference_from_previous,
 price - next_price as price_difference_from_next
 FROM CTE 
+-- Case method practice
+-- Task 1
+SELECT
+item,
+category,
+price,
+CASE 
+    WHEN price < 10 THEN 'cheap'
+    WHEN price BETWEEN 10 AND 30 THEN 'medium'
+    WHEN price > 30 THEN 'expensive'
+END AS price_categories
+FROM expenses
+ORDER BY price
+-- Task 2
+SELECT
+item,
+category,
+price,
+CASE 
+    WHEN price < 5 THEN 'group1'
+    WHEN price BETWEEN 5 AND 10 THEN 'group2'
+    WHEN price BETWEEN 10 AND 30 THEN 'group3'
+    WHEN price > 30 THEN 'group4'
+END as groupss
+FROM expenses
+ORDER BY price
+-- Task 3
+SELECT
+item,
+category,
+price,
+CASE 
+    WHEN price < 5 THEN 'group1'
+    WHEN price BETWEEN 5 AND 10 THEN 'group2'
+    WHEN price BETWEEN 10 AND 30 THEN 'group3'
+    WHEN price > 30 THEN 'group4'
+END as groupss
+FROM expenses
+GROUP BY category
+ORDER BY price
