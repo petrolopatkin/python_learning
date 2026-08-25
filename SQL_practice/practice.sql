@@ -1251,3 +1251,71 @@ END as groupss
 FROM expenses
 GROUP BY category
 ORDER BY price
+-- case practice + window functions
+-- Task 1
+WITH CTE AS(
+SELECT 
+item,
+category,
+price,
+RANK() OVER(PARTITION BY category
+ORDER BY price) as price_rank
+FROM expenses)
+SELECT
+item,
+category,
+price,
+price_rank,
+CASE 
+    WHEN price_rank = 1 THEN 'Cheapest'
+    WHEN price_rank = 2 THEN 'Second cheapest'
+    WHEN price_rank = 3 THEN 'Third cheapest'
+    ELSE 'Other'
+    END as ranks
+FROM CTE 
+-- Task 2
+WITH CTE AS(
+SELECT
+item,
+category,
+price,
+AVG(price) OVER(PARTITION BY category
+) as avg_price
+FROM expenses) 
+SELECT 
+item,
+category,
+price,
+avg_price,
+CASE 
+    WHEN price/avg_price < 0.8 THEN 'Much cheaper'
+    WHEN price/avg_price < 0.5 THEN 'Cheaper'
+    WHEN price/avg_price > 0.5 THEN 'More expensive'
+    WHEN price/avg_price = 0.5 THEN 'Average'
+    END AS price_group
+FROM CTE
+-- Exists/Not exists practice
+-- Task 1
+SELECT
+item,
+category,
+price
+FROM expenses
+WHERE EXISTS(
+SELECT 1
+FROM purchases
+WHERE purchases.item = expenses.item
+AND purchases.quantity >= 1)
+ORDER BY price
+-- Task 2
+SELECT
+item,
+category,
+price
+FROM expenses
+WHERE NOT EXISTS(
+SELECT 1
+FROM purchases
+WHERE purchases.item = expenses.item
+AND purchases.quantity = 0)
+ORDER BY price
