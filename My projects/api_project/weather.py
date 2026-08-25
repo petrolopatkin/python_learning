@@ -85,8 +85,7 @@ def save_city(city, latitude, longitude):
 def load_saved_cities():
      with open("My projects/api_project/cities.json", "r") as f:
          saved_cities = json.load(f)
-     for number, city in enumerate(saved_cities, start= 1):
-        print(f"{number}. {city['name']}")         
+     return saved_cities       
 
 
 def get_weather_for_saved_cities():
@@ -250,4 +249,33 @@ Wind Direction: {selected_wind_direction}
 Wind Gusts: {selected_wind_gusts}km/h
 Weather code: {selected_weather_code} - {selected_weather_description}
 -------------------------""")
-    
+
+
+def delete_saved_city():
+   saved_cities = load_saved_cities()
+   for number, city in enumerate(saved_cities, start=1):
+      print(f"{number}. {city['name']}")
+   while True:
+      try:
+         choice = int(input("Which city you want to delete? "))
+      except ValueError:
+         print("Incorrect value, try again")
+         continue
+      except IndexError:
+         print("Incorrect index, try again")
+         continue
+      if choice < 1 or choice > len(saved_cities):
+         print("This number doesn't exist yet")
+      else:
+         warning_message = input("Are you sure you want ot delete this city? ").lower()
+         if warning_message == "y":
+            saved_cities.pop(choice - 1)
+            with open("My projects/api_project/cities.json", "w") as f:
+               json.dump(saved_cities, f, indent=2)
+            print("City was successfully deleted")
+            break
+         elif warning_message == "n":
+            print("You have cancelled deletion")
+            return
+         else:
+            print("You picked incorrect answer, try again")

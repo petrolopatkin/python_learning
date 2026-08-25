@@ -7,6 +7,7 @@ from weather import get_todays_forecast
 from weather import get_forecast_for_seven_days
 from weather import get_hourly_forecast
 from weather import get_weather_for_specific_hour
+from weather import delete_saved_city
 result = None
 while True:
       print("""
@@ -45,6 +46,7 @@ while True:
 4. Get forecast for 7 days
 5. Get hourly forecast
 6. Get weather for selected hour
+7. Delete saved city
 """)
             try:
              saved_command = int(input("> "))
@@ -77,7 +79,9 @@ while True:
                    result = get_weather_for_saved_cities()
                    if result:
                           city, latitude, longitude = result
-                          get_weather_for_specific_hour(city, latitude, longitude)             
+                          get_weather_for_specific_hour(city, latitude, longitude)      
+            elif saved_command == 7:
+                   delete_saved_city()
       elif command == 4:
             break
       else:
