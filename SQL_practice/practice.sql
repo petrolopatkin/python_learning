@@ -41,6 +41,37 @@ VALUES (1, 'Food', 'Something to eat or to drink'),
        (5, 'Sport', 'Sport objects and products'),
        (6, 'Bills', 'Money for goods and services');
 
+
+CREATE TABLE purchases(
+    id INTEGER PRIMARY KEY,
+    date VARCHAR(50),
+    category VARCHAR(50),
+    item VARCHAR(50),
+    quantity INTEGER,
+    purchase_price DECIMAL
+);
+
+INSERT INTO purchases(
+    id,
+    date,
+    category,
+    item,
+    quantity,
+    purchase_price
+)
+VALUES
+    (1, '2026-08-09', 'Food', 'Carrot', 3, 1.10),
+    (2, '2026-08-10', 'Food', 'Coffee', 1, 3.65),
+    (3, '2026-08-11', 'Shopping', 'T-shirt', 2, 18.40),
+    (4, '2026-08-12', 'Shopping', 'Backpack', 4, 32.70),
+    (5, '2026-08-13', 'Shopping', 'Headphones', 1, 51.89),
+    (6, '2026-08-14', 'Sport', 'Football', 2, 14.90),
+    (7, '2026-08-15', 'Entertainment', 'Cinema', 3, 9.95),
+    (8, '2026-08-16', 'Entertainment', 'Football ticket', 0, 10.52),
+    (9, '2026-08-17', 'Transport', 'Bus ticket', 5, 2.30),
+    (10, '2026-08-18', 'Bills', 'Internet', 1, 21.99),
+    (11, '2026-08-19', 'Food', 'Milk', 3, 1.50),
+    (12, '2026-08-20', 'Shopping', 'Shoes', 2, 45.00);
 -- Task 1
 SELECT *
 FROM expenses
@@ -1319,3 +1350,59 @@ FROM purchases
 WHERE purchases.item = expenses.item
 AND purchases.quantity = 0)
 ORDER BY price
+-- exists/not exists practice
+-- Task 1
+SELECT item,
+category,
+price
+FROM expenses
+WHERE EXISTS(
+SELECT 1
+FROM purchases
+WHERE purchases.item = expenses.item
+AND purchases quantity >= 3)
+-- Task 2
+SELECT item,
+category,
+price
+FROM expenses
+WHERE NOT EXISTS(
+SELECT 1 
+FROM purchases
+WHERE purchases.item = expenses.item AND
+expenses.item IN purchases)
+-- Task 3
+SELECT item,
+category,
+price
+FROM expenses
+WHERE EXISTS(
+SELECT 1
+FROM purchases
+WHERE purchases.item = expenses.item AND 
+purchases.quantity >= 2 AND
+purchases.purchase_price > 100)
+-- Task 4
+SELECT item,
+category,
+price
+FROM expenses
+WHERE NOT EXISTS(
+SELECT 1 
+FROM purchases
+WHERE purchases.item = expenses.item AND
+purchases.category = expenses.category AND
+purchases.quantity > 0)
+-- Task 5
+SELECT *
+FROM expenses
+WHERE category IN(
+SELECT category
+FROM purchases)
+-- Task 6
+SELECT category
+FROM purchases
+WHERE category NOT IN(
+SELECT category
+FROM expenses
+)
