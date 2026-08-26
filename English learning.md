@@ -1056,6 +1056,32 @@ woven - сплетенный, сотканный
 odor - запах, аромат
 
 huskily - хрипло
+
+mutter - бормотать
+
+exhilaration - восторг, сильное возбуждение
+
+lament - оплакивать, сожалеть
+
+forestall - предотвратить
+
+sublime - возвышенный, великолептный
+
+mesmerising - заворажтвающий
+
+underlay - лежал/ распологалсч под чем-то
+
+brittle - хрупкий, ломкий
+
+goading - провоцирование, подстрекатеьство
+
+foliage - листва, растительность
+
+wearily - устало
+
+petulant - капризный, раздражительный
+
+germane - уместный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1592,3 +1618,7 @@ I'm getting closer and closer to achieving my goals every day - я все бли
 He deftly caught the ball - он ловко словил мяч
 
 His response was almost inaudible - его ответ был почти неслышен
+
+It's hard to remember every book I read back then - это сложно вспомнить каждую книгу которую я тогда читал
+
+I don't think I'll ever run out of things to read - я не думаю что у меня кода-то закончаться вещи для чтения
