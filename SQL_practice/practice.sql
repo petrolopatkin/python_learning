@@ -1406,3 +1406,101 @@ WHERE category NOT IN(
 SELECT category
 FROM expenses
 )
+--sql practice Exists/Not exists and CASE
+-- Task 1
+SELECT
+item,
+category,
+price
+FROM expenses ex
+WHERE EXISTS(
+SELECT 1
+FROM purchases p
+WHERE ex.item = p.item AND
+p.quantity >= 1)
+-- Task 2
+SELECT
+item, category, price
+FROM expenses ex
+WHERE NOT EXISTS(
+SELECT 1
+FROM purchases p
+WHERE ex.item = p.item )
+-- Task 3
+SELECT
+item,
+category,
+price
+FROM expenses ex
+WHERE EXISTS(
+SELECT 1
+FROM purchases p
+WHERE ex.item = p.item AND
+p.quantity >= 3)
+-- Task 4
+SELECT
+item, category, price
+FROM expenses ex
+WHERE NOT EXISTS(
+SELECT 1
+FROM purchases p
+WHERE ex.category = p.category AND
+p.quantity > 0)
+-- CASE practice 
+-- TAsk 1
+SELECT
+item, category, price,
+CASE
+    WHEN price < 5 THEN 'cheap'
+    WHEN price BETWEEN 5 AND 20 THEN 'medium'
+    WHEN price BETWEEN 20 AND 40 THEN 'expensive'
+    WHEN price > 40 THEN 'very expensive'
+    END AS group_price
+FROM expenses
+ORDER BY price
+--  Task 2
+SELECT
+item, category, price,
+CASE 
+    WHEN category = 'Food' OR category = 'Transport'
+    THEN 'Essential'
+    WHEN category = 'Entertainment' 
+    OR category = 'Sport'
+    THEN 'Leisure'
+    WHEN category = 'Shopping' THEN 'Personal'
+    WHEN category = 'Bills' THEN 'Necessity'
+    ELSE 'Other'
+    END AS category_type
+FROM expenses
+ORDER by category_type
+-- Task 3
+WITH CTE AS(
+SELECT 
+item, category, price,
+RANK() OVER(PARTITION BY category 
+ORDER BY price DESC) as price_rank
+FROM expenses)
+SELECT
+item, category, price,
+CASE 
+    WHEN price_rank = 1 THEN 'most expensive'
+    WHEN price_rank = 2 THEN 'second'
+    WHEN price_rank = 3 THEN 'third'
+    ELSE 'Other'
+    END AS price_group
+FROM CTE 
+-- Task 4
+WITH CTE AS(
+SELECT 
+item, category, price,
+AVG(price) OVER(PARTITION BY category) as avg_price
+FROM expenses)
+SELECT
+item, category, price,
+CASE 
+    WHEN price/avg_price < 0.7 THEN 'much cheaper'
+    WHEN price/avg_price < 0.5 THEN 'cheaper'
+    WHEN price/avg_price = 1 THEN 'average'
+    WHEN price/avg_price > 1 THEN 'more expensive'
+    END AS price_category
+FROM CTE 
