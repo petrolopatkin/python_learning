@@ -1082,6 +1082,24 @@ wearily - устало
 petulant - капризный, раздражительный
 
 germane - уместный
+
+disinter - извлекать
+
+impetus - стимул, толчок, побуждение
+
+proprietor - владелец, хозяин
+
+ferocious - свирепый, яростный, жестокий
+
+awed - пораженный
+
+veiled - скрытый
+
+pouch - мешочек, сумочка, кармашек
+
+abashed - смущенный, пристыженный
+
+firm - твердый, решительный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1312,6 +1330,14 @@ a judicious decision - благоразумне решение
 a furtive glance - украдкой брошенный взгляд
 
 a semblance of normality - видимость нормальности
+
+ferocious competition - яростная/жестокая конкуренция
+
+veiled criticism - скрытая критика
+
+take a firm stance - занять твердую позицию
+
+give someone impetus to do soemthing - дать кому-то толчок к чему-то
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
