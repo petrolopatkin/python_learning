@@ -1504,3 +1504,67 @@ CASE
     WHEN price/avg_price > 1 THEN 'more expensive'
     END AS price_category
 FROM CTE 
+-- practice
+-- Task 1 
+SELECT
+item, category, price
+FROM expenses ex 
+WHERE EXISTS(
+SELECT 1 
+FROM purchases p
+WHERE ex.item = p.item AND 
+quantity > 0)
+-- Task 2
+SELECT
+item, category, price
+FROM expenses ex
+WHERE NOT EXISTS(
+SELECT 1
+FROM purchases p 
+WHERE ex.item = p.item AND
+p.quantity > 0)
+-- Task 3
+SELECT 
+item, category, price
+FROM expenses ex 
+WHERE EXISTS(
+SELECT 1 
+FROM purchases p
+WHERE ex.item = p.item AND
+p.quantity >= 3 AND 
+p.purchase_price < ex.price)
+-- Task 4
+SELECT
+item, category, price
+FROM expenses ex 
+WHERE NOT EXISTS(
+SELECT 1
+FROM purchases p 
+WHERE ex.category = p.category AND 
+p.quantity < 1)
+-- ANY/ALL practice
+-- Task 1
+SELECT
+item, category, price
+FROM expenses
+WHERE price > ANY(SELECT price 
+FROM purchases WHERE category = 'Entertainment')
+-- task 2 
+SELECT
+item, category, price
+FROM expenses
+WHERE price > ALL(SELECT price FROM purchases
+WHERE category = 'Entertainment')
+-- task 3
+SELECT
+item, category, price
+FROM expenses ex
+WHERE EXISTS(
+SELECT 1
+FROM purchases p 
+WHERE ex.item = p.item AND 
+p.quantity >= 2)
+AND ex.price > 
+ALL(SELECT p.purchase_price 
+FROM purchases
+WHERE p.item = ex.item)
