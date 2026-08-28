@@ -1,5 +1,3 @@
-from django.http import HttpResponse
-
-# Create your views here.
-def home(request):
-    return HttpResponse("Welcome to my weather app!")
+from django.shortcuts import render 
+def index(request):
+    return render(request, "weather/index.html")

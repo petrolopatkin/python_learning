@@ -21,7 +21,8 @@ while True:
             print("Invalid value, try again")
             continue
       if command == 1:
-            result = get_coordinates()
+            city = input("Name a city: ")
+            result = get_coordinates(city)
             if result:
                   city, latitude, longitude = result
                   print(f"Latitude: {latitude}")
@@ -31,6 +32,7 @@ while True:
                         save_city(city, latitude, longitude)
                         print("City was successfully saved!")
             else:
+                        print("You cancelled the deletion")
                         continue
       elif command == 2: 
             if result:

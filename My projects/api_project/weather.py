@@ -21,8 +21,7 @@ weather_codes = {
     82: "Violent rain showers",
     95: "Thunderstorm"
 }
-def get_coordinates():
-    city = input("Name a city: ")
+def get_coordinates(city):
     pr = {
         "name": city
     }
