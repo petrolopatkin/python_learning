@@ -1,3 +1,18 @@
-from django.shortcuts import render 
+from django.shortcuts import render
+
+
 def index(request):
-    return render(request, "weather/index.html")
+    cities = [
+        "Prešov",
+        "Košice",
+        "Kyiv",
+        "Lviv",
+        "Bratislava",
+        "London"
+    ]
+
+    return render(
+        request,
+        "weather/index.html",
+        {"cities": cities}
+    )

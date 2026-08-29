@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Weather App</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Petro Lopatkin">
+
+    <title>My first django weather app</title>
+
+    {% load static %}
+
+    <link rel="icon" href="{% static 'weather/R.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'weather/main.css' %}">
 </head>
-<body>
 
-    <h1>Weather App</h1>
+    <body>
+        <h1>Weather app</h1>
+        <p>My first Django weather application</p>
+        <form>
+            <input type="text" placeholder="Enter a city:">
+            <button type="submit">Get weather</button>
+        </form>
+        <h2>Saved cities:</h2>
+        <ul>
+            {% for city in cities %}
+            <li>{{ city }}</li>
+            {% endfor %}
+        </ul>
+    </body>
 
-    <p>My first Django weather application!</p>
-
-    <form>
-        <input type="text" placeholder="Enter city">
-        <button type="submit">Get weather</button>
-    </form>
-
-</body>
 </html>
