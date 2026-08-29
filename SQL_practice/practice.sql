@@ -60,18 +60,20 @@ INSERT INTO purchases(
     purchase_price
 )
 VALUES
-    (1, '2026-08-09', 'Food', 'Carrot', 3, 1.10),
-    (2, '2026-08-10', 'Food', 'Coffee', 1, 3.65),
-    (3, '2026-08-11', 'Shopping', 'T-shirt', 2, 18.40),
-    (4, '2026-08-12', 'Shopping', 'Backpack', 4, 32.70),
-    (5, '2026-08-13', 'Shopping', 'Headphones', 1, 51.89),
-    (6, '2026-08-14', 'Sport', 'Football', 2, 14.90),
-    (7, '2026-08-15', 'Entertainment', 'Cinema', 3, 9.95),
-    (8, '2026-08-16', 'Entertainment', 'Football ticket', 0, 10.52),
-    (9, '2026-08-17', 'Transport', 'Bus ticket', 5, 2.30),
-    (10, '2026-08-18', 'Bills', 'Internet', 1, 21.99),
-    (11, '2026-08-19', 'Food', 'Milk', 3, 1.50),
-    (12, '2026-08-20', 'Shopping', 'Shoes', 2, 45.00);
+    (1, '2026-08-09', 'Food', 'Carrot', 1, 1.10),
+    (2, '2026-08-09', 'Food', 'Carrot', 1, 0.80),
+    (3, '2026-08-09', 'Food', 'Carrot', 1, 1.20),
+    (4, '2026-08-10', 'Food', 'Coffee', 1, 3.65),
+    (5, '2026-08-11', 'Shopping', 'T-shirt', 2, 18.40),
+    (6, '2026-08-12', 'Shopping', 'Backpack', 4, 32.70),
+    (7, '2026-08-13', 'Shopping', 'Headphones', 1, 51.89),
+    (8, '2026-08-14', 'Sport', 'Football', 2, 14.90),
+    (9, '2026-08-15', 'Entertainment', 'Cinema', 3, 9.95),
+    (10, '2026-08-16', 'Entertainment', 'Football ticket', 0, 10.52),
+    (11, '2026-08-17', 'Transport', 'Bus ticket', 5, 2.30),
+    (12, '2026-08-18', 'Bills', 'Internet', 1, 21.99),
+    (13, '2026-08-19', 'Food', 'Milk', 3, 1.50),
+    (114, '2026-08-20', 'Shopping', 'Shoes', 2, 45.00);
 -- Task 1
 SELECT *
 FROM expenses
@@ -1568,3 +1570,85 @@ AND ex.price >
 ALL(SELECT p.purchase_price 
 FROM purchases
 WHERE p.item = ex.item)
+-- practice
+-- ANY/ALL practice
+-- Task 1
+SELECT
+item, category, price
+FROM expenses ex
+WHERE price > ALL(SELECT purchase_price FROM purchases p
+WHERE ex.item = p.item)
+-- Task 2
+SELECT
+item, category, price
+FROM expenses ex
+WHERE price > ANY(SELECT purchase_price FROM purchases p
+WHERE ex.item = p.item)
+-- Group by = having + window functions + cte
+-- Task 1
+SELECT
+category, price,
+COUNT(*) OVER(PARTITION BY category) as count,
+AVG(price) OVER(PARTITION BY category) as average,
+MAX(price) OVER(PARTITION BY category) as max
+FROM expenses
+-- Task 2
+SELECT
+category,
+AVG(price) as average
+FROM expenses
+GROUP BY category
+HAVING average > 10
+-- Task 3
+WITH CTE AS(
+SELECT
+category,
+AVG(price) as average
+FROM expenses
+GROUP BY category)
+SELECT
+category, average,
+CASE 
+    WHEN average < 5 THEN 'cheap category'
+    WHEN average BETWEEN 5 AND 15 THEN 'medium category'
+    WHEN average > 15 THEN 'expensive category'
+    END AS category_class
+FROM CTE 
+-- Task 4
+WITH CTE AS(
+SELECT
+category,
+AVG(price) as average,
+COUNT(*) as count,
+MAX(price) as max_price
+FROM expenses
+GROUP BY category)
+SELECT
+category,
+average, count, max_price,
+CASE
+    WHEN count = 1 or count = 2 THEN 'Small'
+    WHEN count = 3 or count = 4 THEN 'Medium'
+    WHEN count >= 5 THEN 'Large'
+    END as count_category
+FROM CTE 
+-- Task 5
+WITH category_stats AS(
+SELECT category, price,
+AVG(price) as category_average,
+MAX(price) as max_price
+FROM expenses
+GROUP BY category),
+overall_stats AS(
+SELECT 
+AVG(price) as overall_average
+FROM expenses)
+SELECT
+cs.category,
+cs.category_average,
+os.overall_average,
+cs.max_price
+FROM category_stats cs 
+CROSS JOIN overall_stats os
+WHERE cs.category_average > os.overall_average
+AND cs.max_price > 30
