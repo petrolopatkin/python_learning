@@ -1100,6 +1100,16 @@ pouch - мешочек, сумочка, кармашек
 abashed - смущенный, пристыженный
 
 firm - твердый, решительный
+
+erect - воздвигать
+
+perceive - восприниматьЮ замечать, осознавать
+
+ruefully - с сожалением, раскаянно
+
+seducer - обольститель, соблазнитель
+
+concurrently - одновременно, параллельно
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1338,6 +1348,12 @@ veiled criticism - скрытая критика
 take a firm stance - занять твердую позицию
 
 give someone impetus to do soemthing - дать кому-то толчок к чему-то
+
+perceive a difference - замечать разницу
+
+run concurrently - проходить одновременно
+
+erecy a monument - воздвигать монумент
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
