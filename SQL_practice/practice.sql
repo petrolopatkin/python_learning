@@ -1652,3 +1652,47 @@ FROM category_stats cs
 CROSS JOIN overall_stats os
 WHERE cs.category_average > os.overall_average
 AND cs.max_price > 30
+-- set operators practice
+-- Task 1
+SELECT
+item, category
+FROM expenses
+UNION 
+SELECT
+item, category
+FROM purchases
+-- Task 2
+SELECT item, category, price
+FROM expenses
+WHERE price > 10
+UNION ALL
+SELECT item, category, price
+FROM expenses
+WHERE category = 'Shopping'
+-- Task 3
+SELECT item, category, price
+FROM expenses
+WHERE price > 10
+INTERSECT
+SELECT item, category, price
+FROM expenses
+WHERE category = 'Shopping'
+-- Task 4
+SELECT 
+item, category, price
+FROM expenses
+WHERE category = 'Shopping'
+EXCEPT
+SELECT
+item, category, price
+FROM expenses
+WHERE category = 'Shopping' AND price > 30
+-- Task 5
+SELECT
+item, category, price
+FROM expenses
+WHERE price > 10
+EXCEPT SELECT
+item, category, price
+FROM expenses
+WHERE category = 'Shopping'
