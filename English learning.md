@@ -1110,6 +1110,20 @@ ruefully - с сожалением, раскаянно
 seducer - обольститель, соблазнитель
 
 concurrently - одновременно, параллельно
+
+warranty - гарантия на товар
+
+incessantly - непрерывно, беспрерывно
+
+balk - отказаться, сопротивляться, остановиться из-за нежелания
+
+fringe - край, окраина
+
+encampment - лагерь, стоянка
+
+swerve - резко свернуть, изменить направление
+
+dwindle - уменьшаться, иссекать
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1354,6 +1368,10 @@ perceive a difference - замечать разницу
 run concurrently - проходить одновременно
 
 erecy a monument - воздвигать монумент
+
+a two-year warranty - двухлетняя гарантия
+
+talk incessantly - говорить без остановки
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1664,3 +1682,7 @@ His response was almost inaudible - его ответ был почти несл
 It's hard to remember every book I read back then - это сложно вспомнить каждую книгу которую я тогда читал
 
 I don't think I'll ever run out of things to read - я не думаю что у меня кода-то закончаться вещи для чтения
+
+Natural resources are gradually dwindling - природные ресурсы постепенно иссекают
+
+Be uncertain about the outcome - быть неуверенным в результате/исходе
