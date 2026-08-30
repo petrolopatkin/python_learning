@@ -14,3 +14,23 @@
 # rel - related, "icon" for eample
 # href - hyperreference. for example use some png as a logo for your webpage
 # type= what type is this(image, text and others)
+# <hr> line that are going through across the webpage
+# <em> emphasizing an element
+# <strong> to make an element bigger and bolder
+# &nbsp; to make a space on the webpage
+# &lt; stands for "<" symbol
+# &gt; stands for ">" symbol
+# &copy; stands for "©" symbol
+# <abbr title=""> to show something that abbreviation stands for
+# <address> to write a real adress into our website
+# <!-- --> - html comment
+# <li> stands for list
+# <ol> stands for order list
+# <ul> stands for unordered list
+# <dl> stands for description list
+# <dt> stands for description term
+# <dd> stands for description detail
+# <a> stands for anchor tag(you can link other web pages for example through it)
+# <section> to create links between existing parts of our webpage
+# <a href= "mailto: "youremail"> is a link to contact you, however, it isn't that used nowadays
+# <a href = "tel: your phone number(better with +)"
