@@ -11,67 +11,86 @@
     </head>
 
     <body>
-        <h1>Hello World</h1>
-        <hr>
+        <header>
+            <h1>Hello World</h1>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="#html">Learn HTML</a>
-                </li>
-                <li>
-                    <a href="#countrieslike">Places I'd like to visit</a>
-                </li>
-                <li>
-                    <a href="#countriesnotlike">Places I'd like to avoid</a>
-                </li>
-            </ul>
-        </nav>
-
-        <hr>
-
-        <section id="html">
-        <h2>I'm ready to learn HTML</h2>
-        <p>This is my second <em>web page.</em></p>
-        <p>I use resources from <abbr title="Mozilla Developer Network">
-            <a href="https://developer.mozilla.org/">MDN</a>
-        </abbr></p>
-
-        <h3>I'm ready to make webpages</h3>
-        <p>This will be funny:
-            <br>I'm gonna do <strong>a lot of new things there</strong>
-        </p>
-        </section>
+             <nav>
+                <ul>
+                    <li>
+                        <a href="#html">Learn HTML</a>
+                    </li>
+                    <li>
+                        <a href="#countrieslike">Places I'd like to visit</a>
+                    </li>
+                    <li>
+                        <a href="#countriesnotlike">Places I'd like to avoid</a>
+                    </li>
+                </ul>
+             </nav>
+        </header>
 
         <hr>
+        <main>
+            <article id="html">
+                <section>
+            <h2>I'm ready to learn HTML</h2>
+                <p>This is my second <em>web page.</em></p>
+                 <p>I use resources from <abbr title="Mozilla Developer Network">
+                    <a href="https://developer.mozilla.org/">MDN</a>
+                    </abbr></p>
 
-        <section id="countrieslike">
-        <h2>There is a list of countries I'd like to visit</h2>
-        <p>List looks like that:</p>
-        <ol>
-            <li>Italy</li>
-            <li>France</li>
-            <li>Great Britain</li>
-            <li>China</li>
-        </ol>
-        </section>
+             <h3>I'm ready to make webpages</h3>
+                <p>This will be funny:
+                <br>I'm gonna do <strong>a lot of new things there</strong>
+                </p>
+                <aside>
+                    <details>
+                        <summary>Guess how many <mark>hours</mark> I study per day</summary>
+                        <p>I study at least 5 hours per day</p>
+                    </details>
+                </aside>
+                </section>
+            </article>
 
         <hr>
 
-        <section id="countriesnotlike">
-        <h2>Places I don't want to visit</h2>
-        <dl>
-            <dt>North pole</dt>
-            <dd>I've heard this is a cold place!</dd>
-            
-            <dt>South pole</dt>
-            <dd>I've heard there is cold too</dd>
-        </dl>
-        </section>
+        <article id="countrieslike">
+                <section>
+            <h2>There is a list of countries I'd like to visit</h2>
+            <h3>List looks like that:</h3>
+                <p>Italy</p>
+                    <img src="img/italy.jpg" alt="Italy Landscape" title="Landscapes of Italy" width="600" height="450">
+                <p>France</p>
+                    <img src="img/france.jpg" alt="France Mont Saint Michel" title="Mont Saint Michel in France" width="780" height="438">
+                <p>Great Britain</p>
+                    <img src="img/united_kingdom.jpg" alt="United Kingdom Landscape" title="Landscapes of United Kingdom" width="1332" height="850">
+                <p>China</p>
+                    <img src="img/china.jpg" alt="China Great Wall" title="The Great Wall of China" width="530" height="360">
+                    </section>
+        </article>
 
         <hr>
-        &lt;&lt;&lt; &copy; <a href="about.html">Petro Lopatkin</a> &gt;&gt;&gt;
-        <p><a href="#">Back to top of the page</a></p>
+
+        <article id="countriesnotlike">
+            <section>
+            <h2>Places I don't want to visit</h2>
+                    <dl>
+                        <dt>North pole</dt>
+                        <dd>I've heard this is a cold place!</dd>
+                
+                        <dt>South pole</dt>
+                        <dd>I've heard there is cold too</dd>
+                    </dl>
+                </section>
+        </article>
+        </main>
+        <hr>
+        <footer>
+            <p>
+            &lt;&lt;&lt; &copy; <a href="about.html">Petro Lopatkin</a> &gt;&gt;&gt;
+            </p>
+            <p><a href="#">Back to top of the page</a></p>
+        </footer>
     </body>
 
 </html>

@@ -34,3 +34,16 @@
 # <section> to create links between existing parts of our webpage
 # <a href= "mailto: "youremail"> is a link to contact you, however, it isn't that used nowadays
 # <a href = "tel: your phone number(better with +)"
+# <img> stands for image and has src - source attribute(uses path of your image) and alt - alt attribute
+# <figure> stands for figure
+# <figcaption> stands for text below the figure
+# <code> helps to display html code
+# <nav> stands for navigation
+# <nav aria-labelledby=""> use it ot label your navigation if you have more than 1 navigation on your page and
+# then you have to use <h2> with id
+# <aside>
+# <details> use it within <aside>
+# <summary> use it within <details>
+# <mark> stands for a highlighter like in real life
+# <time> to mark a time duration of something
+# <div> <span> try to avoid those 
