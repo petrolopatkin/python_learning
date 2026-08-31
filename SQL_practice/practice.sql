@@ -22,7 +22,8 @@ VALUES (1, '2026-08-08', 'Food', 'Carrot', 1.1),
        (7, '2026-05-02', 'Bills', 'Internet', 21.99),
        (8, '2026-05-22', 'Entertainment', 'Football ticket', 10.52),
        (9, '2026-06-26', 'Shopping', 'Backpack', 32.70),
-       (10, '2026-07-06', 'Shopping', 'Headphones', 51.89);
+       (10, '2026-07-06', 'Shopping', 'Headphones', 51.89),
+       (11, '2026-07-15', 'Food', 'Chicken', 0);
 
 CREATE TABLE categories(
     id INTEGER PRIMARY KEY,
@@ -1696,3 +1697,35 @@ EXCEPT SELECT
 item, category, price
 FROM expenses
 WHERE category = 'Shopping'
+-- Null operators practice
+-- Task 1
+SELECT
+item, category, price
+FROM expenses
+WHERE price IS NULL
+-- Task 2
+SELECT
+item, price,
+COALESCE(price, 0) as display_price
+FROM expenses
+-- Task 3
+SELECT
+item, category, price,
+NULLIF(price, 0)
+FROM expenses
+-- Task 4
+SELECT
+item, category, price,
+CASE
+    WHEN price IS NULL THEN 'unknown price'
+    WHEN price < 5 THEN 'cheap'
+    WHEN price BETWEEN 5 AND 20 THEN 'medium'
+    WHEN price > 20 THEN 'expensive'
+    END AS groups_price
+FROM expenses
+-- Task 5
+SELECT
+item, category, price,
+COALESCE(AVG(price) OVER(PARTITION BY category), 0)
+as average_price
+FROM expenses
