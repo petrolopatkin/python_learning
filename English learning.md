@@ -1124,6 +1124,18 @@ encampment - лагерь, стоянка
 swerve - резко свернуть, изменить направление
 
 dwindle - уменьшаться, иссекать
+
+manifestation - проявление, выражение
+
+purification - очищение, очистка
+
+incredulous - недоверчивый, не верящий
+
+herald - предвещать
+
+exultant - ликующий, торжествующий
+
+wane - ослабевать, уменьшаться
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1372,6 +1384,12 @@ erecy a monument - воздвигать монумент
 a two-year warranty - двухлетняя гарантия
 
 talk incessantly - говорить без остановки
+
+a manifestation of a wider problem - проявление широкой проблемы
+
+water purification - очищение воды
+
+herald a new era - предвещать новую эру
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1686,3 +1704,7 @@ I don't think I'll ever run out of things to read - я не думаю что у
 Natural resources are gradually dwindling - природные ресурсы постепенно иссекают
 
 Be uncertain about the outcome - быть неуверенным в результате/исходе
+
+His enthusiasm began to wane after several unsuccessful attempts - его энтузиазм начал угасать после нескольких неудачных попыток
+
+She looked at him with an incredulous expression - она смотрела на него с неверящим выражением
