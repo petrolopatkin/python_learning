@@ -47,3 +47,6 @@
 # <mark> stands for a highlighter like in real life
 # <time> to mark a time duration of something
 # <div> <span> try to avoid those 
+# <table> to create a table
+# <tr> stands for table row
+# <td> stands for table data
