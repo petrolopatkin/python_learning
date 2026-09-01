@@ -1136,6 +1136,16 @@ herald - предвещать
 exultant - ликующий, торжествующий
 
 wane - ослабевать, уменьшаться
+
+imperceptibly - незаметно, постепенно
+
+famine - голод
+
+brandish - размахивать
+
+daunting - пугающий
+
+dizzying - головокружительный, ошеломляющий
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1390,6 +1400,14 @@ a manifestation of a wider problem - проявление широкой про�
 water purification - очищение воды
 
 herald a new era - предвещать новую эру
+
+imperceptibly move -  незаметное движение
+
+famine victims - жертвы голода
+
+a daunting task - сложное/трудное задание
+
+at a dizzying pace - с ошеломляющей скоростью
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 

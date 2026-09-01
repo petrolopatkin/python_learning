@@ -1729,3 +1729,57 @@ item, category, price,
 COALESCE(AVG(price) OVER(PARTITION BY category), 0)
 as average_price
 FROM expenses
+-- today's practice
+-- Task 1
+SELECT
+item, category, price,
+CASE 
+    WHEN price IS NULL THEN 'missing'
+    WHEN price IS NOT NULL THEN 'available'
+    END AS price_status
+FROM expenses
+-- Task 2
+SELECT
+item, category, price,
+CASE
+    WHEN price IS NULL THEN 'unknown'
+    WHEN price < 5 THEN 'cheap'
+    WHEN price BETWEEN 5 AND 20 THEN 'medium'
+    WHEN price > 20 THEN 'expensive'
+    END AS price_group
+FROM expenses
+-- Task 3
+SELECT
+item, category, price,
+COALESCE(AVG(price) OVER(PARTITION BY category), 0)
+AS average_price
+FROM expenses
+-- Task 4
+WITH CTE AS(
+SELECT 
+item, category, price,
+price - AVG(price) OVER(
+PARTITION BY category) as price_difference
+FROM expenses)
+SELECT
+item, category, price, price_difference
+FROM CTE
+-- Task 5
+WITH CTE AS(
+SELECT
+item, category, price,
+COALESCE(AVG(price) OVER(PARTITION BY category), 0) 
+AS average_price,
+COALESCE(MAX(price) OVER(PARTITION BY category), 0)
+AS max_price,
+COALESCE(COUNT(*) OVER(PARTITION BY category), 0)
+AS count
+FROM expenses)
+SELECT
+item, category, price, average_price, max_price, count,
+CASE
+    WHEN count < 2 THEN 'small'
+    WHEN count = 2 THEN 'medium'
+    WHEN count > 2 THEN 'large'
+    END AS count_groups
+FROM CTE
