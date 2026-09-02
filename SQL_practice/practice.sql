@@ -1783,3 +1783,30 @@ CASE
     WHEN count > 2 THEN 'large'
     END AS count_groups
 FROM CTE
+-- string functions practice 
+-- Task 1
+SELECT
+item, 
+LOWER(item) as low_item,
+UPPER(item) as up_item
+FROM expenses
+-- Task 2
+SELECT
+item,
+LENGTH(item) as lenght_item
+FROM expenses
+-- Task 3
+SELECT
+item,
+REPLACE(item, 'Football', 'Soccer')
+FROM expenses
+-- Task 4
+SELECT
+item,
+SUBSTRING(item, 1, 3)
+FROM expenses
+-- Task 5
+SELECT
+item, 
+REPLACE(LOWER(item), ' ', '_')
+FROM expenses
