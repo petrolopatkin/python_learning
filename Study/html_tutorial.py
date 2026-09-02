@@ -50,3 +50,6 @@
 # <table> to create a table
 # <tr> stands for table row
 # <td> stands for table data
+# <form>
+# <label>
+# <input>
