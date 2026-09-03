@@ -1810,3 +1810,30 @@ SELECT
 item, 
 REPLACE(LOWER(item), ' ', '_')
 FROM expenses
+-- LIKE practice
+-- Task 1
+SELECT
+*
+FROM expenses
+WHERE item LIKE 'F%'
+-- Task 2
+SELECT
+*
+FROM expenses
+WHERE item LIKE '%s'
+-- Task 3
+SELECT
+*
+FROM expenses
+WHERE item LIKE '%ball%'
+-- Task 4
+SELECT
+*
+FROM expenses
+WHERE category = 'Shopping' AND item LIKE '%a%'
+-- Task 5
+SELECT
+item, 
+LOWER(item) as lower_item
+FROM expenses
+WHERE LOWER(item) LIKE '%ball%'
