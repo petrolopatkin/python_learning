@@ -1146,6 +1146,30 @@ brandish - размахивать
 daunting - пугающий
 
 dizzying - головокружительный, ошеломляющий
+
+vigilance - бдительность, настороженность
+
+secede - отделиться, выйти из состава(государства)
+
+longing - тоска
+
+agilated - взволнованный, раздраженный
+
+luminous - светящийся, яркий
+
+heed - обращать внимание, прислушиваться
+
+wearisome - утомительный, изнурительный
+
+impenetrable - непроницаемый, непроходимый, непостежимый
+
+innocuous - безвредный, безобидный
+
+whiz - гений
+
+invigorating - бодрящий
+
+chump - простак, болван, дурачек
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1408,6 +1432,12 @@ famine victims - жертвы голода
 a daunting task - сложное/трудное задание
 
 at a dizzying pace - с ошеломляющей скоростью
+
+heed a warning - прислушаться к предупреждению
+
+a longing for something - тоска по чему-то
+
+an invigorating experience - бодрящий опыт
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
