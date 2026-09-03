@@ -1,0 +1,27 @@
+/* p {
+    font-size: 20px;
+    color: purple;
+}
+body {
+    font-size: 22px;
+}
+.gray {
+    color: gray;
+}
+#third {
+    font-style: italic;
+}
+h2, h3 {
+    color: blanchedalmond;
+}
+.highlight {
+    text-transform: uppercase;
+    background-color: gold;
+} */
+body {
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    background-color: peru;
+    color: olive;
+}

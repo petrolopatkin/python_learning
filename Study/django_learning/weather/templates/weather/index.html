@@ -5,27 +5,45 @@
     <meta charset="UTF-8">
     <meta name="author" content="Petro Lopatkin">
 
-    <title>My first django weather app</title>
+    <title>Weather App</title>
 
     {% load static %}
 
     <link rel="icon" href="{% static 'weather/R.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'weather/main.css' %}">
 </head>
-
-    <body>
+ <body>
+        <article id="home">
         <h1>Weather app</h1>
-        <p>My first Django weather application</p>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#saved-cities">Saved Cities</a>
+                </li>
+            </ul>
+        </nav>
+        <p>Find what weather is right now in your city</p>
         <form>
             <input type="text" placeholder="Enter a city:">
             <button type="submit">Get weather</button>
         </form>
+        </article>
+
+        <hr>
+
+        <article id="saved-cities">
+        <section>
         <h2>Saved cities:</h2>
         <ul>
             {% for city in cities %}
             <li>{{ city }}</li>
             {% endfor %}
         </ul>
-    </body>
+        </section>
+        </article>
+ </body>
 
 </html>
