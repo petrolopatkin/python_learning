@@ -1837,3 +1837,91 @@ item,
 LOWER(item) as lower_item
 FROM expenses
 WHERE LOWER(item) LIKE '%ball%'
+-- FILTER practice
+-- Task1
+-- PostgreSQL variation
+SELECT
+category,
+COUNT(*) as total_count,
+COUNT(*) FILTER(WHERE price >= 10) as more_than_10
+FROM expenses
+GROUP BY category
+-- Task 2
+SELECT
+category,
+COUNT(*) FILTER (WHERE price < 5) as cheap,
+COUNT(*) FILTER( WHERE price BETWEEN 5 AND 15) as medium,
+COUNT(*) FILTER (WHERE price > 15) as expensive
+FROM expenses
+GROUP BY category
+-- Task 3
+SELECT
+category,
+SUM(price) as sum_price,
+SUM(price) FILTER(WHERE price >= 10) as sum_10
+FROM expenses
+GROUP BY category
+-- Task 4
+SELECT
+category,
+AVG(price) as average_price,
+AVG(price) FILTER(WHERE price >=10) as price_10
+FROM expenses
+GROUP BY category
+-- Task 5
+SELECT
+category,
+COUNT(CASE
+    WHEN price > 10 THEN 'count_more_10'
+    ELSE 'count_less_10'
+    END AS count_price
+FROM expenses
+GROUP BY category
+-- SQLite variation
+-- Task 1
+SELECT
+category,
+COUNT(*) AS total_count,
+SUM(CASE WHEN price > 10 THEN 1 ELSE 0 END)
+AS more_than_10
+FROM expenses
+GROUP BY category;
+-- Task 2
+SELECT
+category,
+SUM(CASE WHEN price < 5 THEN 1 ELSE 0 END) AS cheap,
+SUM(CASE WHEN price BETWEEN 5 AND 15 THEN 1 ELSE 0 END) 
+AS medium,
+SUM(CASE WHEN price > 15 THEN 1 ELSE 0 END) AS expensive
+FROM expenses
+GROUP BY category;
+-- Task 3
+SELECT
+category,
+SUM(price) AS sum_price,
+SUM(CASE WHEN price > 10 THEN price ELSE 0 END) AS sum_10
+FROM expenses
+GROUP BY category;
+-- Task 4
+SELECT
+category,
+AVG(price) AS average_price,
+AVG(CASE WHEN price >= 10 THEN price END) 
+AS price_10
+FROM expenses
+GROUP BY category;
+-- Task 5
+SELECT
+category,
+COUNT(*) as total,
+SUM(CASE
+    WHEN price < 5 THEN 1
+    ELSE 0
+    END) as cheap_items,
+SUM(CASE
+    WHEN price > 15 THEN 1
+    ELSE 0
+    END) AS expensive_items,
+AVG(price) as average_price
+FROM expenses
+GROUP BY category
