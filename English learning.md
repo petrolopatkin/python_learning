@@ -1170,6 +1170,34 @@ whiz - гений
 invigorating - бодрящий
 
 chump - простак, болван, дурачек
+
+overhear - случайно услышать
+
+strive - стремиться, прилагать усилия
+
+beseech - умолять
+
+invoke - ссылаться на, призывать, вызывать
+
+solely - исключительно, только
+
+vital - крайне важный
+
+foster - развивать, способствовать развитию
+
+ameliorate - улучшать
+
+potent - мощный, действенный
+
+household - домохозяйство, семейный
+
+prowess - мастерство, выдающиеся способности
+
+feasible - осуществимый, выполнимый
+
+fruitful - плодотворный, результативный
+
+taunt - дразнить, насмехаться
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1438,6 +1466,12 @@ heed a warning - прислушаться к предупреждению
 a longing for something - тоска по чему-то
 
 an invigorating experience - бодрящий опыт
+
+strive to achieve - смтремиться к достижению
+
+foster development - способствовать развитию
+
+a feasible solution - осуществимое решение
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1756,3 +1790,11 @@ Be uncertain about the outcome - быть неуверенным в резуль
 His enthusiasm began to wane after several unsuccessful attempts - его энтузиазм начал угасать после нескольких неудачных попыток
 
 She looked at him with an incredulous expression - она смотрела на него с неверящим выражением
+
+Education plays a vital role in reducing inequality - обучение играет очень важную роль в уменьшении неравенства
+
+Household income has a significant impact on people's daily life - бытовой доход имеет оромное влияние на жизнь людей
+
+The government introduced measures to ameliorate problem - правительство обьявило меры для смягчения проблемы
+
+The meeting resulted a fruitful discussion - встреча принесла плодотворную дисскуссию
