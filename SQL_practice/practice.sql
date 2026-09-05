@@ -1925,3 +1925,75 @@ SUM(CASE
 AVG(price) as average_price
 FROM expenses
 GROUP BY category
+-- practice
+-- Task 1
+SELECT
+category,
+SUM(price) as sum,
+SUM(CASE
+    WHEN price > 10 THEN price
+    ELSE 0
+    END) as expensive_sum,
+SUM(CASE
+    WHEN price < 10 THEN price
+    ELSE 0
+END) AS cheap_sum
+FROM expenses
+GROUP BY category
+-- Task 2
+SELECT
+category,
+COUNT(*) as count,
+SUM(CASE
+    WHEN price < 5 THEN 1
+    ELSE 0
+    END) AS cheap,
+SUM(CASE
+    WHEN price BETWEEN 5 AND 15 THEN 1
+    ELSE 0
+    END) AS medium,
+SUM(CASE
+    WHEN price > 15 THEN 1
+    ELSE 0
+    END) AS expensive
+FROM expenses
+GROUP BY category
+-- Task 3
+SELECT
+category,
+MAX(price) as max_price,
+AVG(price)  as average_price,
+COUNT(*)  as count
+FROM expenses
+GROUP BY category
+-- Task 4
+SELECT
+category,
+AVG(price) as avg,
+CASE 
+    WHEN AVG(price) < 5 THEN 'cheap'
+    WHEN AVG(price) BETWEEN 5 AND 15 THEN 'medium'
+    WHEN AVG(price) > 15 THEN 'expensive'
+END AS avg_gropus
+FROM expenses
+GROUP BY category 
+-- Task 5
+SELECT
+category,
+COUNT(*) as total_items,
+AVG(price) as avg_price,
+SUM(CASE 
+    WHEN price < 5 THEN 1
+    ELSE 0
+    END) as cheap_items,
+SUM(CASE
+    WHEN price > 15 THEN 1
+    ELSE 0
+    END) as expensive_items,
+CASE 
+    WHEN AVG(price) < 5 THEN 'cheap category'
+    WHEN AVG(price) BETWEEN 5 AND 15 THEN 'medium category'
+    WHEN AVG(price) > 15 THEN 'expensive category'
+    END AS class_category
+FROM expenses
+GROUP BY category
