@@ -1198,6 +1198,22 @@ feasible - осуществимый, выполнимый
 fruitful - плодотворный, результативный
 
 taunt - дразнить, насмехаться
+
+gravely - серьезно
+
+avidly - жадно, с большим интересом
+
+tatter - лохмотья
+
+furled - свернутый, скрученный
+
+blotch - пятно, клякса
+
+tinted - окрашенный
+
+stew - рагу, тушеное блюдо
+
+inferior - худший, низший
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1472,6 +1488,12 @@ strive to achieve - смтремиться к достижению
 foster development - способствовать развитию
 
 a feasible solution - осуществимое решение
+
+be gravely concerned about something - быть крайне обеспокоенным чем-то
+
+avidly read - читать с большим интересом
+
+tinted glass - покрашенное стекло
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1798,3 +1820,5 @@ Household income has a significant impact on people's daily life - бытово�
 The government introduced measures to ameliorate problem - правительство обьявило меры для смягчения проблемы
 
 The meeting resulted a fruitful discussion - встреча принесла плодотворную дисскуссию
+
+Some people believe that public transport is inferior to private cars in terms of comfort - некоторые люди считают что обществнный транспорт хуже личных автомобилей с точки зрения комформта
