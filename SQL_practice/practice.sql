@@ -1997,3 +1997,51 @@ CASE
     END AS class_category
 FROM expenses
 GROUP BY category
+-- Date and Time practice
+-- Task 1
+SELECT
+item,
+date,
+strftime('%Y', date) as year,
+strftime('%m', date) as month,
+strftime('%d', date) as day
+FROM expenses
+-- Task 2
+SELECT
+item, 
+date
+FROM expenses
+WHERE strftime('%Y', date) = 2026
+-- Task 3
+SELECT
+item, 
+date,
+date(date, 'start of month') as month_start
+FROM expenses
+-- Task 4
+SELECT
+item, 
+date,
+date(date, 'start of month', '+1 month', '-1 day') 
+as month_end
+FROM expenses
+-- Task 5
+SELECT
+item,
+date,
+date(date, '-7 days') as seven_days_before
+FROM expenses
+-- Task 6
+SELECT
+date('now') as current_datee,
+datetime('now') as current_datetime,
+strftime('%Y', 'now') as current_year,
+strftime('%m', 'now') as current_month
+FROM expenses
+-- Task 7
+SELECT
+category,
+COUNT(*) as purchase_count
+FROM expenses
+WHERE strftime('%Y-%M', date) = '2026-08'
+GROUP BY category
