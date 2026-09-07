@@ -407,4 +407,167 @@ body {
 .box:nth-child(2) {
     flex: 2 2 250px;
     order: 0;
+}
+#
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2rem;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 50px auto 50px;
+    grid-template-areas: 
+        "hd hd hd hd hd hd hd hd hd"
+        "mn mn mn mn mn mn mn sb sb"
+        "ft ft ft ft ft ft ft ft ft";
+    gap: 0.5rem;
+}
+
+.el {
+    background-color: purple;
+    color: #fff;
+    display: grid;
+    place-content: center;
+}
+
+.header {
+    grid-area: hd;
+}
+
+.sidebar {
+    grid-area: sb;
+    background-color: teal;
+}
+
+.footer {
+    grid-area: ft;
+    background-color: burlywood;
+}
+
+.container {
+    grid-area: mn;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 2fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 2em 1.5em;
+}
+
+.box {
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.box:first-child {
+    background-color: olive;
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+
+    display: grid;
+    place-content: center center
+}
+
+.box:nth-child(3) {
+    background-color: rebeccapurple;
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+}
+#
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2rem;
+    min-height: 100vh;
+    background-color: aliceblue;
+   /*  background-image: url('../img/cat_bubbles.png'), linear-gradient(to left, rgb(0, 162, 255), whitesmoke); */
+}
+
+.example {
+    margin: 1rem;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+.example img {
+    width: 25%;
+    height: auto;
+}
+
+.container {
+    background-color: goldenrod;
+    background-image: url('../img/nickype-coffee-5447420_1920.jpg');
+    background-size: cover;
+}
+
+.cat {
+    border-bottom: 2px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    background-color: hsla(0, 0%, 0%, 0.397);
+}
+
+h1 {
+    font-size: 300%;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+}
+
+.coolcat {
+    width: 35%;
+}
+
+.coolcat img {
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double aliceblue;
+    border-radius: 50%;
+}
+
+.clip {
+    font-size: 18rem;
+    text-align: center;
+    background-image: url('../img/nickype-coffee-5447420_1920.jpg');
+    color: whitesmoke;
+    background-size: 100%;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: hsla(0, 0%, 0%, 0.238);
 } """
