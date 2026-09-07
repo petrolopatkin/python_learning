@@ -1214,6 +1214,26 @@ tinted - окрашенный
 stew - рагу, тушеное блюдо
 
 inferior - худший, низший
+
+hostile - агрессивный, враждебный
+
+sullen - угрюмый, мрачный
+
+terse - краткий, сухой
+
+rosy - радужный, оптимистичный
+
+condensed - сжатый, сконцентрированный
+
+fathom - понять, постичь
+
+unvarnished - неприкрытый, без прикрас
+
+garnish - приукрашать
+
+disgruntled - недовольный, раздраженный
+
+reap - пожинать, получать результат
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1494,6 +1514,16 @@ be gravely concerned about something - быть крайне обеспокое�
 avidly read - читать с большим интересом
 
 tinted glass - покрашенное стекло
+
+hostile relationship - агрессивные/враждебные взаимоотношения
+
+terse reply - краткий ответ
+
+a rosy outlook for the future - радужный/оптимистичный прогноз на будущее
+
+condensed version - сжатая/сокращенная версия
+
+disgruntled customer - недовольный покупатель
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1822,3 +1852,11 @@ The government introduced measures to ameliorate problem - правительс�
 The meeting resulted a fruitful discussion - встреча принесла плодотворную дисскуссию
 
 Some people believe that public transport is inferior to private cars in terms of comfort - некоторые люди считают что обществнный транспорт хуже личных автомобилей с точки зрения комформта
+
+I can't fanthom why some people refuse to accept the evidence - я не могу понять почему некоторые люди отказываються принимать факты
+
+He told me unvarnished truth about the situation - он рассказал мне исорию о ситуации без прикрас
+
+People who invest in their education can reap significant benefits later in life - люди, инвестирующие в свое образование могут получить огромные плюсы позже в жизни
+
+Reap what you sow - что посеешь то пожнешь
