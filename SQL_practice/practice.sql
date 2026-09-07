@@ -2045,3 +2045,46 @@ COUNT(*) as purchase_count
 FROM expenses
 WHERE strftime('%Y-%M', date) = '2026-08'
 GROUP BY category
+-- practice
+-- Task 1
+SELECT
+item,
+julianday(date) - julianday('2026-01-01') as julianday
+FROM expenses
+-- Task 2
+SELECT
+item,
+date
+FROM expenses
+WHERE julianday(date) < julianday('2026-08-01')
+-- Task 3
+SELECT
+item, 
+date
+FROM expenses
+WHERE date >= date('now', '-30 days')
+-- Task 4
+SELECT
+item, 
+strftime('%w', date) as weekday
+FROM expenses
+-- Task 5
+SELECT
+item, 
+strftime('%w', date) as weekday
+FROM expenses
+WHERE strftime('%w', date) IN(6, 0)
+-- Task 6
+SELECT
+category,
+COUNT(*) as count,
+AVG(price) as avg
+FROM expenses
+WHERE strftime('%Y-%m', date) = '2026-08'
+GROUP BY category
+-- Task 7
+SELECT
+item, 
+date
+FROM expenses
+WHERE date >= '2026-01-01' AND date < '2026-07-01'
