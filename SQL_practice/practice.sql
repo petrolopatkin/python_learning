@@ -2088,3 +2088,74 @@ item,
 date
 FROM expenses
 WHERE date >= '2026-01-01' AND date < '2026-07-01'
+-- recursive cte pratice
+-- Task 1
+WITH RECURSIVE CTE20 AS (
+SELECT
+1 as MyNumber
+UNION ALL
+SELECT
+MyNumber + 1
+FROM CTE20
+WHERE MyNumber < 20)
+SELECT *
+FROM CTE20
+-- Task 2
+WITH RECURSIVE CTEEVEN AS (
+SELECT
+0 as MyNumber
+UNION ALL
+SELECT
+MyNumber + 2 
+FROM CTEEVEN
+WHERE MyNumber < 20)
+SELECT *
+FROM CTEEVEN
+-- Task 3
+WITH RECURSIVE CTEDESC AS (
+SELECT
+10 as MyNumber
+UNION ALL
+SELECT
+MyNumber - 1
+FROM CTEDESC
+WHERE MyNumber > 0)
+SELECT *
+FROM CTEDESC
+-- Task 4
+WITH RECURSIVE CTESQUARE AS (
+SELECT
+1 as MyNumber
+UNION ALL
+SELECT
+MyNumber + 1
+FROM CTESQUARE
+WHERE MyNumber < 10)
+SELECT 
+MyNumber, 
+MyNumber * MyNumber as square
+FROM CTESQUARE
+-- Task 5
+WITH CTEDATE AS (
+SELECT
+date('now') as today
+UNION ALL
+SELECT
+date(today, '+1 day')
+FROM CTEDATE 
+WHERE today < date(today, '+30 days'))
+SELECT *
+FROM CTEDATE 
+-- Task 6
+WITH CTEDATE AS (
+SELECT
+date('now') as today
+UNION ALL
+SELECT
+date(today, '+1 day')
+FROM CTEDATE 
+WHERE today < date(today, '+30 days'))
+SELECT
+today, 
+strftime('%w', today) as weekday 
+FROM CTEDATE
