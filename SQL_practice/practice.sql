@@ -2159,3 +2159,39 @@ SELECT
 today, 
 strftime('%w', today) as weekday 
 FROM CTEDATE
+-- Views practice 
+-- Task 1
+CREATE VIEW monthly_expenses4 AS 
+SELECT 
+strftime('%Y-%m', date) as month,
+SUM(purchase_price) as sum
+FROM expenses
+GROUP BY strftime('%Y-%m', date) ;
+
+SELECT
+*
+FROM monthly_expenses
+-- Task 2
+CREATE VIEW expensive_prices AS 
+SELECT 
+date, 
+item, 
+price
+FROM expenses
+WHERE price > 20
+GROUP BY date;
+
+SELECT
+*
+FROM expensive_prices
+-- Task 3
+CREATE VIEW category_expenses2 AS 
+SELECT 
+category,
+SUM(purchase_price * quantity) as total_spent,
+FROM purchases
+GROUP BY category;
+
+SELECT *
+FROM category_expenses
+WHERE total_spent > 30
