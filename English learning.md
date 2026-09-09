@@ -1234,6 +1234,26 @@ garnish - приукрашать
 disgruntled - недовольный, раздраженный
 
 reap - пожинать, получать результат
+
+thumped - глухо ударить
+
+tentative - неуверенный, предварительный
+
+endure - терпеть, выдерживать
+
+sighing - вздыхая
+
+scythe - коса, серп
+
+teeter - шататься, балансировать
+
+hoist - поднимать, подтягивать
+
+rigor - строгость, суровость
+
+conscientiously - добросоветсно, тщательно
+
+unknot - развязать
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1524,6 +1544,12 @@ a rosy outlook for the future - радужный/оптимистичный пр
 condensed version - сжатая/сокращенная версия
 
 disgruntled customer - недовольный покупатель
+
+thump up against something - ударяться обо что-то
+
+let out a sigh - вздохнуть/ испустить вздох
+
+teeter on the edge of disaster - шататься на грани катастрофы
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1860,3 +1886,9 @@ He told me unvarnished truth about the situation - он рассказал мн�
 People who invest in their education can reap significant benefits later in life - люди, инвестирующие в свое образование могут получить огромные плюсы позже в жизни
 
 Reap what you sow - что посеешь то пожнешь
+
+We have made a tentative plan for the future - мы составили предварительный план на будущее
+
+People living in the poverty often have to endure extremely difficult conditions - люди живущие в бедности часто должны преодолевать/выдерживать сложные условия
+
+The study was conducted with scientific rigor - исследование было проведено с научной тщательностью 
