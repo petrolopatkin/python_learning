@@ -570,4 +570,108 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text;
     color: hsla(0, 0%, 0%, 0.238);
-} """
+}
+#
+@media screen and (min-width: 576px) {
+    main {
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
+    }
+
+    .card {
+        width: min(100%, 400px);
+    }
+}
+@media screen and (min-width: 768px) {
+    nav {
+        display: none;
+    }
+    
+    .card {
+        width: min(100%, 325px);
+    }
+
+    .card figure {
+        flex-flow: column-reverse;
+    }
+
+    .card figcaption {
+        margin: 0.1em 0;
+    }
+
+    .card p {
+        margin-top: 1rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .card {
+        width: min(100%, 400px);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .card {
+        width: min(calc(33% - 1rem), 500px);
+    }
+}
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+   h1 {
+    font-size: 1.5rem;
+   }
+
+   nav {
+    display: none;
+   }
+
+   main {
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+   }
+
+   .card {
+    width: min(calc(33% - 0.25rem), 200px);
+   }
+}
+#
+.card:target {
+    border-color: salmon;
+}
+
+.card figure {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.card img {
+    border: 5px double var(--DARK-COLOR);
+    border-radius: 50%;
+}
+
+.card figcaption {
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.card p::before {
+    content: open-quote;
+}
+
+.card p::after {
+    content: close-quote;
+}
+#
+.card {
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: #cbd5e1;
+    border: 2px solid var(--DARK-COLOR);
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ """
