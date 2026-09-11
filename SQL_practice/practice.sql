@@ -2195,3 +2195,38 @@ GROUP BY category;
 SELECT *
 FROM category_expenses
 WHERE total_spent > 30
+-- Index practice 
+-- Task 1
+CREATE INDEX idx_expenses_category
+ON expenses(category) 
+-- Task 2
+EXPLAIN QUERY PLAN 
+SELECT *
+FROM expenses
+WHERE category = 'Food';
+-- Task 3
+CREATE INDEX idx_purchases_category
+ON purchases(category)
+;
+EXPLAIN QUERY PLAN
+SELECT * 
+FROM purchases 
+WHERE category = 'Food'
+ORDER BY purchase_price;
+-- Task 4
+CREATE INDEX idx_for_purchases 
+ON purchases(category, purchase_price);
+
+EXPLAIN QUERY PLAN 
+SELECT *
+FROM purchases
+WHERE category = 'Food'
+ORDER BY purchase_price;
+-- Task 5
+CREATE INDEX idx_price_expenses
+ON expenses(price);
+
+EXPLAIN QUERY PLAN 
+SELECT *
+FROM expenses
+WHERE price > 20;
