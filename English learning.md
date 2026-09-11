@@ -1254,6 +1254,22 @@ rigor - строгость, суровость
 conscientiously - добросоветсно, тщательно
 
 unknot - развязать
+
+ballpark - приблизительный
+
+retort - резко ответить
+
+perceptibly - заметно, ощутимо
+
+sustenance - питание, пища, пропитание
+
+slit - разрезать, прорезать, вскрывать
+
+slackening - ослабление, замедление
+
+gudgingly - неохотно, нехотя
+
+prerogative - исключение
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1550,6 +1566,14 @@ thump up against something - ударяться обо что-то
 let out a sigh - вздохнуть/ испустить вздох
 
 teeter on the edge of disaster - шататься на грани катастрофы
+
+ballpark figure - приблизительная цифра
+
+physical sustenance - физическое поддержание силы
+
+slackening tension - ослабевающее давление
+
+gudgingly admit that.. - неохотно признать что..
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1892,3 +1916,5 @@ We have made a tentative plan for the future - мы составили пред�
 People living in the poverty often have to endure extremely difficult conditions - люди живущие в бедности часто должны преодолевать/выдерживать сложные условия
 
 The study was conducted with scientific rigor - исследование было проведено с научной тщательностью 
+
+It is prerogative of the manager to make final decision - это право менеджера - принять окончательное решение
