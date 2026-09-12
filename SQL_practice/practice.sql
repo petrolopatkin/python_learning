@@ -2230,3 +2230,124 @@ EXPLAIN QUERY PLAN
 SELECT *
 FROM expenses
 WHERE price > 20;
+-- transactions practice
+-- task 1
+BEGIN;
+UPDATE purchases
+SET quantity = quantity + 10
+WHERE id = 6;
+
+SELECT *
+FROM purchases
+WHERE id = 6;
+
+ROLLBACK;
+
+SELECT *
+FROM purchases
+WHERE id = 6;
+-- Task 2
+BEGIN;
+
+UPDATE purchases
+SET quantity = quantity + 2
+WHERE id = 3;
+
+UPDATE purchases
+SET purchase_price = purchase_price + 5
+WHERE id = 3;
+
+SELECT * 
+FROM purchases
+WHERE id = 3;
+
+ROLLBACK;
+
+SELECT * 
+FROM purchases
+WHERE id = 3;
+-- Task 3
+BEGIN;
+
+UPDATE purchases
+SET quantity = quantity + 3
+WHERE id = 8;
+
+UPDATE purchases
+SET purchase_price = purchase_price + 10
+WHERE id = 8;
+
+COMMIT;
+
+SELECT *
+FROM purchases
+WHERE id = 8;
+-- Task 4
+BEGIN;
+
+UPDATE purchases
+SET quantity = quantity + 6
+WHERE id = 9;
+
+SAVEPOINT my_savepoint;
+
+UPDATE purchases
+SET purchase_price = purchase_price + 20 
+WHERE id = 9;
+
+SELECT *
+FROM purchases
+WHERE id = 9;
+
+ROLLBACK TO my_savepoint;
+
+SELECT *
+FROM purchases
+WHERE id = 9;
+
+COMMIt;
+-- Task 5
+BEGIN;
+
+UPDATE purchases
+SET quantity = quantity + 5 
+WHERE id = 10;
+
+SAVEPOINT price_before;
+
+UPDATE purchases
+SET purchase_price = purchase_price + 15 
+WHERE id = 10;
+
+
+ROLLBACK TO price_before;
+
+UPDATE purchases
+SET purchase_price = purchase_price + 5
+WHERE id = 10;
+
+COMMIT;
+
+SELECT * 
+FROM purchases
+WHERE id = 10;
+-- Task 6
+BEGIN;
+
+UPDATE purchases 
+SET quantity = quantity + 2
+WHERE id = 4;
+
+UPDATE purchases 
+SET quantity = quantity + 3
+WHERE id = 7;
+
+SELECT * 
+FROM purchases
+WHERE id IN(4, 7);
+
+ROLLBACK;
+
+SELECT * 
+FROM purchases
+WHERE id IN(4, 7);
