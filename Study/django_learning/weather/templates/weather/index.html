@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Petro Lopatkin">
 
     <title>Weather App</title>
@@ -13,10 +14,11 @@
     <link rel="stylesheet" href="{% static 'weather/main.css' %}">
 </head>
  <body>
+    <header class="header">
         <article id="home">
-        <h1>Weather app</h1>
-        <nav>
-            <ul>
+        <h1 class="header__h1">Weather app</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
                 <li>
                     <a href="#home">Home</a>
                 </li>
@@ -25,25 +27,27 @@
                 </li>
             </ul>
         </nav>
-        <p>Find what weather is right now in your city</p>
-        <form>
-            <input type="text" placeholder="Enter a city:">
-            <button type="submit">Get weather</button>
-        </form>
         </article>
-
+        </header>
+        <main class="main">
+            <article class="main__article search">
+                <p class="main__p">Find what weather is right now in your city</p>
+                <form class="search__form">
+                    <input class="search__input" type="text" placeholder="Enter a city:">
+                    <button class="search__button" type="submit">Get weather</button>
+                </form>
+            </article>
         <hr>
 
-        <article id="saved-cities">
-        <section>
-        <h2>Saved cities:</h2>
-        <ul>
-            {% for city in cities %}
-            <li>{{ city }}</li>
-            {% endfor %}
-        </ul>
-        </section>
-        </article>
+            <article id="saved-cities" class="main__article">
+                <h2>Saved cities:</h2>
+                <ul>
+                    {% for city in cities %}
+                    <li>{{ city }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+        </main>
  </body>
 
 </html>
