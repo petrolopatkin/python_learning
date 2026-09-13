@@ -1270,6 +1270,22 @@ slackening - ослабление, замедление
 gudgingly - неохотно, нехотя
 
 prerogative - исключение
+
+interminable - бесконечный, нескончаемый
+
+taut - натянутый, напряженный
+
+flinch - вздрогнуть, дернуться
+
+awash - залитый, переполненный чем-то
+
+omit - пропустить, отпустить, не включить
+
+instantiate - создать экземпляр, реализовать конкретный пример
+
+hatchet - топорик, небольшой топор
+
+commiserate - посочувствовать
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1574,6 +1590,10 @@ physical sustenance - физическое поддержание силы
 slackening tension - ослабевающее давление
 
 gudgingly admit that.. - неохотно признать что..
+
+be on taut nerves - быть на пределе напряжения
+
+
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1918,3 +1938,9 @@ People living in the poverty often have to endure extremely difficult conditions
 The study was conducted with scientific rigor - исследование было проведено с научной тщательностью 
 
 It is prerogative of the manager to make final decision - это право менеджера - принять окончательное решение
+
+The Internet is awash with information - интернет переполнен информацией
+
+I accidentally omitted an important detail - я случайно упустил важную деталь
+
+Bury the hatchet - помириться после конфликта
