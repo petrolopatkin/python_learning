@@ -2351,3 +2351,80 @@ ROLLBACK;
 SELECT * 
 FROM purchases
 WHERE id IN(4, 7);
+-- Transaction practice day 2
+-- Task 1
+BEGIN;
+
+UPDATE purchases
+SET quantity = quantity + 2
+WHERE id = 5;
+
+UPDATE purchases
+SET purchase_price = purchase_price + 3
+WHERE id = 5;
+
+SELECT *
+FROM purchases 
+WHERE id = 5;
+
+ROLLBACK;
+
+SELECT *
+FROM purchases 
+WHERE id = 5;
+-- Task 2
+BEGIN;
+
+UPDATE purchases
+SET quantity = quantity + 5
+WHERE id = 7;
+
+SAVEPOINT quantity_before;
+
+UPDATE purchases
+SET purchase_price = purchase_price + 10
+WHERE id = 7;
+
+SELECT * 
+FROM purchases
+WHERE id = 7;
+
+ROLLBACK TO quantity_before;
+
+SELECT * 
+FROM purchases
+WHERE id = 7;
+
+COMMIT;
+-- Task 3
+BEGIN;
+
+UPDATE purchases
+SET quantity = quantity + 2
+WHERE id = 3;
+
+UPDATE purchases
+SET quantity = quantity + 2
+WHERE id = 8;
+
+SELECT * 
+FROM purchases
+WHERE id IN(3, 8);
+
+SAVEPOINT quantity_before2;
+
+UPDATE purchases
+SET purchase_price = purchase_price + 5
+WHERE id = 3;
+
+UPDATE purchases
+SET purchase_price = purchase_price + 10
+WHERE id = 8;
+
+SELECT * 
+FROM purchases
+WHERE id IN(3, 8);
+
+ROLLBACK TO quantity_before2;
+
+COMMIT;
