@@ -11,8 +11,20 @@ def index(request):
         "London"
     ]
 
+    city = ""
+
+    if request.method == 'POST':
+        city = request.POST.get("city")
+        if city:
+            cities.append(city)
+        else:
+            print("You entered invalid city, try again")
+
     return render(
         request,
         "weather/index.html",
-        {"cities": cities}
+        {
+        "cities": cities,
+        "city": city
+        }
     )

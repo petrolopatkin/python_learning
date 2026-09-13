@@ -32,10 +32,14 @@
         <main class="main">
             <article class="main__article search">
                 <p class="main__p">Find what weather is right now in your city</p>
-                <form class="search__form">
-                    <input class="search__input" type="text" placeholder="Enter a city:">
+                <form class="search__form" method="post">
+                    {% csrf_token %}
+                    <input class="search__input" name="city" type="text" placeholder="Enter a city:">
                     <button class="search__button" type="submit">Get weather</button>
                 </form>
+                {% if city %}
+                <p>You searched for: {{ city }}</p>
+                {% endif %}
             </article>
         <hr>
 
