@@ -1286,6 +1286,18 @@ instantiate - создать экземпляр, реализовать конк
 hatchet - топорик, небольшой топор
 
 commiserate - посочувствовать
+
+sprain - расстяжение, расстянуть
+
+flattering - льстящий, подходящий
+
+thorougly - тщательно, основательно
+
+treading - наступающий
+
+tease - дразнить, подшучивать
+
+phony - фальшивый, ненастоящий
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1593,7 +1605,7 @@ gudgingly admit that.. - неохотно признать что..
 
 be on taut nerves - быть на пределе напряжения
 
-
+adress the issue - решить проблему, рассмотреть вопрос
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1944,3 +1956,7 @@ The Internet is awash with information - интернет переполнен �
 I accidentally omitted an important detail - я случайно упустил важную деталь
 
 Bury the hatchet - помириться после конфликта
+
+I can't give a straightforward answer to that question - я не могу дать прямой ответ на этот вопрос
+
+I look forward to your prompt response - надеюсь на ваш скорейший ответ
