@@ -3,7 +3,7 @@ from .forms import CityForm
 
 
 def index(request):
-    cities = [
+    default_cities = [
         "Prešov",
         "Košice",
         "Kyiv",
@@ -19,9 +19,11 @@ def index(request):
         form = CityForm(request.POST)
 
         if form.is_valid():
-            city = form.cleaned_data["city"]
-            cities.append(city)
-            request.session["cities"] = cities
+            city = form.cleaned_data["city"].strip()
+
+            if city not in cities:
+                cities.append(city)
+                request.session["cities"] = cities
         else:
             print("You entered invalid city")
     else:
