@@ -1298,6 +1298,16 @@ treading - наступающий
 tease - дразнить, подшучивать
 
 phony - фальшивый, ненастоящий
+
+tamper - вмешиваться, портить, изменять
+
+deteriorate - ухудщаться, портиться
+
+groom - ухаживать за
+
+fudge - искажать, приукрашивать, уклоняться
+
+sketchy - подозрительный, сомнительный, ненадежный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1606,6 +1616,10 @@ gudgingly admit that.. - неохотно признать что..
 be on taut nerves - быть на пределе напряжения
 
 adress the issue - решить проблему, рассмотреть вопрос
+
+tamper with something - вмешиваться во что-то
+
+groom yourself - ухаживать за собой
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -1960,3 +1974,9 @@ Bury the hatchet - помириться после конфликта
 I can't give a straightforward answer to that question - я не могу дать прямой ответ на этот вопрос
 
 I look forward to your prompt response - надеюсь на ваш скорейший ответ
+
+The quality of the service has deteriorated over the last few years - качество обслуживания ухудшилось за последние несколько лет
+
+The company was accused of fudging the figures - компанию обвинили в искажении цифр
+
+I didn't buy anything from that website because it looked sketchy - я ничего не купил с этого сайта потому что он выглядел подозрительно
