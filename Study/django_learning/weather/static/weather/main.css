@@ -70,3 +70,18 @@ a:any-link {
 a:hover, a:focus {
     color: var(--HOVER-COLOR);
 }
+
+.city-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.delete-form, .delete-button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.weather-form, .weather-button {
+    margin: 0;
+}

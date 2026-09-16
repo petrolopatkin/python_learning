@@ -47,7 +47,23 @@
                 <h2>Saved cities:</h2>
                 <ul>
                     {% for city in cities %}
-                    <li>{{ city }}</li>
+                    <li class="city-item">
+                        {{ city }}
+                        <form class="weather-form" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="city" value="{{ city }}">
+                            <button class="weather-button" type="submit" name="action" value="weather">
+                                Get Weather
+                            </button>
+                        </form>
+                        <form class="delete-form" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="city" value="{{ city }}">
+                            <button class="delete-button" type="submit" name="action" value="delete">
+                                Delete
+                            </button>
+                        </form>
+                    </li>
                     {% endfor %}
                 </ul>
             </article>
