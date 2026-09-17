@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import CityForm
-
+from .models import SavedCity
 
 def index(request):
     default_cities = [
@@ -12,9 +12,11 @@ def index(request):
         "London"
     ]
 
-    cities = request.session.get("cities", default_cities)
+    cities = SavedCity.objects.all()
     city = ""
+    message = ""
 
+    form = CityForm()
     if request.method == 'POST':
         action = request.POST.get("action")
         city  = request.POST.get("city")
@@ -22,16 +24,18 @@ def index(request):
             if city in cities:
                 cities.remove(city)
                 request.session["cities"] = cities
+                message = f"{city} was deleted"
             else:
-                print("Incorrect deletion")
+                message = "City not found"
         elif action == "weather":
             print("WEATHER CITY: ", city)
-
+        else:
+            form = CityForm(request.POST)
         if form.is_valid():
             city = form.cleaned_data["city"].strip()
 
             if not any(saved_city.lower() == city.lower() for saved_city in cities):
-                cities.append(city).lower()
+                cities.append(city)
                 request.session["cities"] = cities
         else:
             print("You entered invalid city")
@@ -44,6 +48,7 @@ def index(request):
         {
         "cities": cities,
         "city": city,
-        "form": form
+        "form": form,
+        "message": message
         }
     )
