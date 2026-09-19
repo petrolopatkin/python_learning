@@ -35,13 +35,15 @@
                 <form class="search__form" method="post">
                     {% csrf_token %}
                     {{ form.city }}
-                    <button class="search__button" type="submit">Get weather</button>
+                    <button class="search__button" type="submit" name="action" value="weather-search">Get weather</button>
                 </form>
-                {% if city %}
+                {% if action == "weather-search and city" %}
                 <p>You searched for: {{ city }}</p>
                 {% endif %}
-                {% if message %}
-                <p> {{message}} </p>
+                {% if messages %}
+                    {% for message in messages %}
+                    <p> {{message}} </p>
+                    {% endfor %}
                 {% endif %}
             </article>
         <hr>
