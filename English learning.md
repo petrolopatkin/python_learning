@@ -1308,6 +1308,22 @@ groom - ухаживать за
 fudge - искажать, приукрашивать, уклоняться
 
 sketchy - подозрительный, сомнительный, ненадежный
+
+reckon - полагать, считать, предполагать
+
+backfire - иметь обратный эффект, обернуться против кого-то
+
+patchy - неравномерный, прерывистый
+
+peddler - торговец(продающий товары с рук)
+
+sooty - темный, черный, покрытый сажец
+
+outstrip - превзойтиЮ обогнать, опередить
+
+locket - медальон
+
+limply - вяло, безвольно
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1620,6 +1636,14 @@ adress the issue - решить проблему, рассмотреть воп�
 tamper with something - вмешиваться во что-то
 
 groom yourself - ухаживать за собой
+
+reckon something will happen - предполагать что что-то случиться
+
+backfire badly - дать плохой обратный эффект
+
+patchy internet connection - прерывистое интернет подключение
+
+outstrip competitors - превзойти конкурентов
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
