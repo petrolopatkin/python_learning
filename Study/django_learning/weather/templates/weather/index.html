@@ -37,8 +37,17 @@
                     {{ form.city }}
                     <button class="search__button" type="submit" name="action" value="weather-search">Get weather</button>
                 </form>
-                {% if action == "weather-search and city" %}
-                <p>You searched for: {{ city }}</p>
+                {% if temperature %}
+                    <section>
+                        <h2>Current weather in {{ city }}</h2>
+                        <p>Temperature: {{ temperature }}°C</p>
+                        <p>Feels like: {{ apparent_temperature }}°C</p>
+                        <p>Humidity: {{ relative_humidity }}%</p>
+                        <p>Wind Speed: {{ wind_speed }}km/h</p>
+                        <p>Wind Direction: {{ wind_direction }}</p>
+                        <p>Wind Gusts: {{ wind_gusts }}</p>
+                        <p>Weather Code: {{ weather_code }}</p>
+                    </section>
                 {% endif %}
                 {% if messages %}
                     {% for message in messages %}
