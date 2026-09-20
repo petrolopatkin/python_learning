@@ -1324,6 +1324,26 @@ outstrip - превзойтиЮ обогнать, опередить
 locket - медальон
 
 limply - вяло, безвольно
+
+loaf - буханка
+
+gleam - блестеть, сиять
+
+slab - плита; кусок
+
+knead - месить, вымешивать
+
+frown - хмуриться, нахмуриться
+
+unaccustomed - непривычный
+
+gluffly - грубо, резко
+
+pout - дуться, обижаться
+
+perspiration - пот
+
+ordeal - мучительный, тяжелый
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1644,6 +1664,10 @@ backfire badly - дать плохой обратный эффект
 patchy internet connection - прерывистое интернет подключение
 
 outstrip competitors - превзойти конкурентов
+
+a loaf of bread - буханка хлеба
+
+unaccustomed to change - непривыкший к изменениям
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2004,3 +2028,9 @@ The quality of the service has deteriorated over the last few years - качес
 The company was accused of fudging the figures - компанию обвинили в искажении цифр
 
 I didn't buy anything from that website because it looked sketchy - я ничего не купил с этого сайта потому что он выглядел подозрительно
+
+There was a gleam of hope in his eyes - в его глазах мелькнул проблеск надежды
+
+She frowned when she heard the news - она нахмурилась услышав новости
+
+Moving to another country alone was difficult ordeal but taught me a lot - переезд в другую страну в одиночку был тяжелым испытанием, но многому меня научил
