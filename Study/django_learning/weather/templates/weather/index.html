@@ -39,14 +39,14 @@
                 </form>
                 {% if temperature %}
                     <section>
-                        <h2>Current weather in {{ city }}</h2>
+                        <h2>Current weather in {{ location_name }}, {{ country }}</h2>
                         <p>Temperature: {{ temperature }}°C</p>
                         <p>Feels like: {{ apparent_temperature }}°C</p>
                         <p>Humidity: {{ relative_humidity }}%</p>
                         <p>Wind Speed: {{ wind_speed }}km/h</p>
-                        <p>Wind Direction: {{ wind_direction }}</p>
+                        <p>Wind Direction: {{ wind_direction_name }}</p>
                         <p>Wind Gusts: {{ wind_gusts }}</p>
-                        <p>Weather Code: {{ weather_code }}</p>
+                        <p>Weather Code: {{ weather_description }}</p>
                     </section>
                 {% endif %}
                 {% if messages %}
