@@ -1344,6 +1344,18 @@ pout - дуться, обижаться
 perspiration - пот
 
 ordeal - мучительный, тяжелый
+
+caress - гладить, ласкать
+
+amuse - забавлять, развлекать
+
+intricate - сложный, замысловатый
+
+hamper - мешать, затруднять, препятствовать; корзина(для белья)
+
+smug - самоуверенный, самодовольный
+
+queasy - испытвающий тошноту, мутит
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1668,6 +1680,8 @@ outstrip competitors - превзойти конкурентов
 a loaf of bread - буханка хлеба
 
 unaccustomed to change - непривыкший к изменениям
+
+hamper progress - мешать/препятствовать прогрессу
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2034,3 +2048,7 @@ There was a gleam of hope in his eyes - в его глазах мелькнул 
 She frowned when she heard the news - она нахмурилась услышав новости
 
 Moving to another country alone was difficult ordeal but taught me a lot - переезд в другую страну в одиночку был тяжелым испытанием, но многому меня научил
+
+The machine has an intricate design with hundreds of small components - у машины сложная конструкция состоящая из сотен маленьких деталей
+
+The film amused me more than I expected - фильм развлек меня больше чем я ожидал
