@@ -1356,6 +1356,22 @@ hamper - мешать, затруднять, препятствовать; ко�
 smug - самоуверенный, самодовольный
 
 queasy - испытвающий тошноту, мутит
+
+writhe - корчиться, извиваться(от боли)
+
+nausea - тошнота
+
+anguish - душевные страдания, боль, мука
+
+porch - крыльцо, веранда
+
+decile - послушный, легко управляемый, покладистый
+
+senile - слабоумный
+
+fondness - симпатия, привязанность
+
+puffy - опухший, отекший
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1682,6 +1698,16 @@ a loaf of bread - буханка хлеба
 unaccustomed to change - непривыкший к изменениям
 
 hamper progress - мешать/препятствовать прогрессу
+
+suffer emotional anguish - испытывать душевные страдания
+
+have a fondness for something - испытывать особую любовь, симпатию к чему-то
+
+be docile and easy to handle - быть покладистым и легким в обращении
+
+experience severe nausea - испытывать сильную тошноту
+
+writhe in pain - корчиться от боли
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
