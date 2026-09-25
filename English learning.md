@@ -1372,6 +1372,24 @@ senile - слабоумный
 fondness - симпатия, привязанность
 
 puffy - опухший, отекший
+
+sag - провисать, оседать, обвисать
+
+usher - сопровождать
+
+qualm - сомнение, угрызение совести
+
+meekly - кротко, покорно, смиренно
+
+resent - негодовать, обижаться
+
+refute - опровергать
+
+defiantly - вызывающе, непокрно
+
+exasperation - досада, раздражение
+
+lopsided - кривой, перекошеный, неравномерный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1707,7 +1725,13 @@ be docile and easy to handle - быть покладистым и легким �
 
 experience severe nausea - испытывать сильную тошноту
 
-writhe in pain - корчиться от боли
+writhe in pain - корчиться от 
+
+refute an argument - опровергнуть аргумент
+
+resent being treated unfairly - жаловаться на нечестное отношение к себе
+
+have qualms about doing something - иметь сомнения в деланьи чего-то
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2078,3 +2102,7 @@ Moving to another country alone was difficult ordeal but taught me a lot - пе�
 The machine has an intricate design with hundreds of small components - у машины сложная конструкция состоящая из сотен маленьких деталей
 
 The film amused me more than I expected - фильм развлек меня больше чем я ожидал
+
+She sighed in exasperation after explaining the same thing several times - она раздраженно вздохнула после того как несколько раз обьяснила одно и то же
+
+He looked at his parents defiantly and refused to apologise - он вызывающе посмотрел на родителей и отказался извиняться
