@@ -1390,6 +1390,32 @@ defiantly - вызывающе, непокрно
 exasperation - досада, раздражение
 
 lopsided - кривой, перекошеный, неравномерный
+
+pasty - бледный, нездоровый
+
+repel - отталкивать; вызывать неприязнь
+
+contaminate - загрязнять
+
+solitude - одиночество
+
+brassy - наглый/резкий
+
+shambles - полный беспорядок, хаос
+
+mangy - облезлый, паршивый
+
+pert - дерзкий, бойкий, самоуверенный
+
+snub - игнорировать, пренебрегать
+
+morbid - болезненный, мрачный
+
+adroit - ловкий, искустный, умелый
+
+diminished - уменьшенный, ослабленный
+
+futile - бесполезный, тщетный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1732,6 +1758,20 @@ refute an argument - опровергнуть аргумент
 resent being treated unfairly - жаловаться на нечестное отношение к себе
 
 have qualms about doing something - иметь сомнения в деланьи чего-то
+
+be in shambles - быть в беспорядке/хаосе
+
+diminished confidence - снзившаяся уверенность
+
+a futile attempt - тщетная попытка
+
+repel someone - отталкивать кого-то
+
+morbid curiosity - болезненное любопытство
+
+go with the flow - плыть по течению(быстро адаптироваться)
+
+bask in the ambience - наслаждаться атмосферой
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2106,3 +2146,11 @@ The film amused me more than I expected - фильм развлек меня б�
 She sighed in exasperation after explaining the same thing several times - она раздраженно вздохнула после того как несколько раз обьяснила одно и то же
 
 He looked at his parents defiantly and refused to apologise - он вызывающе посмотрел на родителей и отказался извиняться
+
+He sometimes seeks solitude when he needs to think - он иногда ищет уединения/одиночества когда ему нужно подумать о чем-то
+
+The chemicals contaminated the water - химикаты зарязнили воду
+
+He felt that his former colleagues had deliberatly snubbed him - он чувствовал что его бывшие коллеги специально его игнорировали
+
+She is adroit at handling difficult situations - она искустна в решение сложных ситуаций
