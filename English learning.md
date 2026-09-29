@@ -1416,6 +1416,26 @@ adroit - ловкий, искустный, умелый
 diminished - уменьшенный, ослабленный
 
 futile - бесполезный, тщетный
+
+sprawling - огромный(территориально)
+
+inquire - интересоваться, справляться, узнавать
+
+earmarked - предназначенный для чего-то
+
+cordial - сердечный, доброжелательный
+
+squirm - ерзать, извиваться от дискомфорта
+
+concocted - придуманный, выдуманный
+
+remediation - устранение проблемы
+
+spew out - извергать, выплескивать
+
+adjourn - отложить/перенести
+
+rowdier - более шумный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1772,6 +1792,14 @@ morbid curiosity - болезненное любопытство
 go with the flow - плыть по течению(быстро адаптироваться)
 
 bask in the ambience - наслаждаться атмосферой
+
+a sprawling city - огромный город
+
+cordial relationship - доброжелательные взаимоотношения
+
+squirm in discomfort - извиваться от дискомфорта
+
+concoct a story - выдумать историю
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2154,3 +2182,7 @@ The chemicals contaminated the water - химикаты зарязнили во�
 He felt that his former colleagues had deliberatly snubbed him - он чувствовал что его бывшие коллеги специально его игнорировали
 
 She is adroit at handling difficult situations - она искустна в решение сложных ситуаций
+
+I called the hotel to inquire about the availability of rooms - я позвонил в отель чтобы узнать о наличии свободных номеров
+
+The money was earmarked for improving public transport - деньги были предназначены для улучшения общественного транспорта
