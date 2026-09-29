@@ -1436,6 +1436,14 @@ spew out - извергать, выплескивать
 adjourn - отложить/перенести
 
 rowdier - более шумный
+
+dissection - вскрытие, препарирование
+
+pretense - притворство
+
+deteriorate - ухудшаться
+
+reassure - успокаивать, заверять что все в порядке
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2186,3 +2194,9 @@ She is adroit at handling difficult situations - она искустна в ре
 I called the hotel to inquire about the availability of rooms - я позвонил в отель чтобы узнать о наличии свободных номеров
 
 The money was earmarked for improving public transport - деньги были предназначены для улучшения общественного транспорта
+
+He kept up the pretense that everything was fine - он продолжил притворяться что все в порядке
+
+His condition began to deteriorate over time - его состояние начало ухудшаться со временем
+
+She tried to reassure him that everything would be fine - она пробовала успокоить его что все будет в порядке
