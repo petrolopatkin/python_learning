@@ -1444,6 +1444,24 @@ pretense - притворство
 deteriorate - ухудшаться
 
 reassure - успокаивать, заверять что все в порядке
+
+ensnare - заманить в ловушку, поймать
+
+begrudge - завидовать
+
+touchy - обидчивый, деликатный
+
+flabby - дряблый, слабый, мягкий
+
+shudder - содрогаться, вздрагивать
+
+impaired - нарушенный, ослабленный
+
+oblivious - не замечающий, не осознающий
+
+erroneous - ошибочный, неверный
+
+brevity - краткость
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1808,6 +1826,12 @@ cordial relationship - доброжелательные взаимоотноше
 squirm in discomfort - извиваться от дискомфорта
 
 concoct a story - выдумать историю
+
+impared vision - ослабленное зрение
+
+erroneous information - ошибочная информация
+
+
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2200,3 +2224,7 @@ He kept up the pretense that everything was fine - он продолжил пр�
 His condition began to deteriorate over time - его состояние начало ухудшаться со временем
 
 She tried to reassure him that everything would be fine - она пробовала успокоить его что все будет в порядке
+
+He was completely oblivious to the problems his decision could cause - он абсолютно не замечал проблем к которым могло привести его решение
+
+I don't begrudge him his success - я не завидую его успеху
