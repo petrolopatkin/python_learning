@@ -1462,6 +1462,26 @@ oblivious - не замечающий, не осознающий
 erroneous - ошибочный, неверный
 
 brevity - краткость
+
+gloomy - мрачный, унылый
+
+seldom - редко
+
+tread - ступать, наступать
+
+dapper - элегантный(одетый)
+
+languid - вялый, расслабленный, медлительный
+
+sprucely - опрятно, аккуратно
+
+cram in - втиснуть, впихнуть
+
+intermittently - периодически
+
+posthumously - посмертно
+
+treacherous - коварный, опасный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1831,7 +1851,19 @@ impared vision - ослабленное зрение
 
 erroneous information - ошибочная информация
 
+gloomy weather - мрачная погода
 
+tread carefully - ступать осторожно
+
+a dapper gentleman - элегантный джентельмен
+
+languid movement -вялое движение
+
+function intermittently - работать переодически(с перебоями)
+
+recieve an award posthumously - получить награду посмертно
+
+treacherous road - опасная дорога
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2228,3 +2260,7 @@ She tried to reassure him that everything would be fine - она пробова�
 He was completely oblivious to the problems his decision could cause - он абсолютно не замечал проблем к которым могло привести его решение
 
 I don't begrudge him his success - я не завидую его успеху
+
+I seldom have enough time to relax during the week - у меня редко достаточно времени на отдых в течении недели
+
+We managed to cram five people into small car - мы смогли втиснуть 5 людей в маленькую машину
