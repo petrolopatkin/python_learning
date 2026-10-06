@@ -1482,6 +1482,34 @@ intermittently - периодически
 posthumously - посмертно
 
 treacherous - коварный, опасный
+
+behest - по чьей-то просьбе, приказу
+
+endeavour - стараться, усилие, стремление
+
+exponentially - очень быстро, разительно
+
+inexticably - неразрывно, тесно, связанно
+
+admission - вход, пропуск
+
+bawl - реветь, громко плакать
+
+slickly - гладко, ловко, эффектно
+
+wry - ироничный
+
+amiable - дружелюбный, приятный
+
+shilly-shallying - колеблющийся
+
+earnest - серьезный, искренний
+
+grievance - жалоба, обида
+
+meticulous - тщательный, скурпулезный
+
+hastily - поспешно
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1864,6 +1892,22 @@ function intermittently - работать переодически(с пере�
 recieve an award posthumously - получить награду посмертно
 
 treacherous road - опасная дорога
+
+endeavour to something - прилагать усилия к чему-то
+
+grow exponentially - расти очень быстро
+
+inextricably connected - неразрывно связанно
+
+admission fee - плата за вход
+
+have a grievance - иметь жалобу
+
+at someone's behest - по чьей-то просьбе, по чьему-то приказу
+
+an amiable person - дружелюбный человек
+
+make a decision hastily - поспешно принять решение
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2264,3 +2308,5 @@ I don't begrudge him his success - я не завидую его успеху
 I seldom have enough time to relax during the week - у меня редко достаточно времени на отдых в течении недели
 
 We managed to cram five people into small car - мы смогли втиснуть 5 людей в маленькую машину
+
+This project requires meticulous attention to detail - этот проект требует тщательного внимания к деталям
