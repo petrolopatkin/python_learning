@@ -1510,6 +1510,18 @@ grievance - жалоба, обида
 meticulous - тщательный, скурпулезный
 
 hastily - поспешно
+
+dilute - разбавлять, ослаблять
+
+ghastly - ужасный, жуткий
+
+perturbed - встревоженный, обеспокоенный, взволнованный
+
+vexed - раздраженный, озадаченный
+
+taciturn - молчаливый, неразговорчивый
+
+indignantly - возмущенно, негодующе
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1908,6 +1920,20 @@ at someone's behest - по чьей-то просьбе, по чьему-то п
 an amiable person - дружелюбный человек
 
 make a decision hastily - поспешно принять решение
+
+dilute the effect - ослаблять эффект
+
+be deeply perturbed - быть глубоко встревоженным
+
+be vexed by something - быть раздраженным чем-то
+
+a taciturn person - молчаливый человек
+
+react indignantly - возмущенно реагировать
+
+a stroke of luck - счастливый случай, удача
+
+draw people to someone - привлекать людей к кому-то
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
