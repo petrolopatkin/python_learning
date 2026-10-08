@@ -1522,6 +1522,36 @@ vexed - раздраженный, озадаченный
 taciturn - молчаливый, неразговорчивый
 
 indignantly - возмущенно, негодующе
+
+entitled - имеющий право, заслуживающий
+
+quirk - странность, причуда, необычная способность
+
+riveted - прикованный, завороженный
+
+scrutinize - тщательно изучать, внимательно проверять
+
+odious - отвратительный, крайне неприятный
+
+palaver - пустая болтовня, долгие разговоры
+
+loathe - ненавидеть, не мочь терпеть
+
+gloating - злорадствующий, торжествующий(над чужой неудачей)
+
+elicit - вызывать, извлекать(реакцию, ответ, информацию)
+
+flabbergasted - ошеломленный, пораженный
+
+squalid - грязный, убогий
+
+expostulate - выражать(несогласие)
+
+vehemence - пыл, ярость, сила(чувств, речи)
+
+plausible - правдоподобдно, убедительно
+
+aforethought - преднамеренный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1934,6 +1964,18 @@ react indignantly - возмущенно реагировать
 a stroke of luck - счастливый случай, удача
 
 draw people to someone - привлекать людей к кому-то
+
+be entitled to something - иметь право на что-то
+
+be riveted by something - быть полностью поглощенным чем-то
+
+odious behaviour - крайне неприятное поведение
+
+gloat over someone's failure - злорадствовать чьей-то неудаче
+
+a plausible explanation - превдеподобное обьяснение
+
+come down to - сводиться к, зависеть от, прийти к
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2336,3 +2378,17 @@ I seldom have enough time to relax during the week - у меня редко до
 We managed to cram five people into small car - мы смогли втиснуть 5 людей в маленькую машину
 
 This project requires meticulous attention to detail - этот проект требует тщательного внимания к деталям
+
+Everyone has their own little quirks - каждый имеет свои маленькие странности
+
+The researchers scrtuinized the data before publishing their findings - исследователи внимательно изучили данные перед тем как публицировать их находки
+
+I absolutely loathe being suck in traffic - я ненавижу застревать в пробке
+
+The question was designed to elicit an honest response - вопрос был задан с цель вызвать честный ответ
+
+I was absolutely flabbergasted by the decision - я был абсолютно ошеломлен решением
+
+Many people are forced to live in squalid conditions - многие люди не имеют другого выбора кроме как жить в убогих условиях
+
+He denied the accusation with considerable vehemence - он отклонил обвинения со значительной яростью
