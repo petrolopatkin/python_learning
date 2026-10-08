@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from .forms import CityForm
 from .models import SavedCity
 import requests
+import json
 
 
 weather_descriptions = {
@@ -130,6 +133,164 @@ def get_weather(city):
         return weather
 
 
+@csrf_exempt
+def cities_api(request):
+    if request.method == "GET":
+        cities = SavedCity.objects.all()
+
+        data = []
+
+        for city in cities:
+            data.append({
+                "id": city.id,
+                "name": city.name
+            })
+
+        return JsonResponse(data, safe=False)
+    elif request.method == "POST":
+        body = request.body
+        data = json.loads(body)
+
+        if "name" not in data:
+            return JsonResponse({
+                "error": "This field is required"
+            }, status=400)
+        
+        city_name = data["name"]
+
+        if not isinstance(city_name, str):
+            return JsonResponse({
+                "error": "Incorrect name"
+            }, status=400)
+        
+        if city_name.strip() == "":
+            return JsonResponse({
+                "error": "Name cannot be empty"
+            }, status=400)
+
+        if SavedCity.objects.filter(name__iexact=city_name).exists():
+            return JsonResponse({
+                "error": "This city already exists"
+            }, status=400)
+        
+        city_obj = SavedCity.objects.create(name=city_name)
+
+        return JsonResponse({
+            "id": city_obj.id,
+            "name": city_obj.name
+        }, status=201)
+   
+    else:
+        return JsonResponse(
+            {"error": "Method not allowed"},
+            status=405
+        )
+
+@csrf_exempt
+def city_api(request, city_id):
+     if request.method == "DELETE":
+            try:
+                city = SavedCity.objects.get(id=city_id)
+                city.delete()
+            except SavedCity.DoesNotExist:
+                return JsonResponse({
+                    "error": "City with this id doesn't exist"
+                }, status=404)
+    
+            return JsonResponse({
+                "message": "City was deleted successfully"
+            }, status=200)
+     elif request.method == "PUT":
+             try:
+                city = SavedCity.objects.get(id=city_id)
+             except SavedCity.DoesNotExist:
+                return JsonResponse({
+                    "error": "City with this id doesn't exist"
+                }, status=404)
+             body = request.body
+             data = json.loads(body)
+             if "name" not in data:
+                return JsonResponse({
+                    "error": "This field is required"
+                }, status=400)
+                     
+             city_name = data["name"]
+
+             if not isinstance(city_name, str):
+                return JsonResponse({
+                    "error": "Incorrect name"
+                }, status=400)
+                     
+             if city_name.strip() == "":
+                return JsonResponse({
+                    "error": "Name cannot be empty"
+                }, status=400)
+             if SavedCity.objects.filter(name__iexact=city_name).exclude(id=city_id).exists():
+                return JsonResponse({
+                    "error": "This city already exists"
+                }, status=400)
+             
+             city.name = city_name
+             city.save()
+
+             return JsonResponse({
+                 "id": city.id,
+                 "name": city.name
+             }, status=200)
+     elif request.method == "PATCH":
+        try:
+            city = SavedCity.objects.get(id=city_id)
+        except SavedCity.DoesNotExist:
+            return JsonResponse({
+                "error": "City with this id doesn't exist"
+            }, status=404)
+
+        body = request.body
+        data = json.loads(body)
+
+        if not data:
+            return JsonResponse({
+                "error": "No fields to update"
+            }, status=400)
+
+        if "name" in data:
+            city_name = data["name"]
+
+            if not isinstance(city_name, str):
+                return JsonResponse({
+                    "error": "Incorrect name"
+                }, status=400)
+
+            if city_name.strip() == "":
+                return JsonResponse({
+                    "error": "Name cannot be empty"
+                }, status=400)
+
+            if SavedCity.objects.filter(
+                name__iexact=city_name
+            ).exclude(
+                id=city_id
+            ).exists():
+                return JsonResponse({
+                    "error": "This city already exists"
+                }, status=400)
+
+            city.name = city_name
+
+        city.save()
+
+        return JsonResponse({
+            "id": city.id,
+            "name": city.name
+        }, status=200)
+        
+     else:
+        return JsonResponse(
+            {"error": "Method not allowed"},
+            status=405)
+
+
+     
 def index(request):
     cities = SavedCity.objects.all()
 
