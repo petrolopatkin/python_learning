@@ -1552,6 +1552,34 @@ vehemence - пыл, ярость, сила(чувств, речи)
 plausible - правдоподобдно, убедительно
 
 aforethought - преднамеренный
+
+promiscuous - несистематичныйЮ ведущий беспорядочную половую жизнь
+
+flippant - легкомысленный, несерьезный
+
+tenure - срок пребывания в должности
+
+stoytly - решительно, твердо, упорно
+
+stem from - происходить из чего-то, быть вызванным чем-либо
+
+irrevocably - бесповоротно, необратимо
+
+exultation - ликование, радость, торжество
+
+fluke - случайность
+
+discreetly - тактично, осторожно, незаметно
+
+cease - прекращать, переставать
+
+surmise - предпологать
+
+fretfully - тревожно, беспокойно
+
+foist on - навязывать кому-то что-либо
+
+solace - утешение, облегчение
 # Common collocations
 energy consumption - потребление энергии
 
@@ -1976,6 +2004,18 @@ gloat over someone's failure - злорадствовать чьей-то неу
 a plausible explanation - превдеподобное обьяснение
 
 come down to - сводиться к, зависеть от, прийти к
+
+in the nick of time - в самый последний момент
+
+find solace in something - находить утешение в чем-то
+
+have something foist on you - столкнуться с тем что тебе что-то навязывают
+
+cease functioning - перестать функционировать
+
+a complete fluke - чистая случайность
+
+be irrevocably damaged - быть непоправимо поврежденным
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
