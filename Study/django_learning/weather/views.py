@@ -290,7 +290,22 @@ def city_api(request, city_id):
             status=405)
 
 
-     
+def weather_api(request, city_name):
+    weather = get_weather(city_name)
+
+    if weather == 'not_found':
+        return JsonResponse({
+            "error": "City not found"
+        }, status=404)
+
+    if weather == 'error':
+        return JsonResponse({
+            "error": "Weather Service is unavailable right now"
+        }, status=502)
+
+    return JsonResponse(weather)
+
+
 def index(request):
     cities = SavedCity.objects.all()
 
