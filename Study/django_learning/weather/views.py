@@ -148,8 +148,19 @@ def cities_api(request):
 
         return JsonResponse(data, safe=False)
     elif request.method == "POST":
-        body = request.body
-        data = json.loads(body)
+
+        try:
+            body = request.body
+            data = json.loads(body)
+        except json.JSONDecodeError:
+            return JsonResponse({
+                "error": "Invalid JSON"
+            }, status=400)
+
+        if not isinstance(data, dict):
+            return JsonResponse({
+                "error": "JSON must be an object"
+            }, status=400)
 
         if "name" not in data:
             return JsonResponse({
@@ -168,10 +179,12 @@ def cities_api(request):
                 "error": "Name cannot be empty"
             }, status=400)
 
+        city_name = city_name.strip()
+
         if SavedCity.objects.filter(name__iexact=city_name).exists():
             return JsonResponse({
                 "error": "This city already exists"
-            }, status=400)
+            }, status=409)
         
         city_obj = SavedCity.objects.create(name=city_name)
 
@@ -185,6 +198,35 @@ def cities_api(request):
             {"error": "Method not allowed"},
             status=405
         )
+
+
+def validate_city_name(city_name, city_id):
+    if not isinstance(city_name, str):
+        return None, "Incorrect name", 400
+
+    city_name = city_name.strip()
+
+    if not city_name:
+        return None, "Name cannot be empty", 400
+
+    if SavedCity.objects.filter(name__iexact=city_name).exclude(id=city_id).exists():
+        return None, "This city already exists", 409
+
+    return city_name, None, None
+
+
+def parse_json_body(request):
+    try:
+        body = request.body
+        data = json.loads(body)
+    except json.JSONDecodeError:
+        return None, "Invalid JSON", 400
+
+    if not isinstance(data, dict):
+        return None, "JSON must be an object", 400
+
+    return data, None, None
+
 
 @csrf_exempt
 def city_api(request, city_id):
@@ -207,29 +249,28 @@ def city_api(request, city_id):
                 return JsonResponse({
                     "error": "City with this id doesn't exist"
                 }, status=404)
-             body = request.body
-             data = json.loads(body)
+             
+             data, error, status = parse_json_body(request)
+
+             if error:
+                return JsonResponse({
+                "error": error
+                }, status=status)
+             
              if "name" not in data:
                 return JsonResponse({
                     "error": "This field is required"
                 }, status=400)
                      
-             city_name = data["name"]
+             city_name, error, status = validate_city_name(
+                data["name"], city_id
+                )
 
-             if not isinstance(city_name, str):
+             if error:
                 return JsonResponse({
-                    "error": "Incorrect name"
-                }, status=400)
-                     
-             if city_name.strip() == "":
-                return JsonResponse({
-                    "error": "Name cannot be empty"
-                }, status=400)
-             if SavedCity.objects.filter(name__iexact=city_name).exclude(id=city_id).exists():
-                return JsonResponse({
-                    "error": "This city already exists"
-                }, status=400)
-             
+                    "error": error
+                }, status=status)
+
              city.name = city_name
              city.save()
 
@@ -245,35 +286,27 @@ def city_api(request, city_id):
                 "error": "City with this id doesn't exist"
             }, status=404)
 
-        body = request.body
-        data = json.loads(body)
+        data, error, status = parse_json_body(request)
 
-        if not data:
+        if error:
             return JsonResponse({
-                "error": "No fields to update"
+            "error": error
+            }, status=status)
+
+        if not data or "name" not in data:
+            return JsonResponse({
+                "error": "No supported fields to update"
             }, status=400)
 
         if "name" in data:
-            city_name = data["name"]
+            city_name, error, status = validate_city_name(
+            data["name"], city_id
+            )
 
-            if not isinstance(city_name, str):
+            if error:
                 return JsonResponse({
-                    "error": "Incorrect name"
-                }, status=400)
-
-            if city_name.strip() == "":
-                return JsonResponse({
-                    "error": "Name cannot be empty"
-                }, status=400)
-
-            if SavedCity.objects.filter(
-                name__iexact=city_name
-            ).exclude(
-                id=city_id
-            ).exists():
-                return JsonResponse({
-                    "error": "This city already exists"
-                }, status=400)
+                "error": error
+                }, status=status)
 
             city.name = city_name
 
