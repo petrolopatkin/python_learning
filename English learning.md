@@ -1580,6 +1580,26 @@ fretfully - тревожно, беспокойно
 foist on - навязывать кому-то что-либо
 
 solace - утешение, облегчение
+
+drawback - недостаток, минус
+
+susceptible - подверженный, восприимчевый
+
+merit - достоинство, преимущество; заслуживать
+
+agilated - взволнованный, возбужденный, встревоженный
+
+tantrum - истерика
+
+sheepishly - смущенно, виновато
+
+prolific - плодотворный
+
+brisk - быстрый, энергичный
+
+inkling - смутное представление, намек
+
+rummage - рыться
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2016,6 +2036,20 @@ cease functioning - перестать функционировать
 a complete fluke - чистая случайность
 
 be irrevocably damaged - быть непоправимо поврежденным
+
+a major drawback - существенный недостаток
+
+susceptible to influence - подверженный влиянию
+
+considerable merit - значительные достоинства
+
+look agilated - выглядеть встревоженным
+
+to present something in the best possible light - презентовать что-то в наилучшем свете
+
+snap out of it - покончить с этим
+
+return the favour - вернуть услугу
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
