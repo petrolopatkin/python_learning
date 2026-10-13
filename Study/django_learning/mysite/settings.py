@@ -137,3 +137,28 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "%(asctime)s | %(levelname)s | %(name)s | %(message)s",
+        },
+    },
+    "handlers": {
+        "weather_file": {
+            "level": "ERROR",
+            "class": "logging.FileHandler",
+            "filename": BASE_DIR / "weather.log",
+            "formatter": "verbose",
+        },
+    },
+    "loggers": {
+        "weather": {
+            "handlers": ["weather_file"],
+            "level": "ERROR",
+            "propagate": False,
+        },
+    },
+}

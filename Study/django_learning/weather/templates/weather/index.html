@@ -37,18 +37,18 @@
                     {{ form.city }}
                     <button class="search__button" type="submit" name="action" value="weather-search">Get weather</button>
                 </form>
+                <section id="weather-result" aria-live="polite">
                 {% if temperature %}
-                    <section>
-                        <h2>Current weather in {{ location_name }}, {{ country }}</h2>
+                    <h2>Current weather in {{ location_name }}, {{ country }}</h2>
                         <p>Temperature: {{ temperature }}°C</p>
                         <p>Feels like: {{ apparent_temperature }}°C</p>
                         <p>Humidity: {{ relative_humidity }}%</p>
-                        <p>Wind Speed: {{ wind_speed }}km/h</p>
+                        <p>Wind Speed: {{ wind_speed }} km/h</p>
                         <p>Wind Direction: {{ wind_direction_name }}</p>
                         <p>Wind Gusts: {{ wind_gusts }}</p>
-                        <p>Weather Code: {{ weather_description }}</p>
-                    </section>
+                        <p>Weather: {{ weather_description }}</p>
                 {% endif %}
+                </section>
                 {% if messages %}
                     {% for message in messages %}
                     <p> {{message}} </p>

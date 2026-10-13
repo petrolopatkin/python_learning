@@ -2,13 +2,65 @@ console.log("NEW SCRIPT VERSION")
 const searchButton = document.querySelector('.search__button');
 const cityInput = document.querySelector('[name="city"]');
 const citiesList = document.querySelector('#saved-cities ul');
+const weatherResult = document.querySelector('#weather-result');
 
 console.log(cityInput);
 console.log(searchButton);
 console.log(citiesList);
 
+function displayWeather(weather){
+    weatherResult.replaceChildren();
+
+    const title = document.createElement("h2");
+    title.textContent = `Current weather in ${weather.location_name}, ${weather.country}`
+
+    const temperature = document.createElement("p");
+    temperature.textContent = `Temparature: ${weather.temperature}°C`
+
+    const feelsLike = document.createElement("p");
+    feelsLike.textContent = `Feels Like: ${weather.apparent_temperature}°C`
+
+    const humidity = document.createElement("p");
+    humidity.textContent = `Humidity: ${weather.relative_humidity}%`
+
+    const windSpeed = document.createElement("p");
+    windSpeed.textContent = `Wind Speed: ${weather.wind_speed}km/h`
+
+    const windDirection = document.createElement("p");
+    windDirection.textContent = `Wind Direction: ${weather.wind_direction_name}`
+
+    const windGusts = document.createElement("p");
+    windGusts.textContent = `Wind Gusts: ${weather.wind_gusts}km/h`
+
+    const description = document.createElement("p");
+    description.textContent = `Weather: ${weather.weather_description}`
+
+    weatherResult.append(
+        title,
+        temperature,
+        feelsLike,
+        humidity,
+        windSpeed,
+        windDirection,
+        windGusts,
+        description
+    )
+
+    weatherResult.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
+}
+
 searchButton.addEventListener("click", function(event) {
     event.preventDefault();
+
+    const cityName = cityInput.value.trim();
+
+    if(!cityName) {
+        cityInput.focus();
+        return;
+    }
 
     console.log("1. Button clicked");
 
@@ -18,20 +70,25 @@ searchButton.addEventListener("click", function(event) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            name: cityInput.value
+            name: cityName
         })
     })
         .then(response => {
-            console.log("2. Response received:", response.status);
+            console.log("Add city status:", response.status);
+
+            if (!response.ok) {
+                throw new Error(`Failed to add city: ${response.status}`);
+                }
+
             return response.json();
         })
+
         .then(data => {
             console.log("3. Data received:", data);
 
             const newCity = document.createElement("li");
             const weatherForm = document.createElement('form');
             const weatherButton = document.createElement('button');
-            const weatherResult = document.createElement('div')
             const cityHiddenInput = document.createElement('input');
             const deleteForm = document.createElement('form');
             const deleteButton = document.createElement('button');
@@ -40,7 +97,6 @@ searchButton.addEventListener("click", function(event) {
             weatherButton.className = 'weather-button'
             weatherButton.setAttribute('type', 'button')
             weatherButton.textContent = 'Get Weather'
-            weatherResult.className = 'weather-result'
             deleteForm.className = 'delete-form'
             deleteButton.className = 'delete-button'
             deleteButton.setAttribute('type', 'button')
@@ -65,25 +121,13 @@ searchButton.addEventListener("click", function(event) {
                     return response.json()
                 })
                 .then(weather => {
-                    weatherResult.replaceChildren();
-
-                    const location = document.createElement('p')
-                    location.textContent = `${weather.location_name}, ${weather.country}`;
-
-                    const temperature =  document.createElement('p')
-                    temperature.textContent = `Temparature: ${weather.temperature}°C`;
-
-                    const description = document.createElement('p')
-                    description.textContent = `Weather: ${weather.weather_description}`;
-
-                    weatherResult.append(location, temperature, description)
+                    displayWeather(weather)
                 })
                 .catch(error => {
                     console.error("Weather request failed", error)
                 })
 });
             newCity.append(weatherForm);
-            newCity.append(weatherResult);
             deleteForm.append(deleteHiddenInput);
             deleteForm.append(deleteButton);
             deleteButton.addEventListener('click', function() {

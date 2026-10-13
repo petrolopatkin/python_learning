@@ -47,16 +47,16 @@ class CitiesAPITests(TestCase):
 
         response = self.client.post("/api/cities/", data=json.dumps({
             "name": city.name
-        }), content_type="aplication'json")
+        }), content_type="aplication/json")
 
         self.assertEqual(response.status_code, 409)
 
         self.assertEqual(response["Content-Type"], "application/json")
 
-        self.assertTrue(SavedCity.objects.filter(name="Berlin").count(), 1)
+        self.assertEqual(SavedCity.objects.filter(name="Berlin").count(), 1)
 
 
-    def test_delete_cities_returns_204(self):
+    def test_delete_cities_returns_200(self):
         city = SavedCity.objects.create(name="Vienna")
 
         response = self.client.delete(f"/api/cities/{city.id}/")
@@ -113,3 +113,15 @@ class CitiesAPITests(TestCase):
         self.assertEqual(response["Content-Type"], "application/json")
 
         self.assertTrue(SavedCity.objects.filter(id=city.id, name="Prague").exists())
+
+
+    def test_patch_invalid_json_returns_400(self):
+        city = SavedCity.objects.create(name="Vienna")
+
+        response = self.client.patch(f"/api/cities/{city.id}/", data="{invalid JSON", content_type="application/json")
+
+        self.assertEqual(response.status_code, 400)
+
+        self.assertEqual(response["Content-Type"], "application/json")
+
+        self.assertTrue(SavedCity.objects.filter(id=city.id, name="Vienna").exists())

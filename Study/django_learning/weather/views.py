@@ -6,6 +6,9 @@ from .forms import CityForm
 from .models import SavedCity
 import requests
 import json
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 weather_descriptions = {
@@ -41,11 +44,15 @@ def get_weather(city):
     }
 
     try:
-        r = requests.get(url, params=parameters)
+        r = requests.get(url, params=parameters, timeout=10)
         r.raise_for_status()
+    except requests.HTTPError:
+        logger.exception("HTTP error while requesting weather")
+        return "something went wrong, try again later"
     except requests.RequestException:
+        logger.exception("Request exception while executing code")
         return "error"
-
+   
     print(r.status_code)
     print(r.json())
 
