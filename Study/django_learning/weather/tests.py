@@ -1,10 +1,110 @@
 from django.test import TestCase
 from weather.models import SavedCity
 import json
+from unittest.mock import patch, Mock
+from weather.views import get_weather
+import requests
 
 # Create your tests here.
 
 class CitiesAPITests(TestCase):
+    @patch("weather.views.requests.get")
+    def test_get_weather_geocoding_http_error(self, mock_get):
+        fake_response = Mock()
+        fake_response.raise_for_status.side_effect = requests.HTTPError("Server error")
+
+        mock_get.return_value = fake_response
+
+        result = get_weather("Paris")
+
+        self.assertEqual(result, "something went wrong, try again later")
+
+    @patch("weather.views.requests.get")
+    def test_get_weather_geocoding_timeout(self, mock_get):
+        mock_get.side_effect = requests.Timeout("Request timed out")
+
+        result = get_weather("Paris")
+
+        self.assertEqual(result, "error")
+
+
+    @patch("weather.views.requests.get")
+    def test_get_weather_forecast_http_error(self, mock_get):
+        geocoding_response = Mock()
+
+        geocoding_response.status_code = 200
+
+        geocoding_response.json.return_value = {
+            "results": [{
+                "latitude": 48.8566,
+                "longitude": 2.3522,
+                "name": "Paris",
+                "country": "France"
+            }]
+        }
+
+        forecast_response = Mock()
+
+        forecast_response.raise_for_status.side_effect = requests.HTTPError("Forecats serivce error")
+
+        mock_get.side_effect = [geocoding_response, forecast_response]
+
+        result = get_weather("Paris")
+
+        self.assertEqual(result, "error")
+
+        self.assertEqual(mock_get.call_count, 2)
+
+
+    @patch("weather.views.requests.get")
+    def test_get_weather_success(self, mock_get):
+        geocoding_response = Mock()
+    
+        geocoding_response.status_code = 200
+    
+        geocoding_response.json.return_value = {
+        "results": [{
+            "latitude": 48.8566,
+            "longitude": 2.3522,
+            "name": "Paris",
+            "country": "France"
+                }]
+        }
+    
+        forecast_response = Mock()
+
+        forecast_response.raise_for_status.return_value = None
+
+        forecast_response.json.return_value = {
+            "current": {
+                "temperature_2m": 22.5,
+                "relative_humidity_2m": 60,
+                "weather_code": 3,
+                "wind_speed_10m": 15.0,
+                "wind_direction_10m": 90,
+                "wind_gusts_10m": 22.0,
+                "apparent_temperature": 21.0
+            }
+        }
+
+        mock_get.side_effect = [geocoding_response, forecast_response]
+
+        result = get_weather("Paris")
+
+        self.assertIsInstance(result, dict)
+
+        self.assertEqual(result["location_name"], "Paris")
+
+        self.assertEqual(result["country"], "France")
+
+        self.assertEqual(result["temperature"], 22.5)
+
+        self.assertEqual(result["relative_humidity"], 60)
+
+        self.assertEqual(result["wind_direction_name"], "E")
+
+        self.assertEqual(mock_get.call_count, 2)
+
 
     def test_get_cities_returns_saved_cities(self):
         city = SavedCity.objects.create(name="Prague")
@@ -30,10 +130,14 @@ class CitiesAPITests(TestCase):
 
         self.assertEqual(response["Content-Type"], "application/json")
 
-        self.assertTrue(SavedCity.objects.filter(name="Berlin").exists())
+        self.assertEqual(SavedCity.objects.filter(name="Berlin").count(), 1)
+
+        self.assertEqual(response.json()["name"], "Berlin")
 
 
     def test_post_cities_without_name_returns_400(self):
+        cities_before = SavedCity.objects.count()
+
         response = self.client.post("/api/cities/", data=json.dumps({}), 
         content_type="application/json")
 
@@ -41,19 +145,61 @@ class CitiesAPITests(TestCase):
 
         self.assertEqual(response["Content-Type"], "application/json")
 
+        self.assertEqual(SavedCity.objects.count(), cities_before)
+
 
     def test_post_cities_duplicates_returns_409(self):
         city = SavedCity.objects.create(name="Berlin")
 
         response = self.client.post("/api/cities/", data=json.dumps({
             "name": city.name
-        }), content_type="aplication/json")
+        }), content_type="application/json")
 
         self.assertEqual(response.status_code, 409)
 
         self.assertEqual(response["Content-Type"], "application/json")
 
         self.assertEqual(SavedCity.objects.filter(name="Berlin").count(), 1)
+
+
+    def test_post_cities_whitespace_name_returns_400(self):
+        cities_before = SavedCity.objects.count()
+
+        response = self.client.post("/api/cities/", data=json.dumps({
+            "name": "    "
+        }), content_type="application/json")
+
+        self.assertEqual(response.status_code, 400)
+
+        self.assertEqual(response["Content-Type"], "application/json")
+
+        self.assertEqual(SavedCity.objects.count(), cities_before)
+
+
+    def test_post_with_incorrect_json_returns_400(self):
+        cities_before = SavedCity.objects.count()
+
+        response = self.client.post("/api/cities/", data="{invalid JSON", content_type="application/json")
+
+        self.assertEqual(response.status_code, 400)
+        
+        self.assertEqual(response["Content-Type"], "application/json")
+
+        self.assertEqual(SavedCity.objects.count(), cities_before)
+
+
+    def test_post_incorrect_type_of_data_returns_400(self):
+        cities_before = SavedCity.objects.count()
+        
+        response = self.client.post("/api/cities/", data=json.dumps({
+            "name": 123
+        }), content_type="application/json")
+        
+        self.assertEqual(response.status_code, 400)
+                
+        self.assertEqual(response["Content-Type"], "application/json")
+        
+        self.assertEqual(SavedCity.objects.count(), cities_before)
 
 
     def test_delete_cities_returns_200(self):
@@ -101,6 +247,25 @@ class CitiesAPITests(TestCase):
         self.assertEqual(response["Content-Type"], "application/json")
 
 
+    def test_put_duplicate_city_returns_409(self):
+        city1 = SavedCity.objects.create(name="Vienna")
+        city2 = SavedCity.objects.create(name="Prague")
+
+        response = self.client.put(f"/api/cities/{city1.id}/", data=json.dumps({
+            "name": "Prague"
+        }), content_type="application/json")
+
+        self.assertEqual(response.status_code, 409)
+        
+        self.assertEqual(response["Content-Type"], "application/json")
+
+        self.assertTrue(SavedCity.objects.filter(name="Vienna").exists())
+
+        self.assertTrue(SavedCity.objects.filter(name="Prague").exists())
+
+        self.assertEqual(SavedCity.objects.count(), 2)
+
+
     def test_patch_change_name_returns_200(self):
         city = SavedCity.objects.create(name="Vienna")
 
@@ -125,3 +290,22 @@ class CitiesAPITests(TestCase):
         self.assertEqual(response["Content-Type"], "application/json")
 
         self.assertTrue(SavedCity.objects.filter(id=city.id, name="Vienna").exists())
+
+
+    def test_patch_duplicate_city_returns_409(self):
+        city1 = SavedCity.objects.create(name="Vienna")
+        city2 = SavedCity.objects.create(name="Prague")
+    
+        response = self.client.patch(f"/api/cities/{city1.id}/", data=json.dumps({
+                "name": "Prague"
+            }), content_type="application/json")
+    
+        self.assertEqual(response.status_code, 409)
+            
+        self.assertEqual(response["Content-Type"], "application/json")
+    
+        self.assertTrue(SavedCity.objects.filter(name="Vienna").exists())
+    
+        self.assertTrue(SavedCity.objects.filter(name="Prague").exists())
+    
+        self.assertEqual(SavedCity.objects.count(), 2)

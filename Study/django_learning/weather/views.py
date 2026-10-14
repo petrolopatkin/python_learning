@@ -52,9 +52,6 @@ def get_weather(city):
     except requests.RequestException:
         logger.exception("Request exception while executing code")
         return "error"
-   
-    print(r.status_code)
-    print(r.json())
 
     data = r.json()
 
@@ -66,10 +63,6 @@ def get_weather(city):
         longitude = data["results"][0]["longitude"]
         location_name = data["results"][0]["name"]
         country = data["results"][0]["country"]
-
-        print("CITY:", city)
-        print("Latitude:", latitude)
-        print("Longitude:", longitude)
 
         weather_url = "https://api.open-meteo.com/v1/forecast"
 
@@ -90,17 +83,15 @@ def get_weather(city):
         try:
             weather_r = requests.get(
                 weather_url,
-                params=weather_parameters
+                params=weather_parameters,
+                timeout=10
             )
             weather_r.raise_for_status()
 
         except requests.RequestException:
             return "error"
 
-        print(weather_r.status_code)
-
         weather_data = weather_r.json()
-        print(weather_data)
 
         current = weather_data["current"]
 
