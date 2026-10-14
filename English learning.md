@@ -1600,6 +1600,42 @@ brisk - быстрый, энергичный
 inkling - смутное представление, намек
 
 rummage - рыться
+
+wilt - вянуть, увядать; терять силы или энтузиазм
+
+langurous - вялый, томный
+
+full pelt - на полной скорости
+
+snigger - хихикать, посмеиваться
+
+layabout - бездельник
+
+pristine - нетронутый, первозданный
+
+dormant - неактивный, бездействующий
+
+indulgently - снисходительно, благосклонно
+
+lark - забава, шалость
+
+coerced - принужденный, вынужденный
+
+foible - слабость, недостаток
+
+abduction - похищение
+
+precarious - ненадежный, нестабильный, рискованный
+
+stuffy - душный
+
+brooded - мрачно, угрюмо
+
+huffiness - обидчивость, обида, раздраженность
+
+quandary - затруднительное положение, диллема
+
+albeit - хотя, пусть и, несмотря на то что
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2050,6 +2086,26 @@ to present something in the best possible light - презентовать чт�
 snap out of it - покончить с этим
 
 return the favour - вернуть услугу
+
+pristine beaches - нетронутые пляжи
+
+remain dormant - оставаться неактивным
+
+coerse someone into agreeing - заставить кого-то согласиться
+
+child abduction - похищение ребенка
+
+a precarious situation - нестабильная ситуация
+
+a stuffy room - душная комната
+
+brood over the past - переживать из-за прошлого
+
+face a quandary - столкнуться с дилеммой
+
+albeit difficult - хотя и сложный
+
+make the most of something - извлекать максимум из чего-то
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
