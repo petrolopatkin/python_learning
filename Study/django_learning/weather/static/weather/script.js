@@ -3,6 +3,8 @@ const searchButton = document.querySelector('.search__button');
 const cityInput = document.querySelector('[name="city"]');
 const citiesList = document.querySelector('#saved-cities ul');
 const weatherResult = document.querySelector('#weather-result');
+const notification = document.querySelector('#notification');
+console.log("Notification element:", notification)
 
 console.log(cityInput);
 console.log(searchButton);
@@ -74,14 +76,16 @@ searchButton.addEventListener("click", function(event) {
         })
     })
         .then(response => {
-            console.log("Add city status:", response.status);
+    console.log("Add city status:", response.status);
 
-            if (!response.ok) {
-                throw new Error(`Failed to add city: ${response.status}`);
-                }
+    return response.json().then(data => {
+        if (!response.ok) {
+            throw new Error(data.error || `Failed to add city: ${response.status}`);
+        }
 
-            return response.json();
-        })
+        return data;
+    });
+})
 
         .then(data => {
             console.log("3. Data received:", data);
@@ -153,20 +157,20 @@ searchButton.addEventListener("click", function(event) {
 });
             newCity.append(deleteForm);
             citiesList.append(newCity);
+            showNotificationMessage(`${data.name} was added successfully!`);
 
             console.log("4. City appended:", citiesList.innerHTML);
             console.log(weatherForm)
         })
         .catch(error => {
             console.error("Request failed:", error);
+            showNotificationMessage(error.message)
         });
 });
 
-fetch("/api/cities/")
-    .then(response => {
-        console.log(response.status);
-        return response.json()
-    }
-     )
-    .then(data => console.log(data))
+function showNotificationMessage(message) {
+    console.log("Notification element inside function:", notification);
+    console.log("Message:", message);
 
+    notification.textContent = message;
+}

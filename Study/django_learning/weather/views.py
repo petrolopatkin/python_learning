@@ -89,6 +89,7 @@ def get_weather(city):
             weather_r.raise_for_status()
 
         except requests.RequestException:
+            logger.exception("HTTP error while requesting weather")
             return "error"
 
         weather_data = weather_r.json()

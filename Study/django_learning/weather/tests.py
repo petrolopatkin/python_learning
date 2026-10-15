@@ -106,6 +106,47 @@ class CitiesAPITests(TestCase):
         self.assertEqual(mock_get.call_count, 2)
 
 
+    @patch("weather.views.get_weather")
+    def test_weather_api_success(self, mock_get_weather):
+        mock_get_weather.return_value = {
+            "temperature": 22.5
+        }
+
+        response = self.client.get("/api/weather/Paris/")
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(response.json(),{
+            "temperature": 22.5
+        })
+
+
+    @patch("weather.views.get_weather")
+    def test_weather_api_city_not_found(self, mock_get_weather):
+        mock_get_weather.return_value = "not_found"
+
+        response = self.client.get("/api/weather/NonexistentCity/")
+
+        self.assertEqual(response.status_code, 404)
+
+        self.assertEqual(response.json(),{
+            "error": "City not found"
+        })
+
+
+    @patch("weather.views.get_weather")
+    def test_weather_api_service_unavailable(self, mock_get_weather):
+        mock_get_weather.return_value = "error"
+
+        response = self.client.get("/api/weather/Paris/")
+
+        self.assertEqual(response.status_code, 502)
+
+        self.assertEqual(response.json(), {
+            "error": "Weather Service is unavailable right now"
+        })
+
+
     def test_get_cities_returns_saved_cities(self):
         city = SavedCity.objects.create(name="Prague")
 
@@ -309,3 +350,55 @@ class CitiesAPITests(TestCase):
         self.assertTrue(SavedCity.objects.filter(name="Prague").exists())
     
         self.assertEqual(SavedCity.objects.count(), 2)
+
+
+    def test_patch_empty_json_returns_400(self):
+        city = SavedCity.objects.create(name="Vienna")
+
+        response = self.client.patch(f"/api/cities/{city.id}/", data=json.dumps({}), content_type="application/json")
+
+        self.assertEqual(response.status_code, 400)
+
+        self.assertEqual(response["Content-Type"], "application/json")
+
+        self.assertEqual(response.json(), {
+            "error": "No supported fields to update"
+        })
+
+        self.assertTrue(SavedCity.objects.filter(name="Vienna").exists())
+
+
+    def test_patch_unknown_field_returns_400(self):
+        city = SavedCity.objects.create(name="Vienna")
+
+        response = self.client.patch(f"/api/cities/{city.id}/", data=json.dumps({
+            "country": "France"
+        }), content_type="application/json")
+
+        self.assertEqual(response.status_code, 400)
+
+        self.assertEqual(response["Content-Type"], "application/json")
+
+        self.assertEqual(response.json(), {
+            "error": "No supported fields to update"
+        })
+
+        self.assertTrue(SavedCity.objects.filter(name="Vienna").exists())
+
+
+    def test_patch_incorrect_name_returns_400(self):
+        city = SavedCity.objects.create(name="Vienna")
+
+        response = self.client.patch(f"/api/cities/{city.id}/", data=json.dumps({
+            "name": 123
+        }), content_type="application/json")
+
+        self.assertEqual(response.status_code, 400)
+
+        self.assertEqual(response["Content-Type"], "application/json")
+
+        self.assertEqual(response.json(), {
+            "error": "Incorrect name"
+        })
+
+        self.assertEqual(SavedCity.objects.get(id=city.id).name, "Vienna")

@@ -37,6 +37,7 @@
                     {{ form.city }}
                     <button class="search__button" type="submit" name="action" value="weather-search">Get weather</button>
                 </form>
+                <div id="notification" aria-live="polite"></div>
                 <section id="weather-result" aria-live="polite">
                 {% if temperature %}
                     <h2>Current weather in {{ location_name }}, {{ country }}</h2>
