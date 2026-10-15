@@ -1636,6 +1636,24 @@ huffiness - обидчивость, обида, раздраженность
 quandary - затруднительное положение, диллема
 
 albeit - хотя, пусть и, несмотря на то что
+
+complacent - благодушный, самодовольный
+
+waylay - подкараулить
+
+absent-mindedly - рассеяно
+
+distraught - крайне растроенный, потрясенный
+
+downpour - ливень
+
+crafty - хитрый
+
+gush - порез, рана
+
+impinge - затрагивать, оказывать влияние
+
+scarce - редкий, дефицитный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2106,6 +2124,18 @@ face a quandary - столкнуться с дилеммой
 albeit difficult - хотя и сложный
 
 make the most of something - извлекать максимум из чего-то
+
+nod absent-mindedly - рассеяно кивнуть
+
+a sudden downpour - внезапный ливень
+
+a crafty person - хитрый человек
+
+deep gash - глубокий порез
+
+implinge on daily life - влиять на повседневную жизнь
+
+scarce resources - ограниченные ресурсы
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2522,3 +2552,9 @@ I was absolutely flabbergasted by the decision - я был абсолютно о
 Many people are forced to live in squalid conditions - многие люди не имеют другого выбора кроме как жить в убогих условиях
 
 He denied the accusation with considerable vehemence - он отклонил обвинения со значительной яростью
+
+People shouldn't become complacent about their health - люди не должны отсноситься к своему здоровью беспечно
+
+She was distraught when she realised that she had lost the letter - она была очень расстроена когда поняла что потеряла письмо
+
+He barely has enough time to cook dinner, let alone learn a new programming language - у него едва хватает времени приготовить ужин, не говоря уже об изучении нового языка программирования
