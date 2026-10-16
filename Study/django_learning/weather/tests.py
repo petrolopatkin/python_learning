@@ -145,7 +145,7 @@ class CitiesAPITests(TestCase):
         self.assertEqual(response.json(), {
             "error": "Weather Service is unavailable right now"
         })
-
+        
 
     def test_get_cities_returns_saved_cities(self):
         city = SavedCity.objects.create(name="Prague")

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.db import IntegrityError, transaction
 from .forms import CityForm
 from .models import SavedCity
 import requests
@@ -35,6 +36,15 @@ weather_descriptions = {
 
 directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
 
+def create_city(city_name):
+    try:
+        with transaction.atomic():
+            city = SavedCity.objects.create(name=city_name)
+    except IntegrityError:
+        return None, "This city already exists"
+    
+    return city, None
+
 
 def get_weather(city):
     url = "https://geocoding-api.open-meteo.com/v1/search"
@@ -53,7 +63,11 @@ def get_weather(city):
         logger.exception("Request exception while executing code")
         return "error"
 
-    data = r.json()
+    try:
+        data = r.json()
+    except requests.JSONDecodeError:
+        logger.exception("Invalid JSON recieved from geocoding API")
+        return "error"
 
     if not data["results"]:
         return "not_found"
@@ -92,7 +106,11 @@ def get_weather(city):
             logger.exception("HTTP error while requesting weather")
             return "error"
 
-        weather_data = weather_r.json()
+        try:
+            weather_data = weather_r.json()
+        except requests.JSONDecodeError:
+            logger.exception("Invalid JSON recieved from weather API")
+            return "error"
 
         current = weather_data["current"]
 
@@ -184,8 +202,13 @@ def cities_api(request):
             return JsonResponse({
                 "error": "This city already exists"
             }, status=409)
-        
-        city_obj = SavedCity.objects.create(name=city_name)
+
+        city_obj, error = create_city(city_name)
+
+        if error: 
+            return JsonResponse({
+                "error": error
+            }, status=409)
 
         return JsonResponse({
             "id": city_obj.id,
@@ -208,10 +231,22 @@ def validate_city_name(city_name, city_id):
     if not city_name:
         return None, "Name cannot be empty", 400
 
+    if len(city_name) > 50:
+        return None, "City name cannot exceed more than 50 charachters", 400 
+
     if SavedCity.objects.filter(name__iexact=city_name).exclude(id=city_id).exists():
         return None, "This city already exists", 409
 
     return city_name, None, None
+
+
+def save_city_name(city_name, city):
+    try:
+        city.name = city_name
+        city.save()
+    except IntegrityError:
+        return None, "This city already exists"
+    return city, None
 
 
 def parse_json_body(request):
@@ -270,13 +305,18 @@ def city_api(request, city_id):
                     "error": error
                 }, status=status)
 
-             city.name = city_name
-             city.save()
+             city, error = save_city_name(city_name, city)
+
+             if error:
+                 return JsonResponse({
+                     "error": error
+                 }, status=409)
 
              return JsonResponse({
                  "id": city.id,
                  "name": city.name
              }, status=200)
+
      elif request.method == "PATCH":
         try:
             city = SavedCity.objects.get(id=city_id)
@@ -307,9 +347,12 @@ def city_api(request, city_id):
                 "error": error
                 }, status=status)
 
-            city.name = city_name
+            city, error = save_city_name(city_name, city)
 
-        city.save()
+            if error:
+                return JsonResponse({
+                    "error": error
+                }, status=409)
 
         return JsonResponse({
             "id": city.id,
@@ -403,24 +446,12 @@ def index(request):
 
                 city = form.cleaned_data["city"].strip()
 
-                if not SavedCity.objects.filter(
-                    name__iexact=city
-                ).exists():
+                city_obj, error = create_city(city)
 
-                    SavedCity.objects.create(
-                        name=city
-                    )
-
-                    messages.success(
-                        request,
-                        f"{city} was created"
-                    )
-
+                if error:
+                    messages.info(request, "City already saved")
                 else:
-                    messages.success(
-                        request,
-                        "City already saved"
-                    )
+                    messages.success(request, f"{city_obj.name} was created")
 
             else:
                 print("You entered invalid city")
