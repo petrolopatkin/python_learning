@@ -1654,6 +1654,22 @@ gush - порез, рана
 impinge - затрагивать, оказывать влияние
 
 scarce - редкий, дефицитный
+
+amicable - дружелюбный, мирный
+
+scorn - презрение, пренебрежение, презирать
+
+opt - выбирать, отдавать предпочтение
+
+forego - отказаться от чего-либо
+
+gouge - вырезать; необосновано завысить цену
+
+fleetingly - мимолетно, мельком, на мгновение
+
+stifling - душный, удушающий
+
+negligible - незначительный, пренебрежительный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2136,6 +2152,18 @@ deep gash - глубокий порез
 implinge on daily life - влиять на повседневную жизнь
 
 scarce resources - ограниченные ресурсы
+
+an amicable agreement - мирное соглашение
+
+treat someone with scorn - относиться к кому-либо с презрением
+
+opt a cheaper option - выбрать более дешевый вариант
+
+glance fleetingly at someone - посмотреть на кого-то мельком
+
+stifling heat - удушающая жара
+
+a negligible difference - незначительная разница
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2558,3 +2586,5 @@ People shouldn't become complacent about their health - люди не должн
 She was distraught when she realised that she had lost the letter - она была очень расстроена когда поняла что потеряла письмо
 
 He barely has enough time to cook dinner, let alone learn a new programming language - у него едва хватает времени приготовить ужин, не говоря уже об изучении нового языка программирования
+
+Trying different hobbies can help people discover what they're passionate about - Проьовать разные хобби модет помочь человеку найти то что ему по душе
