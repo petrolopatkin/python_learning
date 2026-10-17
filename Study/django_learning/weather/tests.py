@@ -3,27 +3,28 @@ from weather.models import SavedCity
 import json
 from unittest.mock import patch, Mock
 from weather.views import get_weather
+from weather.views import get_coordinates
 import requests
 
 # Create your tests here.
 
 class CitiesAPITests(TestCase):
     @patch("weather.views.requests.get")
-    def test_get_weather_geocoding_http_error(self, mock_get):
+    def test_get_coordinates_geocoding_http_error(self, mock_get):
         fake_response = Mock()
         fake_response.raise_for_status.side_effect = requests.HTTPError("Server error")
 
         mock_get.return_value = fake_response
 
-        result = get_weather("Paris")
+        result = get_coordinates("Paris")
 
         self.assertEqual(result, "something went wrong, try again later")
 
     @patch("weather.views.requests.get")
-    def test_get_weather_geocoding_timeout(self, mock_get):
+    def test_get_coordinates_geocoding_timeout(self, mock_get):
         mock_get.side_effect = requests.Timeout("Request timed out")
 
-        result = get_weather("Paris")
+        result = get_coordinates("Paris")
 
         self.assertEqual(result, "error")
 
@@ -104,6 +105,108 @@ class CitiesAPITests(TestCase):
         self.assertEqual(result["wind_direction_name"], "E")
 
         self.assertEqual(mock_get.call_count, 2)
+
+
+    @patch("weather.views.requests.get")
+    def test_get_coordinates_success(self, mock_get):
+        geocoding_response = Mock()
+
+        geocoding_response.json.return_value = {
+            "results": [{
+                "latitude": 48.8566,
+                "longitude": 2.3522,
+                "name": "Paris",
+                "country": "France"
+            }]
+        }
+
+        mock_get.return_value = geocoding_response
+
+        result = get_coordinates("Paris")
+
+        self.assertEqual(result, { 
+            "latitude": 48.8566,
+            "longitude": 2.3522,
+            "location_name": "Paris",
+            "country": "France"})
+
+        mock_get.assert_called_once()
+
+
+    @patch("weather.views.requests.get")
+    def test_get_coordinates_missing_results_returns_error(self, mock_get):
+        geocoding_response = Mock()
+
+        geocoding_response.status_code = 200
+
+        geocoding_response.json.return_value = {
+            "unexpected": "data"
+        }
+
+        mock_get.return_value = geocoding_response
+
+        result = get_coordinates("Paris")
+
+        self.assertEqual(result, "error")
+
+        mock_get.assert_called_once()
+
+
+    @patch("weather.views.requests.get")
+    def test_get_coordinates_unexpected_results_returns_error(self, mock_get):
+        geocoding_response = Mock()
+
+        geocoding_response.status_code = 200
+
+        geocoding_response.json.return_value = {
+            "results": "unexpected"
+        }
+
+        mock_get.return_value = geocoding_response
+
+        result = get_coordinates("Paris")
+
+        self.assertEqual(result, "error")
+
+        mock_get.assert_called_once()
+
+
+    @patch("weather.views.requests.get")
+    def test_get_coordinates_results_returns_none(self, mock_get):
+        geocoding_response = Mock()
+
+        geocoding_response.status_code = 200
+
+        geocoding_response.json.return_value = {
+            "results": None
+        }
+
+        mock_get.return_value = geocoding_response
+
+        result = get_coordinates("Paris")
+
+        self.assertEqual(result, "error")
+
+        mock_get.assert_called_once()
+
+
+    @patch("weather.views.requests.get")
+    def test_get_coordinates_results_incorrect_first_element_returns_error(self, mock_get):
+        geocoding_response = Mock()
+
+        geocoding_response.status_code = 200
+
+        geocoding_response.json.return_value = {
+            "results": ["unexpected"]
+        }
+
+        mock_get.return_value = geocoding_response
+
+        result = get_coordinates("Paris")
+
+        self.assertEqual(result, "error")
+
+        mock_get.assert_called_once()
 
 
     @patch("weather.views.get_weather")
@@ -307,6 +410,22 @@ class CitiesAPITests(TestCase):
         self.assertEqual(SavedCity.objects.count(), 2)
 
 
+    def test_put_empty_name_returns_400(self):
+        city = SavedCity.objects.create(name="Vienna")
+
+        response = self.client.put(f"/api/cities/{city.id}/", data=json.dumps({}), content_type="application/json")
+
+        self.assertEqual(response.status_code, 400)
+
+        self.assertEqual(response["Content-Type"], "application/json")
+
+        self.assertEqual(response.json(), {
+            "error": "This field is required"
+        })
+
+        self.assertEqual(SavedCity.objects.get(id=city.id).name, "Vienna")
+
+
     def test_patch_change_name_returns_200(self):
         city = SavedCity.objects.create(name="Vienna")
 
@@ -402,3 +521,13 @@ class CitiesAPITests(TestCase):
         })
 
         self.assertEqual(SavedCity.objects.get(id=city.id).name, "Vienna")
+
+
+    def test_patch_nonexistent_city_returns_404(self):
+        response = self.client.patch("/api/cities/99999/", data=json.dumps({
+            "name": "Prague"
+        }), content_type="application/json")
+
+        self.assertEqual(response.status_code, 404)
+
+        self.assertEqual(response["Content-Type"], "application/json")

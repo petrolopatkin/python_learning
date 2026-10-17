@@ -46,43 +46,72 @@ def create_city(city_name):
     return city, None
 
 
-def get_weather(city):
+def get_coordinates(city):
     url = "https://geocoding-api.open-meteo.com/v1/search"
-
+    
     parameters = {
-        "name": city
+            "name": city
+        }
+    
+    try:
+            r = requests.get(url, params=parameters, timeout=10)
+            r.raise_for_status()
+    except requests.HTTPError:
+            logger.exception("HTTP error while requesting weather")
+            return "something went wrong, try again later"
+    except requests.RequestException:
+            logger.exception("Request exception while executing code")
+            return "error"
+    
+    try:
+            data = r.json()
+    except requests.JSONDecodeError:
+            logger.exception("Invalid JSON recieved from geocoding API")
+            return "error"
+    
+    if "results" not in data:
+            return "error"
+    
+    if not isinstance(data["results"], list):
+            return "error"
+        
+    if not data["results"]:
+            return "not_found"
+    
+    if not isinstance(data["results"][0], dict):
+            return "error"
+    
+        
+    latitude = data["results"][0]["latitude"]
+    longitude = data["results"][0]["longitude"]
+    location_name = data["results"][0]["name"]
+    country = data["results"][0]["country"]
+
+    return {
+         "latitude": latitude,
+         "longitude": longitude,
+         "location_name": location_name,
+         "country": country
     }
 
-    try:
-        r = requests.get(url, params=parameters, timeout=10)
-        r.raise_for_status()
-    except requests.HTTPError:
-        logger.exception("HTTP error while requesting weather")
-        return "something went wrong, try again later"
-    except requests.RequestException:
-        logger.exception("Request exception while executing code")
-        return "error"
 
-    try:
-        data = r.json()
-    except requests.JSONDecodeError:
-        logger.exception("Invalid JSON recieved from geocoding API")
-        return "error"
+def get_weather(city):
+    coordinates = get_coordinates(city)
 
-    if not data["results"]:
-        return "not_found"
+    if coordinates == "error":
+         return "error"
 
-    else:
-        latitude = data["results"][0]["latitude"]
-        longitude = data["results"][0]["longitude"]
-        location_name = data["results"][0]["name"]
-        country = data["results"][0]["country"]
+    if coordinates == "not_found":
+         return "not_found"
 
-        weather_url = "https://api.open-meteo.com/v1/forecast"
+    if coordinates == "something went wrong, try again later":
+         return "something went wrong, try again later"
+    
+    weather_url = "https://api.open-meteo.com/v1/forecast"
 
-        weather_parameters = {
-            "latitude": latitude,
-            "longitude": longitude,
+    weather_parameters = {
+            "latitude": coordinates["latitude"],
+            "longitude": coordinates["longitude"],
             "current": (
                 "temperature_2m,"
                 "wind_speed_10m,"
@@ -94,7 +123,7 @@ def get_weather(city):
             )
         }
 
-        try:
+    try:
             weather_r = requests.get(
                 weather_url,
                 params=weather_parameters,
@@ -102,39 +131,39 @@ def get_weather(city):
             )
             weather_r.raise_for_status()
 
-        except requests.RequestException:
+    except requests.RequestException:
             logger.exception("HTTP error while requesting weather")
             return "error"
 
-        try:
+    try:
             weather_data = weather_r.json()
-        except requests.JSONDecodeError:
+    except requests.JSONDecodeError:
             logger.exception("Invalid JSON recieved from weather API")
             return "error"
 
-        current = weather_data["current"]
+    current = weather_data["current"]
 
-        temperature = current["temperature_2m"]
-        relative_humidity = current["relative_humidity_2m"]
-        weather_code = current["weather_code"]
+    temperature = current["temperature_2m"]
+    relative_humidity = current["relative_humidity_2m"]
+    weather_code = current["weather_code"]
 
-        weather_description = weather_descriptions.get(
+    weather_description = weather_descriptions.get(
             weather_code
         )
 
-        wind_speed = current["wind_speed_10m"]
-        wind_direction = current["wind_direction_10m"]
+    wind_speed = current["wind_speed_10m"]
+    wind_direction = current["wind_direction_10m"]
 
-        direction_index = int(
+    direction_index = int(
             (wind_direction + 22.5) / 45
         ) % 8
 
-        wind_direction_name = directions[direction_index]
+    wind_direction_name = directions[direction_index]
 
-        wind_gusts = current.get("wind_gusts_10m")
-        apparent_temperature = current.get("apparent_temperature")
+    wind_gusts = current.get("wind_gusts_10m")
+    apparent_temperature = current.get("apparent_temperature")
 
-        weather = {
+    weather = {
             "temperature": temperature,
             "relative_humidity": relative_humidity,
             "weather_code": weather_code,
@@ -144,10 +173,10 @@ def get_weather(city):
             "apparent_temperature": apparent_temperature,
             "weather_description": weather_description,
             "wind_direction_name": wind_direction_name,
-            "location_name": location_name,
-            "country": country
+            "location_name": coordinates["location_name"],
+            "country": coordinates["country"]
         }
-        return weather
+    return weather
 
 
 @csrf_exempt
