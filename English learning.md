@@ -1670,6 +1670,26 @@ fleetingly - мимолетно, мельком, на мгновение
 stifling - душный, удушающий
 
 negligible - незначительный, пренебрежительный
+
+aptitude - способность, склонность
+
+tenuous - шаткий, слабый, непрочный
+
+frivously - легкомысленно, несерьезно
+
+wobbly - шаткий, неустойчивый
+
+incongruous - несоответствующий, неуместный
+
+stoop - наклоняться, сутулиться
+
+weary - уставший, измотанный
+
+soggy - промокший, размокший
+
+awestruck - пораженный
+
+predilection - склонность, пристрастие, предрасположенность
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2164,6 +2184,20 @@ glance fleetingly at someone - посмотреть на кого-то мель�
 stifling heat - удушающая жара
 
 a negligible difference - незначительная разница
+
+habe a aptitdue fro learning languages - иметь способности к изучению языков
+
+a tenuous connection - слабая связь
+
+behave frivolously - вести себя легкомысленно
+
+an incongruous combination - странное сочетание
+
+stoop to pick something up - наклониться чтобы поднять что-то
+
+grow weary of something - устать от чего-либо
+
+stand awestruck - стоять пораженным чем-то
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
