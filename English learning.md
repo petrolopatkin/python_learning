@@ -1690,6 +1690,18 @@ soggy - промокший, размокший
 awestruck - пораженный
 
 predilection - склонность, пристрастие, предрасположенность
+
+forbearance - снисходительность, терпимость
+
+recollect - вспоминать, припоминать
+
+outing - прогулка, выезд, выход куда-нибудь
+
+gist - суть, основная мысль
+
+flatly - категорически, решительно, прямо
+
+elated - вне себя от радости, чрезвычайно счастливый
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2198,6 +2210,18 @@ stoop to pick something up - наклониться чтобы поднять ч
 grow weary of something - устать от чего-либо
 
 stand awestruck - стоять пораженным чем-то
+
+show forbearance - проявлять терпение/снисходительность
+
+recollect something clearly - отчетливо что-то вспомнить
+
+a day outing - однодневная поездка
+
+get the gist of something - уловить суть чего-либо
+
+flatly deny something - категорически отрицать что-то 
+
+elated with the result - чрезвычайно довольный результатом
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
