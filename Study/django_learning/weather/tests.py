@@ -209,6 +209,23 @@ class CitiesAPITests(TestCase):
         mock_get.assert_called_once()
 
 
+    @patch("weather.views.requests.get")
+    def test_get_coordinates_empty_results_returns_not_found(self, mock_get):
+        geocoding_response = Mock()
+
+        geocoding_response.json.return_value = {
+            "results": []
+        }
+
+        mock_get.return_value = geocoding_response
+
+        result = get_coordinates("Paris")
+
+        self.assertEqual(result, "not_found")
+
+        mock_get.assert_called_once()
+
+
     @patch("weather.views.get_weather")
     def test_weather_api_success(self, mock_get_weather):
         mock_get_weather.return_value = {
