@@ -1702,6 +1702,20 @@ gist - суть, основная мысль
 flatly - категорически, решительно, прямо
 
 elated - вне себя от радости, чрезвычайно счастливый
+
+secluded - уединенный, укромный, удаленный
+
+stock up - запастись чем-либо
+
+jovial - веселый, жизнерадостный
+
+settee - диван
+
+aback - врасплох, неожиданно
+
+repercussion - последствие(обычно неприятное или серьезное)
+
+disgress - отклоняться(от темы, от основной мысли)
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2222,6 +2236,16 @@ get the gist of something - уловить суть чего-либо
 flatly deny something - категорически отрицать что-то 
 
 elated with the result - чрезвычайно довольный результатом
+
+a sevluded spot - укромное место
+
+stock up on food - запастись едой
+
+face the repercussions - столкнуться с последствиями
+
+disgress from the main topic - отклоняться от основной темы
+
+pang of regret - чувство сожаления
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2646,3 +2670,5 @@ She was distraught when she realised that she had lost the letter - она бы�
 He barely has enough time to cook dinner, let alone learn a new programming language - у него едва хватает времени приготовить ужин, не говоря уже об изучении нового языка программирования
 
 Trying different hobbies can help people discover what they're passionate about - Проьовать разные хобби модет помочь человеку найти то что ему по душе
+
+I was taken aback by the news, as I hadn't expected anything like that - эта новость застала меня врасплох, поскольку я не ожидал ничего подобного
