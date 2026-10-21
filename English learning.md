@@ -1716,6 +1716,20 @@ aback - врасплох, неожиданно
 repercussion - последствие(обычно неприятное или серьезное)
 
 disgress - отклоняться(от темы, от основной мысли)
+
+prominent - известный, выдающийся, заметный
+
+indulge - позволять себе что-то, потакать желаниям, предаваться чему-либо
+
+tiff - небольшая ссора
+
+interwoven - переплетенный, тесно связанный
+
+unravel - распутывать, разгадывать
+
+unforthcoming - неразговорчивы, уклончивый, молчаливый
+
+acutely - остро, чрезвычайно сильно, очень отчетливо
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2246,6 +2260,16 @@ face the repercussions - столкнуться с последствиями
 disgress from the main topic - отклоняться от основной темы
 
 pang of regret - чувство сожаления
+
+a prominent figure - выдающаяся личность
+
+indulge in something - предаваться чему-либо
+
+the themes are interwoven - темы тесно связаны
+
+unravel a complex problem - разобраться в сложной проблеме
+
+acutely aware of something - прекрасно осознавать что-то
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2672,3 +2696,9 @@ He barely has enough time to cook dinner, let alone learn a new programming lang
 Trying different hobbies can help people discover what they're passionate about - Проьовать разные хобби модет помочь человеку найти то что ему по душе
 
 I was taken aback by the news, as I hadn't expected anything like that - эта новость застала меня врасплох, поскольку я не ожидал ничего подобного
+
+Many students struggke to cope with the pressure of university exams - многие студенты с трудом справляються с давлением во время университетских экзаменов
+
+The ship ran aground near the coast during a storm - корабль сел на мель недалеко от побрежья во время шторма
+
+Several possible solutions sprang to mind, but I wasn't sure which one would work best - несколько возможных решений пришло мне в голову, но я был неуверен какое из них будет наилучшим
