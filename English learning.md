@@ -1730,6 +1730,20 @@ unravel - распутывать, разгадывать
 unforthcoming - неразговорчивы, уклончивый, молчаливый
 
 acutely - остро, чрезвычайно сильно, очень отчетливо
+
+scour - тщательно обыскивать
+
+imbibe - пить(употреблять напитки); впитывать идеи, знания
+
+botched - неудачно выполненный, испорченный из-за ошибок
+
+embellish - приукрашивать, украшать
+
+frail - хрупкий, слабый, физически ослабленный
+
+emaciated - крайне истощенный, сильно исхудавший
+
+delirious - находящийся в бреду, безумно радостный или взволнованный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2270,6 +2284,16 @@ the themes are interwoven - темы тесно связаны
 unravel a complex problem - разобраться в сложной проблеме
 
 acutely aware of something - прекрасно осознавать что-то
+
+scour the internet - тщательно искать в интернете
+
+a botched attempt - неудачная попытка
+
+embellish a story - приукрашать историю
+
+a frail body - хрупкое/слабое тело
+
+delirious with excitement - вне себя от волнения 
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
