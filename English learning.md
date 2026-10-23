@@ -1744,6 +1744,28 @@ frail - хрупкий, слабый, физически ослабленный
 emaciated - крайне истощенный, сильно исхудавший
 
 delirious - находящийся в бреду, безумно радостный или взволнованный
+
+infatuation - влюбленность, увлечение
+
+protrude - выступать, торчать
+
+revulsion - отвращение, неприязнь
+
+gruff - грубоватый, резкий, ворчливый
+
+scrunity - тщательное изучение, пристальное внимание
+
+prune - обрезать, подрезать; сокращать, урезать
+
+reared - врыстил, воспитал; был выращен или воспитан
+
+bemusement - недоумение, замешательство
+
+culpable - виновный
+
+impenetrable - непроницаемый, неприступный, непостижимый
+
+niggle - беспокоить, мучить, раздражать
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2294,6 +2316,22 @@ embellish a story - приукрашать историю
 a frail body - хрупкое/слабое тело
 
 delirious with excitement - вне себя от волнения 
+
+a teenage infatuation - подростковая влюбленность
+
+a sense of revultion - чувство отвращения
+
+a gruff voice - грубоватый голос
+
+come under scrunity - подвергнуться пристальному изучению, проверке
+
+prune a budget - сокращать бюджет 
+
+be reared in a small town - вырасти в маленьком городе
+
+watch in bemusement - наблюдать в недоумении
+
+morally culpable - морально виновный
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
