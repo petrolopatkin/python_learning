@@ -51,7 +51,7 @@ def test_validate_seonding_rejects_boolean_amount():
         validate_spending(data)
 
 
-def test_validate_spending_accepts_unknown_amount():
+def test_validate_spending_rejects_unknown_amount():
     data = {
                     "description": "books",
                     "amount": None,
@@ -59,9 +59,8 @@ def test_validate_spending_accepts_unknown_amount():
                     "category": "books",
         }
 
-    result = validate_spending(data)
-
-    assert result == data
+    with pytest.raises(ValueError, match="Invalid amount"):
+        validate_spending(data)
 
 
 def test_validate_spending_rejects_not_string_currency():

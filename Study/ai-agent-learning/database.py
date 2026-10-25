@@ -28,5 +28,8 @@ def save_spending(spending):
                 (spending["description"], spending["amount"], spending["currency"], spending["category"]))
 
             connection.commit()
+    except pymysql.MySQLError:
+        connection.rollback()
+        raise
     finally:
         connection.close()

@@ -1,25 +1,37 @@
-from database import save_spending
-from database import get_db_connection
+from database import save_spending, get_db_connection
 
-spending = {
-    "description": "test book",
-    "amount": 18.00,
-    "currency": "EUR",
-    "category": "education"
-}
 
-save_spending(spending)
+def test_save_spending():
+    spending = {
+        "description": "test book",
+        "amount": 18.00,
+        "currency": "EUR",
+        "category": "education"
+    }
 
-connection = get_db_connection()
+    save_spending(spending)
 
-try:
-    with connection.cursor() as cursor:
-        cursor.execute("SELECT DATABASE()")
-        print("Current database:", cursor.fetchone())
-        cursor.execute("SELECT * FROM spending LIMIT 1")
-        print(cursor.fetchall())
+    connection = get_db_connection()
 
-        # result = cursor.fetchone()
-        # print(result)
-finally:
-    connection.close()
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT Description, Amount, currency, category
+                FROM spending
+                WHERE Description = %s
+                ORDER BY Id DESC
+                LIMIT 1
+                """,
+                (spending["description"],)
+            )
+            result = cursor.fetchone()
+
+        assert result is not None
+        assert result[0] == spending["description"]
+        assert float(result[1]) == spending["amount"]
+        assert result[2] == spending["currency"]
+        assert result[3] == spending["category"]
+
+    finally:
+        connection.close()

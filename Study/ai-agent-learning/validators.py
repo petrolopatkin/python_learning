@@ -13,9 +13,7 @@ def validate_spending(data):
     if not isinstance(data["description"], str):
         raise ValueError("Description must be a string")
     
-    if isinstance(data["amount"], (int, float)) and not isinstance(data["amount"], bool) or data["amount"] is None:
-        pass
-    else:
+    if not isinstance(data["amount"], (int, float)) or isinstance(data["amount"], bool) or data["amount"] <= 0:
         raise ValueError("Invalid amount")
 
     if not isinstance(data["currency"], str) and data["currency"] is not None:

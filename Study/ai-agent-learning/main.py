@@ -1,5 +1,6 @@
 import os 
 import json
+import pymysql
 from dotenv import load_dotenv
 from google import genai
 from google.genai import errors
@@ -70,7 +71,7 @@ def main():
 
             try:
                 save_spending(spending)
-            except Exception as err:
+            except pymysql.MySQLError as err:
                 print(f"Error: Failed to save spending: {err}")
                 continue
 
