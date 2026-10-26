@@ -6,7 +6,8 @@ def test_save_spending():
         "description": "test book",
         "amount": 18.00,
         "currency": "EUR",
-        "category": "education"
+        "category": "education",
+        "purchase_date": "2026-10-26"
     }
 
     save_spending(spending)
@@ -17,7 +18,7 @@ def test_save_spending():
         with connection.cursor() as cursor:
             cursor.execute(
                 """
-                SELECT Description, Amount, currency, category
+                SELECT Description, Amount, currency, category, purchase_date
                 FROM spending
                 WHERE Description = %s
                 ORDER BY Id DESC
@@ -32,6 +33,7 @@ def test_save_spending():
         assert float(result[1]) == spending["amount"]
         assert result[2] == spending["currency"]
         assert result[3] == spending["category"]
+        assert result[4].isoformat() == spending["purchase_date"]
 
     finally:
         connection.close()

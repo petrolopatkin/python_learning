@@ -17,15 +17,15 @@ def get_db_connection():
 
 def save_spending(spending):
     query = """INSERT INTO spending
-    (Description, Amount, currency, category)
-    VALUES(%s ,%s ,%s ,%s )
+    (Description, Amount, currency, category, purchase_date)
+    VALUES(%s ,%s ,%s ,%s ,%s )
     """
 
     connection = get_db_connection()
     try:
         with connection.cursor() as cursor:
             cursor.execute(query,
-                (spending["description"], spending["amount"], spending["currency"], spending["category"]))
+                (spending["description"], spending["amount"], spending["currency"], spending["category"], spending["purchase_date"]))
 
             connection.commit()
     except pymysql.MySQLError:

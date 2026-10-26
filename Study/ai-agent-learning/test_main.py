@@ -2,12 +2,13 @@ from main import parse_spending
 import pytest
 import json
 import main
+import pymysql
 from unittest.mock import patch
 from google.genai import errors
 
 
 def test_parse_spending_returns_valid_data():
-    raw_response = '{"description": "coffee", "amount": 3.50, "currency": "EUR", "category": "food"}'
+    raw_response = '{"description": "coffee", "amount": 3.50, "currency": "EUR", "category": "food", "purchase_date": "2026-10-26"}'
 
     result = parse_spending(raw_response)
 
@@ -15,7 +16,8 @@ def test_parse_spending_returns_valid_data():
         "description": "coffee",
         "amount": 3.50,
         "currency": "EUR",
-        "category": "food"
+        "category": "food",
+        "purchase_date": "2026-10-26"
     }
 
 
@@ -46,4 +48,30 @@ def test_ask_gemini_api_error(capsys):
 
     assert "Gemini API request failed" in output 
     mock_gemini.assert_called_once()
+    mock_save.assert_not_called()
+
+
+def test_main_handles_mysql_error(capsys):
+    with patch("builtins.input", side_effect=["coffee 3 EUR", "exit"]):
+        with patch("main.ask_gemini", return_value='{"description": "coffee", "amount": 3, "currency": "EUR", "category": "food", "purchase_date": null}') as mock_gemini:
+            with patch("main.save_spending", side_effect=pymysql.MySQLError("Database error")) as mock_save:
+                main.main()
+
+    output = capsys.readouterr().out
+
+    assert "Failed to save spending" in output
+    assert "Database error" in output
+    mock_gemini.assert_called_once()
+    mock_save.assert_called_once()
+
+
+def test_main_exits_without_processing(capsys):
+    with patch("builtins.input", side_effect= ["exit"]):
+        with patch("main.ask_gemini") as mock_gemini:
+            with patch("main.save_spending") as mock_save:
+                main.main()
+
+    output = capsys.readouterr().out
+    assert "Goodbye" in output
+    mock_gemini.assert_not_called()
     mock_save.assert_not_called()
