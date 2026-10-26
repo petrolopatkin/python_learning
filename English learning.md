@@ -1766,6 +1766,26 @@ culpable - виновный
 impenetrable - непроницаемый, неприступный, непостижимый
 
 niggle - беспокоить, мучить, раздражать
+
+nudge - подтолкнуть(мягко, слегка)
+
+folly - глупость, безрассудство
+
+bountifully - щедро, в изобилии
+
+salvage - спасти, сохранить
+
+forlorn - унылый, безнадежный
+
+shun - избегать, сознательно избегать(общения)
+
+happy-go-lucky - беззаботный, беспечный
+
+preemptively - превентивно, заранее
+
+stupefy - ошеломить, удивить
+
+discernment - проницательность
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2332,6 +2352,14 @@ be reared in a small town - вырасти в маленьком городе
 watch in bemusement - наблюдать в недоумении
 
 morally culpable - морально виновный
+
+nudge someone towards something - подтолкнуть кого-то к чему-то
+
+salvage what remains - спасти то что осталось
+
+shun responsibility - уклоняться от ответственности
+
+a lack of discernment - недостаток проницательности
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2764,3 +2792,11 @@ Many students struggke to cope with the pressure of university exams - мног�
 The ship ran aground near the coast during a storm - корабль сел на мель недалеко от побрежья во время шторма
 
 Several possible solutions sprang to mind, but I wasn't sure which one would work best - несколько возможных решений пришло мне в голову, но я был неуверен какое из них будет наилучшим
+
+There is no single best way to learn a foreign language, as different methods work for different people - нет единственного лучшего способа для изучения языка потому что разные методы подходят разным людям
+
+When students feel overwhelmed by their studies, they can turn to their teachers for guidance - когда студенты чувствуют что учеба их подавляет они могут обратиться к преподавателям за советом
+
+His parents went through the roof when they found out he had failed his exams - его родители пришли в ярость когда узнали что он провалил свой экзамен
+
+My teacher suggested a topic for my research project, and I decided to run with it because I found it genuienly interesting - мой преподаватель предложил тему для исследовательского проекта и я решил развить эту идею поскольку она показалась мне действительно интересной
