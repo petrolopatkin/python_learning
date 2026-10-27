@@ -1,6 +1,8 @@
 import os
 import pymysql
 from dotenv import load_dotenv
+from datetime import date
+from decimal import Decimal
 
 load_dotenv()
 
@@ -33,3 +35,54 @@ def save_spending(spending):
         raise
     finally:
         connection.close()
+
+
+def get_spending_by_month(year, month):
+    query = """
+        SELECT 
+            Description,
+            Amount,
+            currency, 
+            category,
+            purchase_date
+        FROM spending
+        WHERE purchase_date >= %s AND purchase_date < %s
+        ORDER BY purchase_date DESC
+        """
+
+    start_date = date(year, month, 1)
+
+    if month == 12:
+        end_date = date(year + 1, 1, 1)
+    else:
+        end_date = date(year, month + 1, 1)
+
+    connection = get_db_connection()
+
+    try:
+        with connection.cursor(pymysql.cursors.DictCursor) as cursor:
+            cursor.execute(query, (start_date, end_date))
+            return cursor.fetchall()
+    finally:
+        connection.close()
+
+
+def get_monthly_summary(year, month):
+    spendings = get_spending_by_month(year, month)
+
+    totals = {}
+
+    for spending in spendings:
+        currency = spending["currency"]
+
+        if currency not in totals:
+            totals[currency] = Decimal("0.00")
+
+        totals[currency] += spending["Amount"]
+
+    most_expensive = max(spendings, key=lambda spending: spending["Amount"])
+
+    return {
+        "totals_by_currency": totals,
+        "most_expensive": most_expensive
+    }

@@ -32,8 +32,6 @@ def ask_gemini(client, user_input, today):
 
     Do not invent information that is not present in the user's message.
     If a field is unknown use null.
-
-    User message: {user_input}
      
     User message: {user_input}
     """, config={
@@ -72,8 +70,6 @@ def main():
             try:
                 today = date.today()
                 raw_response = ask_gemini(client, user_input, today)
-                print("RAW RESPONSE:", repr(raw_response))
-                print("RESPONSE TYPE:", type(raw_response))
             except errors.APIError as err:
                 print(f"Error: Gemini API request failed: {err}")
                 continue
