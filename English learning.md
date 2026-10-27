@@ -1786,6 +1786,14 @@ preemptively - превентивно, заранее
 stupefy - ошеломить, удивить
 
 discernment - проницательность
+
+stopgap - временное решение, временная мера
+
+proffer - предложить, преподнести
+
+whatnot - и тому подобное, прочие мелочи
+
+placid - спокойный, безмятежный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2360,6 +2368,12 @@ salvage what remains - спасти то что осталось
 shun responsibility - уклоняться от ответственности
 
 a lack of discernment - недостаток проницательности
+
+a stopgap solution - временное решение
+
+proffer advice - предложить совет
+
+a placid nature - спокойный характер
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2800,3 +2814,5 @@ When students feel overwhelmed by their studies, they can turn to their teachers
 His parents went through the roof when they found out he had failed his exams - его родители пришли в ярость когда узнали что он провалил свой экзамен
 
 My teacher suggested a topic for my research project, and I decided to run with it because I found it genuienly interesting - мой преподаватель предложил тему для исследовательского проекта и я решил развить эту идею поскольку она показалась мне действительно интересной
+
+My fisrt experience of living abroad left a lasting impression on me because it taught me to become more independent and adaptable - мой первый опыт жизни за граниицей оставил невероятное впечатление, потому что научил меня быть самостоятельным и гибким
