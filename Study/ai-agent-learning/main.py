@@ -4,9 +4,12 @@ import pymysql
 from dotenv import load_dotenv
 from google import genai
 from google.genai import errors
+from google.genai import types
 from datetime import date
 from validators import validate_spending
 from database import save_spending
+from tools import get_monthly_spending_report
+from tools import get_monthly_report_for_gemini
 
 
 def ask_gemini(client, user_input, today):
@@ -42,6 +45,24 @@ def ask_gemini(client, user_input, today):
     return response.text
 
 
+def ask_report_agent(client, user_input):
+    response = client.models.generate_content(model="gemini-3.5-flash-lite", contents=user_input,
+               config=types.GenerateContentConfig(
+                   tools=[get_monthly_report_for_gemini],
+                   system_instruction=(
+                       "You are a personal spending assistant."
+                       "Use the monthly report tool when the user asks about recorded spending."
+                       "The current date is provided by the application"
+                       "Never guess the year or month"
+                       "If the requested period is the current month use the current year and month from application"
+                       "Base your answer on the tool result and never invent financial data"
+                   ),
+               ),
+            )
+
+    return response.text
+
+
 def parse_spending(raw_response):
     spending = json.loads(raw_response)
     validate_spending(spending)
@@ -65,6 +86,44 @@ def main():
         if user_input.strip().lower() == "exit":
             print("Goodbye!")
             break
+        elif user_input.strip().lower().startswith("ask"):
+            question = user_input.strip()[4:]
+
+            try:
+                answer = ask_report_agent(client, question)
+                print(f"\n{answer}")
+            except errors.APIError as err:
+                print(f"Error: Gemini API request failed {err}")
+            except (ValueError, TypeError) as err:
+                print(f"Error: Agent failed {err}")
+            continue
+
+        elif user_input.strip().lower() == "report":
+            today = date.today()
+
+            report = get_monthly_spending_report(today.year, today.month)
+
+            print(f"\nMonthly spending report -- {today.strftime('%B, %Y')}")
+            
+            if not report["totals_by_currency"]:
+                print("No purchases found this month")
+            else:
+                print(f"\nTotal spending: ")
+
+            for currency, total in report["totals_by_currency"].items():
+                print(f"  {currency}: {total:.2f}")
+
+                print("\n Most expensive purchases:")
+
+                for currency, purchase in report["most_expensive_by_currency"].items():
+                    description = purchase["Description"]
+                    amount = purchase["Amount"]
+                    category = purchase["category"]
+                    purchase_date = purchase["purchase_date"]
+
+                    print(f"  {currency}: {description} -- {amount:.2f} {currency}")
+                    print(f"  Category: {category}")
+                    print(f"  Date: {purchase_date}")
 
         else:
             try:

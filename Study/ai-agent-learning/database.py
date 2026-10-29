@@ -80,9 +80,17 @@ def get_monthly_summary(year, month):
 
         totals[currency] += spending["Amount"]
 
-    most_expensive = max(spendings, key=lambda spending: spending["Amount"])
+    most_expensive_by_currency = {}
+
+    for spending in spendings:
+        currency = spending["currency"]
+
+        if currency not in most_expensive_by_currency:
+            most_expensive_by_currency[currency] = spending
+        elif spending["Amount"] > most_expensive_by_currency[currency]["Amount"]:
+            most_expensive_by_currency[currency] = spending
 
     return {
         "totals_by_currency": totals,
-        "most_expensive": most_expensive
+        "most_expensive_by_currency": most_expensive_by_currency 
     }

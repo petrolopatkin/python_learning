@@ -20,7 +20,8 @@ def test_save_spending_rolls_back_on_mysql_error():
             "description": "test book",
             "amount": 18.00,
             "currency": "EUR",
-            "category": "education"
+            "category": "education",
+            "purchase_date": None
         }
 
         with pytest.raises(pymysql.MySQLError, match="Test Database Error"):
@@ -58,7 +59,8 @@ def test_save_spending_executes_query_with_correct_values():
             "description": "coffee",
             "amount": 3.50,
             "currency": "EUR",
-            "category": "food"
+            "category": "food",
+            "purchase_date": None
         }
 
         save_spending(spending)
@@ -66,7 +68,7 @@ def test_save_spending_executes_query_with_correct_values():
         assert "INSERT INTO spending" in actual_query
         mock_cursor.execute.assert_called_once_with(
             ANY,
-            ("coffee", 3.50, "EUR", "food")
+            ("coffee", 3.50, "EUR", "food", None)
         )
 
 
@@ -85,7 +87,8 @@ def test_save_spending_rolls_back_on_commit_error():
                     "description": "coffee",
                     "amount": 3.50,
                     "currency": "EUR",
-                    "category": "food"
+                    "category": "food",
+                    "purchase_date": None
                 }
         with pytest.raises(pymysql.MySQLError, match="Commit failed"):
             save_spending(spending)
