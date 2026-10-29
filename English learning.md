@@ -1794,6 +1794,30 @@ proffer - предложить, преподнести
 whatnot - и тому подобное, прочие мелочи
 
 placid - спокойный, безмятежный
+
+adversity - невзгоды, трудности
+
+indignation - возмущение, недовольство
+
+atone - искупать вину, заглаживать проступок
+
+strife - раздоры, конфликты
+
+inexplicable - необьяснимый
+
+demeanor - манера, поведение
+
+germinate - зарождаться, развиваться, прорастать
+
+abscond - скрыться, тайно сбежать
+
+cantankerous - сварливый, раздраженный; склонный к спорам
+
+puny - крошечный, слабый, ничтожный
+
+unremittingly - непрестанно, неослабно, без передышки
+
+wallow - валяться, барахтаться
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2374,6 +2398,22 @@ a stopgap solution - временное решение
 proffer advice - предложить совет
 
 a placid nature - спокойный характер
+
+overcome adversity - преодолеть невзгоды/трудности
+
+express indignation - выражать недовольство
+
+atone for a crime - искупать вину за преступление
+
+political strife - политический конфликт
+
+inexplicable behaviour - необьяснимое поведение
+
+ideas begin to germinate - идеи начинают зарождаться
+
+abscond with money - скрыться с деньгами
+
+a cantakerous old man - сварливый старый мужчина
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2816,3 +2856,5 @@ His parents went through the roof when they found out he had failed his exams - 
 My teacher suggested a topic for my research project, and I decided to run with it because I found it genuienly interesting - мой преподаватель предложил тему для исследовательского проекта и я решил развить эту идею поскольку она показалась мне действительно интересной
 
 My fisrt experience of living abroad left a lasting impression on me because it taught me to become more independent and adaptable - мой первый опыт жизни за граниицей оставил невероятное впечатление, потому что научил меня быть самостоятельным и гибким
+
+After a difficult week at university, watching a comedy with my friends really lifted my spirits - после тяжелой недели в университете, просмотр комедии с друзьями реально поднял мне настроение
