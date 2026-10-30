@@ -8,8 +8,7 @@ from google.genai import types
 from datetime import date
 from validators import validate_spending
 from database import save_spending
-from tools import get_monthly_spending_report
-from tools import get_monthly_report_for_gemini
+from tools import get_monthly_spending_report, get_monthly_report_for_gemini, get_monthly_income_report_for_gemini
 
 
 def ask_gemini(client, user_input, today):
@@ -48,14 +47,17 @@ def ask_gemini(client, user_input, today):
 def ask_report_agent(client, user_input):
     response = client.models.generate_content(model="gemini-3.5-flash-lite", contents=user_input,
                config=types.GenerateContentConfig(
-                   tools=[get_monthly_report_for_gemini],
+                   tools=[get_monthly_report_for_gemini,
+                          get_monthly_income_report_for_gemini],
                    system_instruction=(
-                       "You are a personal spending assistant."
-                       "Use the monthly report tool when the user asks about recorded spending."
-                       "The current date is provided by the application"
-                       "Never guess the year or month"
-                       "If the requested period is the current month use the current year and month from application"
-                       "Base your answer on the tool result and never invent financial data"
+                       "You are a personal finance assistant."
+                        "Use the monthly spending report tool when the user asks about recorded expenses."
+                        "Use the monthly income report tool when the user asks about recorded income."
+                        "Never confuse income with spending."
+                        "The current date is provided by the application."
+                        "Never guess the year or month."
+                        "If the requested period is the current month, use the current year and month from the application."
+                        "Base your answers on the tool results and never invent financial data."
                    ),
                ),
             )
