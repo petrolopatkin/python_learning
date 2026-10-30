@@ -1818,6 +1818,22 @@ puny - крошечный, слабый, ничтожный
 unremittingly - непрестанно, неослабно, без передышки
 
 wallow - валяться, барахтаться
+
+accoutrement - принадлежность, экипировка, оборудование
+
+tussle - потасовка, борьба, схватка
+
+worthwhile - стоящий усилий, полезный, заслуживающий внимания
+
+hark - прислушиваться
+
+blissful - блаженный, безмятежно счастливый
+
+ineluctably - неизбежно, неотвратимо
+
+converge - сходиться, сближаться, приближаться
+
+askance - косо, с подозрением
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2414,6 +2430,14 @@ ideas begin to germinate - идеи начинают зарождаться
 abscond with money - скрыться с деньгами
 
 a cantakerous old man - сварливый старый мужчина
+
+a brief tussle - короткая потасовка/драка
+
+a worthwhile experience - стоящий опыт
+
+a blissful moment - момент полного счастья
+
+converge on a point - сходиться на одной точке
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -2858,3 +2882,17 @@ My teacher suggested a topic for my research project, and I decided to run with 
 My fisrt experience of living abroad left a lasting impression on me because it taught me to become more independent and adaptable - мой первый опыт жизни за граниицей оставил невероятное впечатление, потому что научил меня быть самостоятельным и гибким
 
 After a difficult week at university, watching a comedy with my friends really lifted my spirits - после тяжелой недели в университете, просмотр комедии с друзьями реально поднял мне настроение
+
+I gradually realised that my original degree wasn't the right fit for me - я постепенно начал осознавать что моя специальность не совсем мне подходит
+
+The dog lunged forward when it saw the stranger - собака рванула вперед увидив незнакомца
+
+This story left a lasting impression on him - эта история оставила на нем сильное впечатление
+
+I've been learning Python for three months, and so far, so good - я изучаю пайтон три месяца и пока все идет хорошо
+
+I found myself in a bit of a pickle when I realised that I'd forgotten to prepare for my university presentation - я оказался в затруднительном положении когда понял что забыл подготовиться к презентации
+
+The government should allocate more funding to public transport and the preservation of natural areas - правительству следует выделять больше денег на общественный транспорт и сохранение природных территорий
+
+Instead of taking responsibility for the mistake, the manager threw one of his employees under the bus - вместо того чтобы взять ответственность за ошибку, менеджер подставил одного из своих сотрудников 
