@@ -3,6 +3,7 @@ import pymysql
 from dotenv import load_dotenv
 from datetime import date
 from decimal import Decimal
+from logging_config import logger
 
 load_dotenv()
 
@@ -30,8 +31,11 @@ def save_spending(spending):
                 (spending["description"], spending["amount"], spending["currency"], spending["category"], spending["purchase_date"]))
 
             connection.commit()
+            logger.info("Spending record saved successfully")
     except pymysql.MySQLError:
+        logger.exception("Failed to save spending record")
         connection.rollback()
+        logger.warning("Spending transacrtion rolled back")
         raise
     finally:
         connection.close()
@@ -55,8 +59,11 @@ def save_income(income):
                 )
             )
             connection.commit()
+            logger.info("Income record saved successfully")
     except pymysql.MySQLError:
+        logger.exception("Failed to save income record")
         connection.rollback()
+        logger.warning("Income transacrtion rolled back")
         raise
     finally:
         connection.close()
