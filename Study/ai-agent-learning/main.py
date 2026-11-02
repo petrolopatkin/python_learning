@@ -7,7 +7,7 @@ from google.genai import errors
 from google.genai import types
 from datetime import date
 from validators import validate_spending, validate_income
-from database import save_spending, save_income
+from database import save_spending, save_income, save_operations
 from tools import get_monthly_spending_report, get_monthly_report_for_gemini, get_monthly_income_report_for_gemini
 from logging_config import logger
 
@@ -250,16 +250,12 @@ def main():
                 continue
 
             try:
-                for operation in operations:
-                    if operation["type"] == "spending":
-                        save_spending(operation["data"])
-
-                    elif operation["type"] == "income":
-                        save_income(operation["data"])
-
+                save_operations(operations)
             except pymysql.MySQLError as err:
-                logger.exception("Failed to save operations")
                 print(f"Error: Failed to save operations: {err}")
+                continue
+            except ValueError as err:
+                print(f"Error: {err}")
                 continue
 
             if operations:

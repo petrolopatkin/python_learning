@@ -18,37 +18,29 @@ def get_db_connection():
     return connection
 
 
-def save_spending(spending):
+def save_spending(spending, connection):
     query = """INSERT INTO spending
     (Description, Amount, currency, category, purchase_date)
     VALUES(%s ,%s ,%s ,%s ,%s )
     """
-
-    connection = get_db_connection()
-    try:
-        with connection.cursor() as cursor:
+    
+    with connection.cursor() as cursor:
             cursor.execute(query,
-                (spending["description"], spending["amount"], spending["currency"], spending["category"], spending["purchase_date"]))
+                (spending["description"], 
+                 spending["amount"], 
+                 spending["currency"], 
+                 spending["category"], 
+                 spending["purchase_date"]))
 
-            connection.commit()
             logger.info("Spending record saved successfully")
-    except pymysql.MySQLError:
-        logger.exception("Failed to save spending record")
-        connection.rollback()
-        logger.warning("Spending transacrtion rolled back")
-        raise
-    finally:
-        connection.close()
 
 
-def save_income(income):
+def save_income(income, connection):
     query = """INSERT INTO income
     (description, amount, currency, income_date)
     VALUES(%s, %s, %s, %s)"""
-
-    connection = get_db_connection()
-    try:
-        with connection.cursor() as cursor:
+    
+    with connection.cursor() as cursor:
             cursor.execute(
                 query,
                 (
@@ -58,12 +50,27 @@ def save_income(income):
                     income["income_date"]
                 )
             )
-            connection.commit()
+
             logger.info("Income record saved successfully")
-    except pymysql.MySQLError:
-        logger.exception("Failed to save income record")
+
+
+def save_operations(operations):
+    connection = get_db_connection()
+
+    try:
+        for operation in operations:
+            if operation["type"] == "spending":
+                save_spending(operation["data"], connection)
+            elif operation["type"] == "income":
+                save_income(operation["data"], connection)
+            else:
+                raise ValueError(f"Unknown operation type {operation['type']}")
+
+        connection.commit()
+        logger.info("All operations saved successfully")
+    except Exception:
         connection.rollback()
-        logger.warning("Income transacrtion rolled back")
+        logger.exception("Failed to save operations; transaction rolled back")
         raise
     finally:
         connection.close()

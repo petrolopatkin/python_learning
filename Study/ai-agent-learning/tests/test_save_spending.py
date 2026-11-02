@@ -1,4 +1,4 @@
-from database import save_spending, get_db_connection
+from database import save_operations, get_db_connection
 
 
 def test_save_spending():
@@ -10,7 +10,12 @@ def test_save_spending():
         "purchase_date": "2026-10-26"
     }
 
-    save_spending(spending)
+    save_operations([
+        {
+            "type": "spending",
+            "data": spending
+        }
+    ])
 
     connection = get_db_connection()
 
