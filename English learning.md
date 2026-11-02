@@ -1834,6 +1834,26 @@ ineluctably - неизбежно, неотвратимо
 converge - сходиться, сближаться, приближаться
 
 askance - косо, с подозрением
+
+buggered - вымотанный, уставший
+
+chagrin - огорчение, досада
+
+prominently - заметно, отчетливо, ярко
+
+sombre - мрачный, печальный, угрюмый
+
+haggle - торговаться
+
+profusely - обильно, в большом количестве
+
+derogatory - пренебрежительный, оскорбительный
+
+thrust - резко толкнуть, толчок
+
+beckon - манить, привлекать
+
+ensconce - удобно устроиться, расположиться
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2438,6 +2458,16 @@ a worthwhile experience - стоящий опыт
 a blissful moment - момент полного счастья
 
 converge on a point - сходиться на одной точке
+
+much to my chagrin - к моему большому огорчению
+
+be prominently displayed - быть выставленным на видном месте
+
+haggle over the price - торговаться из-за цены
+
+a derogatory remark - оскорбительное замечание
+
+the main thrust of an argument - основная мысль аргумента
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
