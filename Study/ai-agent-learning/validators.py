@@ -11,6 +11,9 @@ def validate_spending(data):
         if field not in data:
             raise ValueError(f"Missing required field: {field}")
 
+    if data["description"] is None:
+        raise ValueError("Missing spending description")
+
     if not isinstance(data["description"], str):
         raise ValueError("Description must be a string")
 

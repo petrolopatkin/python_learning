@@ -70,6 +70,10 @@ Use today's date to interpret relative dates:
 - If a required field is unknown, do not guess its value. Use null.
 - Amount must be numeric and must preserve the value stated by the user.
 - Currency must be a currency code when it can be identified.
+- Never use generic placeholder descriptions such as "Spent money", "Purchase", "Other expense"
+- If the user does not specify what they bought or what the money was spent on, set description to null
+- Never invent a description just to fill a required field 
+- If description is null, preserve it as null in the JSON output
 
 6. Output format
 
@@ -138,6 +142,8 @@ def parse_operations(raw_response):
 
     validated_operations = []
 
+    pending_operation = None
+
     for operation in operations:
         if not isinstance(operation, dict):
             raise ValueError("Each operation must be a JSON object")
@@ -152,15 +158,21 @@ def parse_operations(raw_response):
             raise ValueError("Operation data must be a JSON object")
 
         if operation_type == "spending":
-            validate_spending(data)
+            if data["description"] is None:
+                pending_operation = operation
+            else:
+                validate_spending(data)
+                validated_operations.append(operation)
         elif operation_type == "income":
-            validate_income(data)
+            if data["description"] is None:
+                pending_operation = operation
+            else:
+                validate_income(data)
+                validated_operations.append(operation)
         else:
             raise ValueError(f"Unknown operation type {operation_type}")
 
-        validated_operations.append(operation)
-
-    return validated_operations
+    return validated_operations, pending_operation
 
 
 def main():
@@ -172,6 +184,8 @@ def main():
         raise RuntimeError("GEMINI_API_KEY is not set")
 
     client = genai.Client(api_key=api_key)
+
+    pending_operation = None
 
     while True:
         user_input = input("Describe your spending: ")
@@ -227,44 +241,66 @@ def main():
                     print(f"  {currency}: {description} -- {amount:.2f} {currency}")
                     print(f"  Category: {category}")
                     print(f"  Date: {purchase_date}")
+            continue
+
+        if pending_operation is not None:
+            pending_operation["data"]["description"] = user_input
+
+            if pending_operation["type"] == "spending":
+                validate_spending(pending_operation["data"])
+            elif pending_operation["type"] == "income":
+                validate_income(pending_operation["data"])
+
+            save_operations([pending_operation])
+            pending_operation = None
+            print("Operation saved successfully")
+            continue
+
+        try:
+            today = date.today()
+            raw_response = ask_gemini(client, user_input, today)
+
+        except errors.APIError as err:
+            logger.exception("Gemini API request failed")
+            print(f"Error: Gemini API request failed: {err}")
+            continue
+
+        try:
+            operations, pending_operation = parse_operations(raw_response)
+
+        except json.JSONDecodeError:
+            print("Error: Gemini returned invalid JSON")
+            continue
+
+        except ValueError as err:
+            print(f"Error: {err}")
+            continue
+
+        try:
+            if operations:
+                save_operations(operations)
+
+        except pymysql.MySQLError as err:
+            print(f"Error: Failed to save operations: {err}")
+            continue
+
+        except ValueError as err:
+            print(f"Error: {err}")
+            continue
+
+        if pending_operation is not None:
+            if pending_operation["type"] == "spending":
+                print("What did you spend the money on?")
+            else:
+                print("What was the source of this income?")
+
+        elif operations:
+            print("Operations saved to database")
+            print("\nExtracted operations:")
+            print(json.dumps(operations, indent=4))
 
         else:
-            try:
-                today = date.today()
-                raw_response = ask_gemini(client, user_input, today)
-
-            except errors.APIError as err:
-                logger.exception("Gemini API request failed")
-                print(f"Error: Gemini API request failed: {err}")
-                continue
-
-            try:
-                operations = parse_operations(raw_response)
-
-            except json.JSONDecodeError:
-                print("Error: Gemini returned invalid JSON")
-                continue
-
-            except ValueError as err:
-                print(f"Error: {err}")
-                continue
-
-            try:
-                save_operations(operations)
-            except pymysql.MySQLError as err:
-                print(f"Error: Failed to save operations: {err}")
-                continue
-            except ValueError as err:
-                print(f"Error: {err}")
-                continue
-
-            if operations:
-                print("Operations saved to database")
-                print("\nExtracted operations:")
-                print(json.dumps(operations, indent=4))
-
-            else:
-                print("No financial transactions found.")
+            print("No financial transactions found.")
 
 if __name__ == "__main__":
     main()

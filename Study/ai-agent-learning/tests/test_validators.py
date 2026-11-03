@@ -29,6 +29,19 @@ def test_validate_spending_rejects_list():
         validate_spending(data)
 
 
+def test_validate_spending_rejects_description_is_none():
+    data = {
+        "description": None,
+        "amount": 18.4,
+        "currency": "USD",
+        "category": "books",
+        "purchase_date": None
+    }
+
+    with pytest.raises(ValueError, match="Missing spending description"):
+        validate_spending(data)
+
+
 def test_validate_spending_rejects_invald_amount():
     data = {
             "description": "books",
