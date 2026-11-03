@@ -1854,6 +1854,28 @@ thrust - резко толкнуть, толчок
 beckon - манить, привлекать
 
 ensconce - удобно устроиться, расположиться
+
+gobble - поглощать(пищу); быстро проглатывать/поглощать информацию
+
+chuffed - очень довольный, чрезвычайно радостный
+
+inconceivable - немыслимый, невероятный, невообразимый
+
+swerve - отклониться(от направления, от чего-то)
+
+virulent - крацне опасный, крайне язвительный/злобный
+
+infirm - слабый, немощный
+
+edible - сьедобный
+
+callous - бессердечный, бесчувственный
+
+sleek - гладкий, блестящий, элегантный, стильный
+
+splendid - великолептный, превосходный, замечательный
+
+pungent - резкий, едкий, сильный(запах, вкус)
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2468,6 +2490,24 @@ haggle over the price - торговаться из-за цены
 a derogatory remark - оскорбительное замечание
 
 the main thrust of an argument - основная мысль аргумента
+
+gooble up food - быстро поглощать еду
+
+absolutely chuffed - невероятно довольный
+
+almost inconceivable - почти немыслемый/невообразимый
+
+swerve to avoid something - свернуть чтобы избежать чего-то
+
+edible mushrooms - сьедобные грибы
+
+callous behaviour - бессердечное поведение
+
+sleek design - элегантный дизайн
+
+a splendid view - потрясающий вид
+
+a pungent smell - резкий запах
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
