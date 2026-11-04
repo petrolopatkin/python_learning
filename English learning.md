@@ -1876,6 +1876,20 @@ sleek - гладкий, блестящий, элегантный, стильны
 splendid - великолептный, превосходный, замечательный
 
 pungent - резкий, едкий, сильный(запах, вкус)
+
+grossly - крайне, грубо, значительно
+
+empirical - основаный на наблюдениях и опыте
+
+hamper - мешать, препятствовать
+
+conundrum - сложная проблема, головоломка, загадка
+
+insouciant - беспечный, беззаботный
+
+giddy - легкомысленный, веселый, радостный
+
+overblow - преувеличивать, раздувать
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2508,6 +2522,16 @@ sleek design - элегантный дизайн
 a splendid view - потрясающий вид
 
 a pungent smell - резкий запах
+
+grossly exaggerated - сильно преувеличеный
+
+empirical data - эмпиричиские данные
+
+hamper progress - тормозить прогресс
+
+face a conundrum - столкнуться с дилеммой
+
+giddy with excitement - быть вне себя от восторга
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
