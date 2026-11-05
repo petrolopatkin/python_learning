@@ -1,5 +1,6 @@
 # There are all validators for my AI Agent studying practice
 from datetime import date
+import math
 
 def validate_spending(data):
     if not isinstance(data, dict):
@@ -20,7 +21,7 @@ def validate_spending(data):
     if not data["description"].strip():
         raise ValueError("Description cannot be empty")
     
-    if not isinstance(data["amount"], (int, float)) or isinstance(data["amount"], bool) or data["amount"] <= 0:
+    if not isinstance(data["amount"], (int, float)) or isinstance(data["amount"], bool) or data["amount"] <= 0 or not math.isfinite(data["amount"]):
         raise ValueError("Invalid amount")
 
     if not isinstance(data["currency"], str):
@@ -65,7 +66,7 @@ def validate_income(data):
     if not data["description"].strip():
         raise ValueError("Description cannot be empty")
 
-    if not isinstance(data["amount"], (int, float)) or isinstance(data["amount"], bool) or data["amount"] <= 0:
+    if not isinstance(data["amount"], (int, float)) or isinstance(data["amount"], bool) or data["amount"] <= 0 or not math.isfinite(data["amount"]):
         raise ValueError("Invalid amount")
 
     if not isinstance(data["currency"], str):

@@ -317,3 +317,28 @@ def test_validate_income_accepts_correct_date():
     result = validate_income(data)
 
     assert result == data
+
+
+def test_validate_spending_rejects_float_nan():
+    data = {
+        "description": "book",
+        "amount": float("nan"),
+        "currency": "EUR",
+        "category": "education",
+        "purchase_date": None
+    }
+
+    with pytest.raises(ValueError, match="Invalid amount"):
+        validate_spending(data)
+
+
+def test_validate_income_rejects_float_inf():
+    data = {
+        "description": "part-time job",
+        "amount": float("inf"),
+        "currency": "USD",
+        "income_date": "2026-11-05"
+    }
+
+    with pytest.raises(ValueError, match="Invalid amount"):
+            validate_income(data)

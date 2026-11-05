@@ -23,7 +23,7 @@ def test_parse_operations_returns_valid_data():
         ]
     })
 
-    result = parse_operations(raw_response)
+    result, pending = parse_operations(raw_response)
 
     assert result == [
         {
@@ -38,6 +38,7 @@ def test_parse_operations_returns_valid_data():
         }
     ]
 
+    assert pending == []
 
 def test_parse_operations_incorrect_json_returns_error():
     raw_response = '{"operations": ['
@@ -66,6 +67,89 @@ def test_parse_operations_json_contains_invalid_value_returns_error():
         parse_operations(raw_response)
 
 
+def test_parse_operations_description_is_missing_in_spending():
+    raw_response = json.dumps({
+        "operations": [
+                    {
+                        "type": "spending",
+                        "data": {
+                            "amount": 5.00,
+                            "currency": "EUR",
+                            "category": "food",
+                            "purchase_date": "2026-11-05"
+                        }
+                    }
+                ]
+    })
+
+    with pytest.raises(ValueError, match="Missing required field: description"):
+        parse_operations(raw_response)
+
+
+def test_parse_operations_description_is_missing_in_income():
+    raw_response = json.dumps({
+            "operations": [
+                        {
+                            "type": "income",
+                            "data": {
+                                "amount": 5.00,
+                                "currency": "EUR",
+                                "income_date": "2026-11-05"
+                            }
+                        }
+                    ]
+        })
+
+    with pytest.raises(ValueError, match="Missing required field: description"):
+        parse_operations(raw_response)
+
+
+def test_parse_operations_handles_multiple_pending_operations():
+    raw_response = json.dumps({
+        "operations": [
+                    {
+                        "type": "spending",
+                        "data": {
+                            "description": None,
+                            "amount": 5.00,
+                            "currency": "EUR",
+                            "category": "food",
+                            "purchase_date": "2026-11-05"
+                        }
+                    },
+                    {
+                        "type": "income",
+                        "data": {
+                            "description": None,
+                            "amount": 400,
+                            "currency": "EUR",
+                            "income_date": "2026-11-05"
+                        }
+                    },
+                    {
+                        "type": "spending",
+                        "data": {
+                            "description": "chocolate",
+                            "amount": 2.55,
+                            "currency": "EUR",
+                            "category": "food",
+                            "purchase_date": "2026-11-05"
+                        }
+                    }
+                ]
+    })
+
+    result, pending = parse_operations(raw_response)
+
+    assert len(result) == 1
+    assert len(pending) == 2
+
+    assert result[0]["data"]["description"] == "chocolate"
+
+    assert pending[0]["type"] == "spending"
+    assert pending[1]["type"] == "income"
+
+    
 def test_ask_gemini_api_error(capsys):
     with patch("builtins.input", side_effect=["coffee 3 EUR", "exit"]):
         with patch("main.ask_gemini", side_effect=errors.APIError(

@@ -142,7 +142,7 @@ def parse_operations(raw_response):
 
     validated_operations = []
 
-    pending_operation = None
+    pending_operations = []
 
     for operation in operations:
         if not isinstance(operation, dict):
@@ -158,21 +158,25 @@ def parse_operations(raw_response):
             raise ValueError("Operation data must be a JSON object")
 
         if operation_type == "spending":
+            if "description" not in data:
+                raise ValueError("Missing required field: description")
             if data["description"] is None:
-                pending_operation = operation
+                pending_operations.append(operation)
             else:
                 validate_spending(data)
                 validated_operations.append(operation)
         elif operation_type == "income":
+            if "description" not in data:
+                raise ValueError("Missing required field: description")
             if data["description"] is None:
-                pending_operation = operation
+                pending_operations.append(operation)
             else:
                 validate_income(data)
                 validated_operations.append(operation)
         else:
             raise ValueError(f"Unknown operation type {operation_type}")
 
-    return validated_operations, pending_operation
+    return validated_operations, pending_operations
 
 
 def main():
