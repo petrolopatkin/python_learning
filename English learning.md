@@ -1890,6 +1890,26 @@ insouciant - беспечный, беззаботный
 giddy - легкомысленный, веселый, радостный
 
 overblow - преувеличивать, раздувать
+
+squander - растрачивать(время, деньги, возможность)
+
+oppressive - гнетущий, угнетающий
+
+nab - схватить, поймать, задерживать
+
+implore - умолять, настойчиво просить
+
+brazen - наглый, бесстыдны, дерзкий
+
+voraciously - жадно, с огромным аппетитом
+
+gingerly - осторожно, аккуратно
+
+nonetheless - тем не менее, несмотря на
+
+ludicrous - нелепый, абсурдный, смехотворный
+
+exertion - усилие, напряжение
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2532,6 +2552,26 @@ hamper progress - тормозить прогресс
 face a conundrum - столкнуться с дилеммой
 
 giddy with excitement - быть вне себя от восторга
+
+squander money - транжирить деньги
+
+oppressive atmosphere - гнетущая атмосфера
+
+nab a thief - поймать вора
+
+implore for help - умолять о помощи
+
+brazen lie - наглая/откровенная ложь
+
+eat voraciously - жадно есть
+
+step gingerly - осторожно ступать
+
+difficult but nonetheless important - сложно, но тем не менее важно
+
+ludicrous idea - нелепая идея
+
+mental exertion - ментальное напряжение
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
