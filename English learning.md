@@ -1910,6 +1910,24 @@ nonetheless - тем не менее, несмотря на
 ludicrous - нелепый, абсурдный, смехотворный
 
 exertion - усилие, напряжение
+
+obtuse - тупой, несообразительный
+
+devoid - лишенный чего-либо
+
+staple - основной, базовый, продукт первой необходимости
+
+sparsely - редко, в небольшом количестве
+
+rebuke - делать выговор, критиковать, порицать
+
+onslaught - натиск, шквал, мощная атака
+
+appalled - потрясенный, возмущенный
+
+gleefully - радостно, с восторгом
+
+plight - положение, состояние(обычно тяжелое)
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2572,6 +2590,20 @@ difficult but nonetheless important - сложно, но тем не менее 
 ludicrous idea - нелепая идея
 
 mental exertion - ментальное напряжение
+
+devoid of emotion - лишенный эмоций
+
+staple food - основной продукт питания
+
+sparsely populated city - малонаселенный город
+
+publicly rebuke - публично отчитать
+
+an onslaught of criticism - шквал критики
+
+gleefully announce - радостно обьявить
+
+find oneself in a plight - оказаться в затруднительном положении
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -3030,3 +3062,13 @@ I found myself in a bit of a pickle when I realised that I'd forgotten to prepar
 The government should allocate more funding to public transport and the preservation of natural areas - правительству следует выделять больше денег на общественный транспорт и сохранение природных территорий
 
 Instead of taking responsibility for the mistake, the manager threw one of his employees under the bus - вместо того чтобы взять ответственность за ошибку, менеджер подставил одного из своих сотрудников 
+
+I was appalled by the way some people treated the elderly - я был потрясен тем как некоторые люди обращались с пожилыми 
+
+The benefits of studying abroad often outweigh the disadvantages, especially when it comes to personal development - преимущества обучения за границей чаще всего перевешивают недостатки, особенно когда речь идет о личном развитии
+
+People with extensive experience in their field are usually better equipped to deal with unexpected challanges - люди с обширным опытом в своей сфере обычно лучше подготовлены к решению неожиданных проблем
+
+After spending several years abroad, he was looking forward to reuniting with his family - проведя несколько лет за границей, он с нетерпением ждал воссоединения со своей семьей
+
+Moving to another country can be challenging, but it also allows young adults to embark on a journey of self-discovery - переезд в другую страну может быть сложным, но это также позволяет молодым людям отправиться в путь развития
