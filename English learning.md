@@ -1928,6 +1928,22 @@ appalled - потрясенный, возмущенный
 gleefully - радостно, с восторгом
 
 plight - положение, состояние(обычно тяжелое)
+
+fitful - прерывистый, беспокойный
+
+ramble - блуждать, бесцельно ходить; говорить долго и бессвязно
+
+grasp - схватить, ухватиться; понять, осознать
+
+wield - владеть, орудовать; обладать влиянием или властью
+
+unpalatably - невкусно, неприятно для вкуса
+
+apprehension - тревога, опасение; понимание, осознание
+
+piqued - вызвать интерес, пробудь любопытство; задеть, уязвить
+
+arduous - трудный, изнурительный
 # Common collocations
 energy consumption - потребление энергии
 
@@ -2604,6 +2620,16 @@ an onslaught of criticism - шквал критики
 gleefully announce - радостно обьявить
 
 find oneself in a plight - оказаться в затруднительном положении
+
+fitful sleep - прерывистый сон
+
+grasp an opportunity - ухватиться за возможность
+
+wield power - владеть силой(властью)
+
+a sense of apprehension - чувство тревоги
+
+arduous journey - трудное путешествие
 # Useful phrases
 Cancer had started to metastasize to other parts of the body - рак начал распространяться на другие части тела
 
@@ -3072,3 +3098,7 @@ People with extensive experience in their field are usually better equipped to d
 After spending several years abroad, he was looking forward to reuniting with his family - проведя несколько лет за границей, он с нетерпением ждал воссоединения со своей семьей
 
 Moving to another country can be challenging, but it also allows young adults to embark on a journey of self-discovery - переезд в другую страну может быть сложным, но это также позволяет молодым людям отправиться в путь развития
+
+He tends to ramble when he gets nervous - он склонен говорить бессвязно когда нервничает
+
+The mysterious title immediately piqued my curiosity - загадочное название сразу же привлекло мой интерес
